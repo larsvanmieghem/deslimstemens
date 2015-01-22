@@ -281,6 +281,13 @@ Public Class Controle
     Private Sub ronde2startronde_Click(sender As Object, e As EventArgs) Handles ronde2startronde.Click
         actieveronde = actieverondeenum.Opendeur
         ronde2startronde.Visible = False
+        If (jan.Seconden < platypus.Seconden) And (jan.Seconden < miauw.Seconden) Then
+            aandebeurt = aandebeurtenum.Jan
+        ElseIf (platypus.Seconden < jan.Seconden) And (platypus.Seconden < miauw.Seconden) Then
+            aandebeurt = aandebeurtenum.Platypus
+        ElseIf (miauw.Seconden < jan.Seconden) And (miauw.Seconden < platypus.Seconden) Then
+            aandebeurt = aandebeurtenum.Miauw
+        End If
 
     End Sub
 
@@ -316,5 +323,13 @@ Public Class Controle
                     miauw.Istelleraan = True
             End Select
         End If
+    End Sub
+
+    Private Sub ronde2stop_Click(sender As Object, e As EventArgs) Handles ronde2stop.Click
+
+    End Sub
+
+    Private Sub ronde2start_Click(sender As Object, e As EventArgs) Handles ronde2start.Click
+
     End Sub
 End Class
