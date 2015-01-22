@@ -191,6 +191,8 @@ Public Class Controle
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
+
+
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False

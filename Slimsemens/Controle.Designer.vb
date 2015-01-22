@@ -23,6 +23,7 @@ Partial Class Controle
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Controle))
         Me.label1 = New System.Windows.Forms.Label()
         Me.labelteller = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
@@ -50,12 +51,14 @@ Partial Class Controle
         Me.ronde1j = New System.Windows.Forms.Button()
         Me.ronde1f = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ronde2startronde = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ronde1antwoordtekstlbl = New System.Windows.Forms.Label()
-        Me.ronde2startronde = New System.Windows.Forms.Button()
+        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -320,6 +323,16 @@ Partial Class Controle
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Bedieningpaneel"
         '
+        'ronde2startronde
+        '
+        Me.ronde2startronde.Location = New System.Drawing.Point(9, 16)
+        Me.ronde2startronde.Name = "ronde2startronde"
+        Me.ronde2startronde.Size = New System.Drawing.Size(190, 53)
+        Me.ronde2startronde.TabIndex = 10
+        Me.ronde2startronde.Text = "Start ronde 2"
+        Me.ronde2startronde.UseVisualStyleBackColor = True
+        Me.ronde2startronde.Visible = False
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -339,26 +352,26 @@ Partial Class Controle
         Me.ronde1antwoordtekstlbl.TabIndex = 13
         Me.ronde1antwoordtekstlbl.Text = "Antwoordtekst"
         '
-        'ronde2startronde
+        'AxWindowsMediaPlayer1
         '
-        Me.ronde2startronde.Location = New System.Drawing.Point(9, 16)
-        Me.ronde2startronde.Name = "ronde2startronde"
-        Me.ronde2startronde.Size = New System.Drawing.Size(190, 53)
-        Me.ronde2startronde.TabIndex = 10
-        Me.ronde2startronde.Text = "Start ronde 2"
-        Me.ronde2startronde.UseVisualStyleBackColor = True
-        Me.ronde2startronde.Visible = False
+        Me.AxWindowsMediaPlayer1.Enabled = True
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(29, 12)
+        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
+        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(314, 214)
+        Me.AxWindowsMediaPlayer1.TabIndex = 14
         '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(729, 413)
+        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.ronde1antwoordtekstlbl)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Name = "Controle"
         Me.Text = "Controlepaneel"
         Me.GroupBox1.ResumeLayout(False)
@@ -366,6 +379,7 @@ Partial Class Controle
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -400,5 +414,6 @@ Partial Class Controle
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ronde1antwoordtekstlbl As System.Windows.Forms.Label
     Friend WithEvents ronde2startronde As System.Windows.Forms.Button
+    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
 
 End Class
