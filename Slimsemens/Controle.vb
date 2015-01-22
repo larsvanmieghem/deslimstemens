@@ -289,6 +289,7 @@ Public Class Controle
 
     Private Sub ronde2startronde_Click(sender As Object, e As EventArgs) Handles ronde2startronde.Click
         actieveronde = actieverondeenum.Opendeur
+        GroupBox4.Enabled = False
         ronde2startronde.Visible = False
         If (jan.Seconden < platypus.Seconden) And (jan.Seconden < miauw.Seconden) Then
             aandebeurt = aandebeurtenum.Jan
@@ -340,5 +341,20 @@ Public Class Controle
 
     Private Sub ronde2start_Click(sender As Object, e As EventArgs) Handles ronde2start.Click
 
+    End Sub
+
+    Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
+    End Sub
+
+    Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
+    End Sub
+
+    Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1 = "openbeurtrechts.wmv"
     End Sub
 End Class

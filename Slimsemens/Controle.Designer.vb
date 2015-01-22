@@ -62,17 +62,17 @@ Partial Class Controle
         Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
-        Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
-        Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -403,6 +403,7 @@ Partial Class Controle
         '
         'ronde2stop
         '
+        Me.ronde2stop.Enabled = False
         Me.ronde2stop.Location = New System.Drawing.Point(113, 192)
         Me.ronde2stop.Name = "ronde2stop"
         Me.ronde2stop.Size = New System.Drawing.Size(88, 38)
@@ -413,6 +414,7 @@ Partial Class Controle
         'ronde2antw1chk
         '
         Me.ronde2antw1chk.AutoSize = True
+        Me.ronde2antw1chk.Enabled = False
         Me.ronde2antw1chk.Location = New System.Drawing.Point(20, 31)
         Me.ronde2antw1chk.Name = "ronde2antw1chk"
         Me.ronde2antw1chk.Size = New System.Drawing.Size(79, 17)
@@ -423,6 +425,7 @@ Partial Class Controle
         'ronde2antwoord2chk
         '
         Me.ronde2antwoord2chk.AutoSize = True
+        Me.ronde2antwoord2chk.Enabled = False
         Me.ronde2antwoord2chk.Location = New System.Drawing.Point(20, 64)
         Me.ronde2antwoord2chk.Name = "ronde2antwoord2chk"
         Me.ronde2antwoord2chk.Size = New System.Drawing.Size(79, 17)
@@ -433,6 +436,7 @@ Partial Class Controle
         'ronde2antwoord3chk
         '
         Me.ronde2antwoord3chk.AutoSize = True
+        Me.ronde2antwoord3chk.Enabled = False
         Me.ronde2antwoord3chk.Location = New System.Drawing.Point(20, 110)
         Me.ronde2antwoord3chk.Name = "ronde2antwoord3chk"
         Me.ronde2antwoord3chk.Size = New System.Drawing.Size(79, 17)
@@ -443,6 +447,7 @@ Partial Class Controle
         'ronde2antwoord4chk
         '
         Me.ronde2antwoord4chk.AutoSize = True
+        Me.ronde2antwoord4chk.Enabled = False
         Me.ronde2antwoord4chk.Location = New System.Drawing.Point(20, 148)
         Me.ronde2antwoord4chk.Name = "ronde2antwoord4chk"
         Me.ronde2antwoord4chk.Size = New System.Drawing.Size(79, 17)
@@ -450,15 +455,15 @@ Partial Class Controle
         Me.ronde2antwoord4chk.Text = "antwoord 4"
         Me.ronde2antwoord4chk.UseVisualStyleBackColor = True
         '
-        'ronde2foto1
+        'ronde2foto3
         '
-        Me.ronde2foto1.Image = CType(resources.GetObject("ronde2foto1.Image"), System.Drawing.Image)
-        Me.ronde2foto1.Location = New System.Drawing.Point(341, 12)
-        Me.ronde2foto1.Name = "ronde2foto1"
-        Me.ronde2foto1.Size = New System.Drawing.Size(136, 76)
-        Me.ronde2foto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ronde2foto1.TabIndex = 16
-        Me.ronde2foto1.TabStop = False
+        Me.ronde2foto3.Image = Global.Slimsemens.My.Resources.Resources.kat
+        Me.ronde2foto3.Location = New System.Drawing.Point(341, 179)
+        Me.ronde2foto3.Name = "ronde2foto3"
+        Me.ronde2foto3.Size = New System.Drawing.Size(136, 76)
+        Me.ronde2foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto3.TabIndex = 18
+        Me.ronde2foto3.TabStop = False
         '
         'ronde2foto2
         '
@@ -470,15 +475,15 @@ Partial Class Controle
         Me.ronde2foto2.TabIndex = 17
         Me.ronde2foto2.TabStop = False
         '
-        'ronde2foto3
+        'ronde2foto1
         '
-        Me.ronde2foto3.Image = Global.Slimsemens.My.Resources.Resources.kat
-        Me.ronde2foto3.Location = New System.Drawing.Point(341, 179)
-        Me.ronde2foto3.Name = "ronde2foto3"
-        Me.ronde2foto3.Size = New System.Drawing.Size(136, 76)
-        Me.ronde2foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ronde2foto3.TabIndex = 18
-        Me.ronde2foto3.TabStop = False
+        Me.ronde2foto1.Image = CType(resources.GetObject("ronde2foto1.Image"), System.Drawing.Image)
+        Me.ronde2foto1.Location = New System.Drawing.Point(341, 12)
+        Me.ronde2foto1.Name = "ronde2foto1"
+        Me.ronde2foto1.Size = New System.Drawing.Size(136, 76)
+        Me.ronde2foto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto1.TabIndex = 16
+        Me.ronde2foto1.TabStop = False
         '
         'Controle
         '
@@ -505,9 +510,9 @@ Partial Class Controle
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
