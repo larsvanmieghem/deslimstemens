@@ -62,11 +62,17 @@ Partial Class Controle
         Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'label1
@@ -366,7 +372,7 @@ Partial Class Controle
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(29, 12)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(253, 189)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(306, 237)
         Me.AxWindowsMediaPlayer1.TabIndex = 14
         Me.AxWindowsMediaPlayer1.Visible = False
         '
@@ -444,11 +450,44 @@ Partial Class Controle
         Me.ronde2antwoord4chk.Text = "antwoord 4"
         Me.ronde2antwoord4chk.UseVisualStyleBackColor = True
         '
+        'ronde2foto1
+        '
+        Me.ronde2foto1.Image = CType(resources.GetObject("ronde2foto1.Image"), System.Drawing.Image)
+        Me.ronde2foto1.Location = New System.Drawing.Point(341, 12)
+        Me.ronde2foto1.Name = "ronde2foto1"
+        Me.ronde2foto1.Size = New System.Drawing.Size(136, 76)
+        Me.ronde2foto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto1.TabIndex = 16
+        Me.ronde2foto1.TabStop = False
+        '
+        'ronde2foto2
+        '
+        Me.ronde2foto2.Image = Global.Slimsemens.My.Resources.Resources.platypus
+        Me.ronde2foto2.Location = New System.Drawing.Point(341, 97)
+        Me.ronde2foto2.Name = "ronde2foto2"
+        Me.ronde2foto2.Size = New System.Drawing.Size(136, 76)
+        Me.ronde2foto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto2.TabIndex = 17
+        Me.ronde2foto2.TabStop = False
+        '
+        'ronde2foto3
+        '
+        Me.ronde2foto3.Image = Global.Slimsemens.My.Resources.Resources.kat
+        Me.ronde2foto3.Location = New System.Drawing.Point(341, 179)
+        Me.ronde2foto3.Name = "ronde2foto3"
+        Me.ronde2foto3.Size = New System.Drawing.Size(136, 76)
+        Me.ronde2foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto3.TabIndex = 18
+        Me.ronde2foto3.TabStop = False
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(729, 413)
+        Me.Controls.Add(Me.ronde2foto3)
+        Me.Controls.Add(Me.ronde2foto2)
+        Me.Controls.Add(Me.ronde2foto1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.ronde1antwoordtekstlbl)
@@ -466,6 +505,9 @@ Partial Class Controle
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -508,5 +550,8 @@ Partial Class Controle
     Friend WithEvents ronde2antw1chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde2stop As System.Windows.Forms.Button
     Friend WithEvents ronde2start As System.Windows.Forms.Button
+    Friend WithEvents ronde2foto1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde2foto2 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
 
 End Class

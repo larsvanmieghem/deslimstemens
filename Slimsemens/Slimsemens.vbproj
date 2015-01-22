@@ -159,6 +159,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\platypus.jpg" />
+    <None Include="Resources\kat.jpg" />
     <Content Include="spelbestand.txt" />
   </ItemGroup>
   <ItemGroup>
