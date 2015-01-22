@@ -125,17 +125,18 @@ Public Class Controle
         label1.Text = jan.Seconden.ToString
         Label2.Text = platypus.Seconden.ToString
         Label3.Text = miauw.Seconden.ToString
-
-        'Toont het actieve antwoord/de actieve antwoorden
        
+
 
         'Toont de juiste elementen afhankelijk van de ronde
         Select Case actieveronde
             Case actieverondeenum.driezesnegen
                 GroupBox2.Visible = True
                 GroupBox3.Visible = True
+                GroupBox4.Visible = False
                 ronde1antwoordtekstlbl.Text = antwoordenronde1(ronde1actievevraag) 'Toont het actieve antwoord   
                 ronde1antwoordtekstlbl.Visible = True
+                AxWindowsMediaPlayer1.Visible = False
                 'Geeft aan wat de actieve vraag is
                 Select Case ronde1actievevraag
                     Case 1
@@ -191,28 +192,36 @@ Public Class Controle
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
-                GroupBox4.Visible = False
+                GroupBox4.Visible = True
+                AxWindowsMediaPlayer1.Visible = True
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
-                GroupBox4.Visible = True
+                GroupBox4.Visible = False
+                AxWindowsMediaPlayer1.Visible = False
+
             Case actieverondeenum.Galerij
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
+                AxWindowsMediaPlayer1.Visible = False
+
             Case actieverondeenum.Collectiefgeheugen
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
+                AxWindowsMediaPlayer1.Visible = True
+
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 GroupBox4.Visible = False
+                AxWindowsMediaPlayer1.Visible = False
         End Select
         'Toont wie er aan de beurt is
         Select Case aandebeurt
@@ -290,7 +299,7 @@ Public Class Controle
         End If
 
     End Sub
-
+    '---Ronde2---
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
         If ronde2antw1chk.Checked = True Then
             Select Case aandebeurt

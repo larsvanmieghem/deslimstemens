@@ -368,6 +368,7 @@ Partial Class Controle
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
         Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(253, 189)
         Me.AxWindowsMediaPlayer1.TabIndex = 14
+        Me.AxWindowsMediaPlayer1.Visible = False
         '
         'GroupBox4
         '
