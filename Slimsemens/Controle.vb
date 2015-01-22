@@ -283,4 +283,38 @@ Public Class Controle
         ronde2startronde.Visible = False
 
     End Sub
+
+    Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
+        If ronde2antw1chk.Checked = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += 20
+                    miauw.Istelleraan = True
+            End Select
+        ElseIf ronde2antw1chk.Checked = False Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= 20
+                    miauw.Istelleraan = True
+            End Select
+        End If
+    End Sub
 End Class
