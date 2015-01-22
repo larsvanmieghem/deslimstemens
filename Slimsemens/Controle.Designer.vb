@@ -55,10 +55,18 @@ Partial Class Controle
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ronde1antwoordtekstlbl = New System.Windows.Forms.Label()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ronde2start = New System.Windows.Forms.Button()
+        Me.ronde2stop = New System.Windows.Forms.Button()
+        Me.ronde2antw1chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'label1
@@ -321,7 +329,7 @@ Partial Class Controle
         Me.GroupBox3.Size = New System.Drawing.Size(217, 87)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Bedieningpaneel"
+        Me.GroupBox3.Text = "Bedieningpaneel ronde 1"
         '
         'ronde2startronde
         '
@@ -358,14 +366,89 @@ Partial Class Controle
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(29, 12)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(314, 214)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(253, 189)
         Me.AxWindowsMediaPlayer1.TabIndex = 14
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.ronde2antwoord4chk)
+        Me.GroupBox4.Controls.Add(Me.ronde2antwoord3chk)
+        Me.GroupBox4.Controls.Add(Me.ronde2antwoord2chk)
+        Me.GroupBox4.Controls.Add(Me.ronde2antw1chk)
+        Me.GroupBox4.Controls.Add(Me.ronde2stop)
+        Me.GroupBox4.Controls.Add(Me.ronde2start)
+        Me.GroupBox4.Location = New System.Drawing.Point(499, 19)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(217, 236)
+        Me.GroupBox4.TabIndex = 15
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Bedieningspaneel ronde 2"
+        Me.GroupBox4.Visible = False
+        '
+        'ronde2start
+        '
+        Me.ronde2start.Location = New System.Drawing.Point(6, 192)
+        Me.ronde2start.Name = "ronde2start"
+        Me.ronde2start.Size = New System.Drawing.Size(88, 38)
+        Me.ronde2start.TabIndex = 0
+        Me.ronde2start.Text = "Start"
+        Me.ronde2start.UseVisualStyleBackColor = True
+        '
+        'ronde2stop
+        '
+        Me.ronde2stop.Location = New System.Drawing.Point(113, 192)
+        Me.ronde2stop.Name = "ronde2stop"
+        Me.ronde2stop.Size = New System.Drawing.Size(88, 38)
+        Me.ronde2stop.TabIndex = 1
+        Me.ronde2stop.Text = "Stop"
+        Me.ronde2stop.UseVisualStyleBackColor = True
+        '
+        'ronde2antw1chk
+        '
+        Me.ronde2antw1chk.AutoSize = True
+        Me.ronde2antw1chk.Location = New System.Drawing.Point(20, 31)
+        Me.ronde2antw1chk.Name = "ronde2antw1chk"
+        Me.ronde2antw1chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antw1chk.TabIndex = 2
+        Me.ronde2antw1chk.Text = "antwoord 1"
+        Me.ronde2antw1chk.UseVisualStyleBackColor = True
+        '
+        'ronde2antwoord2chk
+        '
+        Me.ronde2antwoord2chk.AutoSize = True
+        Me.ronde2antwoord2chk.Location = New System.Drawing.Point(20, 64)
+        Me.ronde2antwoord2chk.Name = "ronde2antwoord2chk"
+        Me.ronde2antwoord2chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antwoord2chk.TabIndex = 3
+        Me.ronde2antwoord2chk.Text = "antwoord 2"
+        Me.ronde2antwoord2chk.UseVisualStyleBackColor = True
+        '
+        'ronde2antwoord3chk
+        '
+        Me.ronde2antwoord3chk.AutoSize = True
+        Me.ronde2antwoord3chk.Location = New System.Drawing.Point(20, 110)
+        Me.ronde2antwoord3chk.Name = "ronde2antwoord3chk"
+        Me.ronde2antwoord3chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antwoord3chk.TabIndex = 4
+        Me.ronde2antwoord3chk.Text = "antwoord 3"
+        Me.ronde2antwoord3chk.UseVisualStyleBackColor = True
+        '
+        'ronde2antwoord4chk
+        '
+        Me.ronde2antwoord4chk.AutoSize = True
+        Me.ronde2antwoord4chk.Location = New System.Drawing.Point(20, 148)
+        Me.ronde2antwoord4chk.Name = "ronde2antwoord4chk"
+        Me.ronde2antwoord4chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antwoord4chk.TabIndex = 5
+        Me.ronde2antwoord4chk.Text = "antwoord 4"
+        Me.ronde2antwoord4chk.UseVisualStyleBackColor = True
         '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(729, 413)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.ronde1antwoordtekstlbl)
         Me.Controls.Add(Me.Label4)
@@ -380,6 +463,8 @@ Partial Class Controle
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -415,5 +500,12 @@ Partial Class Controle
     Friend WithEvents ronde1antwoordtekstlbl As System.Windows.Forms.Label
     Friend WithEvents ronde2startronde As System.Windows.Forms.Button
     Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents ronde2antwoord4chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde2antwoord3chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde2antwoord2chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde2antw1chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde2stop As System.Windows.Forms.Button
+    Friend WithEvents ronde2start As System.Windows.Forms.Button
 
 End Class

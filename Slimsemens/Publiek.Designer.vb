@@ -22,6 +22,7 @@ Partial Class Publiek
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Publiek))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,60 +45,68 @@ Partial Class Publiek
         Me.r1v3 = New System.Windows.Forms.Label()
         Me.r1v2 = New System.Windows.Forms.Label()
         Me.r1v1 = New System.Windows.Forms.Label()
+        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 400)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(55, 482)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(19, 13)
+        Me.Label1.Size = New System.Drawing.Size(30, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "60"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(354, 399)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(385, 482)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(19, 13)
+        Me.Label2.Size = New System.Drawing.Size(30, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "60"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(666, 398)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(827, 482)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(19, 13)
+        Me.Label3.Size = New System.Drawing.Size(30, 24)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "60"
         '
         'Naam1label
         '
         Me.Naam1label.AutoSize = True
-        Me.Naam1label.Location = New System.Drawing.Point(55, 348)
+        Me.Naam1label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam1label.Location = New System.Drawing.Point(55, 448)
         Me.Naam1label.Name = "Naam1label"
-        Me.Naam1label.Size = New System.Drawing.Size(24, 13)
+        Me.Naam1label.Size = New System.Drawing.Size(40, 24)
         Me.Naam1label.TabIndex = 3
         Me.Naam1label.Text = "Jan"
         '
         'Naam2label
         '
         Me.Naam2label.AutoSize = True
-        Me.Naam2label.Location = New System.Drawing.Point(357, 348)
+        Me.Naam2label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam2label.Location = New System.Drawing.Point(357, 448)
         Me.Naam2label.Name = "Naam2label"
-        Me.Naam2label.Size = New System.Drawing.Size(47, 13)
+        Me.Naam2label.Size = New System.Drawing.Size(80, 24)
         Me.Naam2label.TabIndex = 4
         Me.Naam2label.Text = "Platypus"
         '
         'Naam3label
         '
         Me.Naam3label.AutoSize = True
-        Me.Naam3label.Location = New System.Drawing.Point(647, 348)
+        Me.Naam3label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam3label.Location = New System.Drawing.Point(808, 448)
         Me.Naam3label.Name = "Naam3label"
-        Me.Naam3label.Size = New System.Drawing.Size(38, 13)
+        Me.Naam3label.Size = New System.Drawing.Size(65, 24)
         Me.Naam3label.TabIndex = 5
         Me.Naam3label.Text = "Miauw"
         '
@@ -118,7 +127,7 @@ Partial Class Publiek
         Me.GroupBox2.Controls.Add(Me.r1v3)
         Me.GroupBox2.Controls.Add(Me.r1v2)
         Me.GroupBox2.Controls.Add(Me.r1v1)
-        Me.GroupBox2.Location = New System.Drawing.Point(58, 265)
+        Me.GroupBox2.Location = New System.Drawing.Point(58, 382)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(345, 63)
         Me.GroupBox2.TabIndex = 8
@@ -260,11 +269,21 @@ Partial Class Publiek
         Me.r1v1.TabIndex = 0
         Me.r1v1.Text = "1"
         '
+        'AxWindowsMediaPlayer1
+        '
+        Me.AxWindowsMediaPlayer1.Enabled = True
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(58, 12)
+        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
+        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(557, 364)
+        Me.AxWindowsMediaPlayer1.TabIndex = 15
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 446)
+        Me.ClientSize = New System.Drawing.Size(891, 520)
+        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Naam3label)
         Me.Controls.Add(Me.Naam2label)
@@ -277,6 +296,7 @@ Partial Class Publiek
         Me.Text = "Publiek"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -303,4 +323,5 @@ Partial Class Publiek
     Friend WithEvents r1v3 As System.Windows.Forms.Label
     Friend WithEvents r1v2 As System.Windows.Forms.Label
     Friend WithEvents r1v1 As System.Windows.Forms.Label
+    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
 End Class

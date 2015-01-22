@@ -191,24 +191,28 @@ Public Class Controle
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
-
+                GroupBox4.Visible = False
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
+                GroupBox4.Visible = True
             Case actieverondeenum.Galerij
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
+                GroupBox4.Visible = False
             Case actieverondeenum.Collectiefgeheugen
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
+                GroupBox4.Visible = False
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
+                GroupBox4.Visible = False
         End Select
         'Toont wie er aan de beurt is
         Select Case aandebeurt
