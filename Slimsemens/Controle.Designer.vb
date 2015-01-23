@@ -56,12 +56,12 @@ Partial Class Controle
         Me.ronde1antwoordtekstlbl = New System.Windows.Forms.Label()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ronde2start = New System.Windows.Forms.Button()
-        Me.ronde2stop = New System.Windows.Forms.Button()
-        Me.ronde2antw1chk = New System.Windows.Forms.CheckBox()
-        Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
-        Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2antw1chk = New System.Windows.Forms.CheckBox()
+        Me.ronde2stop = New System.Windows.Forms.Button()
+        Me.ronde2start = New System.Windows.Forms.Button()
         Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
@@ -392,46 +392,16 @@ Partial Class Controle
         Me.GroupBox4.Text = "Bedieningspaneel ronde 2"
         Me.GroupBox4.Visible = False
         '
-        'ronde2start
+        'ronde2antwoord4chk
         '
-        Me.ronde2start.Location = New System.Drawing.Point(6, 192)
-        Me.ronde2start.Name = "ronde2start"
-        Me.ronde2start.Size = New System.Drawing.Size(88, 38)
-        Me.ronde2start.TabIndex = 0
-        Me.ronde2start.Text = "Start"
-        Me.ronde2start.UseVisualStyleBackColor = True
-        '
-        'ronde2stop
-        '
-        Me.ronde2stop.Enabled = False
-        Me.ronde2stop.Location = New System.Drawing.Point(113, 192)
-        Me.ronde2stop.Name = "ronde2stop"
-        Me.ronde2stop.Size = New System.Drawing.Size(88, 38)
-        Me.ronde2stop.TabIndex = 1
-        Me.ronde2stop.Text = "Stop"
-        Me.ronde2stop.UseVisualStyleBackColor = True
-        '
-        'ronde2antw1chk
-        '
-        Me.ronde2antw1chk.AutoSize = True
-        Me.ronde2antw1chk.Enabled = False
-        Me.ronde2antw1chk.Location = New System.Drawing.Point(20, 31)
-        Me.ronde2antw1chk.Name = "ronde2antw1chk"
-        Me.ronde2antw1chk.Size = New System.Drawing.Size(79, 17)
-        Me.ronde2antw1chk.TabIndex = 2
-        Me.ronde2antw1chk.Text = "antwoord 1"
-        Me.ronde2antw1chk.UseVisualStyleBackColor = True
-        '
-        'ronde2antwoord2chk
-        '
-        Me.ronde2antwoord2chk.AutoSize = True
-        Me.ronde2antwoord2chk.Enabled = False
-        Me.ronde2antwoord2chk.Location = New System.Drawing.Point(20, 64)
-        Me.ronde2antwoord2chk.Name = "ronde2antwoord2chk"
-        Me.ronde2antwoord2chk.Size = New System.Drawing.Size(79, 17)
-        Me.ronde2antwoord2chk.TabIndex = 3
-        Me.ronde2antwoord2chk.Text = "antwoord 2"
-        Me.ronde2antwoord2chk.UseVisualStyleBackColor = True
+        Me.ronde2antwoord4chk.AutoSize = True
+        Me.ronde2antwoord4chk.Enabled = False
+        Me.ronde2antwoord4chk.Location = New System.Drawing.Point(20, 148)
+        Me.ronde2antwoord4chk.Name = "ronde2antwoord4chk"
+        Me.ronde2antwoord4chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antwoord4chk.TabIndex = 5
+        Me.ronde2antwoord4chk.Text = "antwoord 4"
+        Me.ronde2antwoord4chk.UseVisualStyleBackColor = True
         '
         'ronde2antwoord3chk
         '
@@ -444,16 +414,46 @@ Partial Class Controle
         Me.ronde2antwoord3chk.Text = "antwoord 3"
         Me.ronde2antwoord3chk.UseVisualStyleBackColor = True
         '
-        'ronde2antwoord4chk
+        'ronde2antwoord2chk
         '
-        Me.ronde2antwoord4chk.AutoSize = True
-        Me.ronde2antwoord4chk.Enabled = False
-        Me.ronde2antwoord4chk.Location = New System.Drawing.Point(20, 148)
-        Me.ronde2antwoord4chk.Name = "ronde2antwoord4chk"
-        Me.ronde2antwoord4chk.Size = New System.Drawing.Size(79, 17)
-        Me.ronde2antwoord4chk.TabIndex = 5
-        Me.ronde2antwoord4chk.Text = "antwoord 4"
-        Me.ronde2antwoord4chk.UseVisualStyleBackColor = True
+        Me.ronde2antwoord2chk.AutoSize = True
+        Me.ronde2antwoord2chk.Enabled = False
+        Me.ronde2antwoord2chk.Location = New System.Drawing.Point(20, 64)
+        Me.ronde2antwoord2chk.Name = "ronde2antwoord2chk"
+        Me.ronde2antwoord2chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antwoord2chk.TabIndex = 3
+        Me.ronde2antwoord2chk.Text = "antwoord 2"
+        Me.ronde2antwoord2chk.UseVisualStyleBackColor = True
+        '
+        'ronde2antw1chk
+        '
+        Me.ronde2antw1chk.AutoSize = True
+        Me.ronde2antw1chk.Enabled = False
+        Me.ronde2antw1chk.Location = New System.Drawing.Point(20, 31)
+        Me.ronde2antw1chk.Name = "ronde2antw1chk"
+        Me.ronde2antw1chk.Size = New System.Drawing.Size(79, 17)
+        Me.ronde2antw1chk.TabIndex = 2
+        Me.ronde2antw1chk.Text = "antwoord 1"
+        Me.ronde2antw1chk.UseVisualStyleBackColor = True
+        '
+        'ronde2stop
+        '
+        Me.ronde2stop.Enabled = False
+        Me.ronde2stop.Location = New System.Drawing.Point(113, 192)
+        Me.ronde2stop.Name = "ronde2stop"
+        Me.ronde2stop.Size = New System.Drawing.Size(88, 38)
+        Me.ronde2stop.TabIndex = 1
+        Me.ronde2stop.Text = "Stop"
+        Me.ronde2stop.UseVisualStyleBackColor = True
+        '
+        'ronde2start
+        '
+        Me.ronde2start.Location = New System.Drawing.Point(6, 192)
+        Me.ronde2start.Name = "ronde2start"
+        Me.ronde2start.Size = New System.Drawing.Size(88, 38)
+        Me.ronde2start.TabIndex = 0
+        Me.ronde2start.Text = "Start"
+        Me.ronde2start.UseVisualStyleBackColor = True
         '
         'ronde2foto3
         '

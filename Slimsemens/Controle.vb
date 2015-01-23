@@ -20,6 +20,7 @@ Public Class Controle
     Public antwoordenronde5video1(5, 2) As String
     Public antwoordenronde5video2(5, 2) As String
     Public antwoordenronde5video3(5, 2) As String
+    Public ticknaspelen As Short
     Public Enum actieverondeenum As Short
         driezesnegen = 1
         Opendeur = 2
@@ -38,6 +39,12 @@ Public Class Controle
     'Variabelen voor ronde 1
     Public ronde1actievevraag As Short
     Public ronde1rondgaan As Short 'Om te tellen of de vraag bij dezelfde persoon is aanbeland en door niemand juist beantwoord (i.p.v. door te gaan tot iemand het juist heeft)
+    Public Enum ronde2actievevraagem
+        links = 1
+        centraal = 2
+        rechts = 3
+    End Enum
+    Public ronde2actievevraag As ronde2actievevraagem
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
@@ -196,9 +203,7 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = True
                 AxWindowsMediaPlayer1.Visible = True
-                ronde2foto1.Visible = True
-                ronde2foto2.Visible = True
-                ronde2foto3.Visible = True
+               
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
@@ -260,12 +265,15 @@ Public Class Controle
 
         If AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying Then
             ronde2start.Enabled = False
+            ticknaspelen = 0
         Else
-            ronde2start.Enabled = True
-        End If
+            ticknaspelen += 1
+            If ticknaspelen < 2 Then
+                ronde2start.Enabled = True
+            End If
+            End If
 
-
-        publiekvenster.synchroniseer()
+            publiekvenster.synchroniseer()
     End Sub
 
 
@@ -325,9 +333,76 @@ Public Class Controle
         ElseIf (miauw.Seconden < jan.Seconden) And (miauw.Seconden < platypus.Seconden) Then
             aandebeurt = aandebeurtenum.Miauw
         End If
-
+        ronde2foto1.Visible = True
+        ronde2foto2.Visible = True
+        ronde2foto3.Visible = True
     End Sub
     '---Ronde2---
+  
+
+    Private Sub ronde2stop_Click(sender As Object, e As EventArgs) Handles ronde2stop.Click
+        ronde2stop.Enabled = False
+        GroupBox4.Enabled = False
+        ronde2antw1chk.Enabled = False
+        ronde2antwoord2chk.Enabled = False
+        ronde2antwoord3chk.Enabled = False
+        ronde2antwoord4chk.Enabled = False
+
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                If (ronde2antw1chk.Checked = True) And (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked = True) And (ronde2antwoord4chk.Checked = True) Then
+
+                End If
+                jan.Istelleraan = False
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = False
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = False
+        End Select
+
+    End Sub
+
+    Private Sub ronde2start_Click(sender As Object, e As EventArgs) Handles ronde2start.Click
+        ronde2start.Enabled = False
+        ronde2stop.Enabled = True
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = True
+        End Select
+        ronde2antw1chk.Enabled = True
+        ronde2antwoord2chk.Enabled = True
+        ronde2antwoord3chk.Enabled = True
+        ronde2antwoord4chk.Enabled = True
+    End Sub
+
+    Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
+        ronde2foto1.Visible = False
+        ronde2foto2.Visible = False
+        ronde2foto3.Visible = False
+    End Sub
+
+    Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
+        ronde2foto1.Visible = False
+        ronde2foto2.Visible = False
+        ronde2foto3.Visible = False
+    End Sub
+
+    Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
+        GroupBox4.Enabled = True
+        AxWindowsMediaPlayer1.URL = "openbeurtrechts.wmv"
+        ronde2foto1.Visible = False
+        ronde2foto2.Visible = False
+        ronde2foto3.Visible = False
+    End Sub
+
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
         If ronde2antw1chk.Checked = True Then
             Select Case aandebeurt
@@ -361,29 +436,105 @@ Public Class Controle
             End Select
         End If
     End Sub
-
-    Private Sub ronde2stop_Click(sender As Object, e As EventArgs) Handles ronde2stop.Click
-
+    Private Sub ronde2antwoord2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord2chk.CheckedChanged
+        If ronde2antwoord2chk.Checked = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += 20
+                    miauw.Istelleraan = True
+            End Select
+        ElseIf ronde2antwoord2chk.Checked = False Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= 20
+                    miauw.Istelleraan = True
+            End Select
+        End If
     End Sub
 
-    Private Sub ronde2start_Click(sender As Object, e As EventArgs) Handles ronde2start.Click
-
+    Private Sub ronde2antwoord3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord3chk.CheckedChanged
+        If ronde2antwoord3chk.Checked = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += 20
+                    miauw.Istelleraan = True
+            End Select
+        ElseIf ronde2antwoord3chk.Checked = False Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= 20
+                    miauw.Istelleraan = True
+            End Select
+        End If
     End Sub
 
-    Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
-
-        AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
-
-
-    End Sub
-
-    Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
-
-        AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
-    End Sub
-
-    Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
-
-        AxWindowsMediaPlayer1.URL = "openbeurtrechts.wmv"
+    Private Sub ronde2antwoord4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord4chk.CheckedChanged
+        If ronde2antwoord4chk.Checked = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += 20
+                    miauw.Istelleraan = True
+            End Select
+        ElseIf ronde2antwoord4chk.Checked = False Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= 20
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= 20
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= 20
+                    miauw.Istelleraan = True
+            End Select
+        End If
     End Sub
 End Class
