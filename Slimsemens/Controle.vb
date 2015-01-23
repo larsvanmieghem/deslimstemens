@@ -185,7 +185,9 @@ Public Class Controle
                         r1v15.BackColor = Color.Yellow
                 End Select
 
-
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
 
 
             Case actieverondeenum.Opendeur
@@ -194,6 +196,9 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = True
                 AxWindowsMediaPlayer1.Visible = True
+                ronde2foto1.Visible = True
+                ronde2foto2.Visible = True
+                ronde2foto3.Visible = True
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
@@ -201,6 +206,9 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
                 AxWindowsMediaPlayer1.Visible = False
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
 
             Case actieverondeenum.Galerij
                 GroupBox2.Visible = False
@@ -208,6 +216,9 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
                 AxWindowsMediaPlayer1.Visible = False
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
 
             Case actieverondeenum.Collectiefgeheugen
                 GroupBox2.Visible = False
@@ -215,6 +226,9 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
                 AxWindowsMediaPlayer1.Visible = True
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
 
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
@@ -222,6 +236,9 @@ Public Class Controle
                 GroupBox3.Visible = False
                 GroupBox4.Visible = False
                 AxWindowsMediaPlayer1.Visible = False
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
         End Select
         'Toont wie er aan de beurt is
         Select Case aandebeurt
@@ -238,6 +255,16 @@ Public Class Controle
                 Naam2label.BackColor = Color.Transparent
                 Naam3label.BackColor = Color.Yellow
         End Select
+
+        'Zorgt ervoor dat de speler nog niet kan beginnen als de video aan staat 
+
+        If AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying Then
+            ronde2start.Enabled = False
+        Else
+            ronde2start.Enabled = True
+        End If
+
+
         publiekvenster.synchroniseer()
     End Sub
 
@@ -344,17 +371,19 @@ Public Class Controle
     End Sub
 
     Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
-        GroupBox4.Enabled = True
+
         AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
+
+
     End Sub
 
     Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
-        GroupBox4.Enabled = True
+
         AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
     End Sub
 
     Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
-        GroupBox4.Enabled = True
-        AxWindowsMediaPlayer1 = "openbeurtrechts.wmv"
+
+        AxWindowsMediaPlayer1.URL = "openbeurtrechts.wmv"
     End Sub
 End Class
