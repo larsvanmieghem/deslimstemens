@@ -42,12 +42,12 @@ Partial Class Edit
         Me.Button9 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class Edit
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button1.Location = New System.Drawing.Point(122, 28)
+        Me.Button1.Location = New System.Drawing.Point(178, 25)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(39, 23)
         Me.Button1.TabIndex = 0
@@ -66,7 +66,7 @@ Partial Class Edit
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(166, 31)
+        Me.Label1.Location = New System.Drawing.Point(222, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(24, 17)
         Me.Label1.TabIndex = 1
@@ -75,7 +75,7 @@ Partial Class Edit
         'mintienspelereen
         '
         Me.mintienspelereen.Cursor = System.Windows.Forms.Cursors.Default
-        Me.mintienspelereen.Location = New System.Drawing.Point(77, 28)
+        Me.mintienspelereen.Location = New System.Drawing.Point(133, 25)
         Me.mintienspelereen.Name = "mintienspelereen"
         Me.mintienspelereen.Size = New System.Drawing.Size(39, 23)
         Me.mintienspelereen.TabIndex = 2
@@ -95,7 +95,7 @@ Partial Class Edit
         'pluseenspelereen
         '
         Me.pluseenspelereen.Cursor = System.Windows.Forms.Cursors.Default
-        Me.pluseenspelereen.Location = New System.Drawing.Point(196, 28)
+        Me.pluseenspelereen.Location = New System.Drawing.Point(252, 25)
         Me.pluseenspelereen.Name = "pluseenspelereen"
         Me.pluseenspelereen.Size = New System.Drawing.Size(39, 23)
         Me.pluseenspelereen.TabIndex = 5
@@ -105,7 +105,7 @@ Partial Class Edit
         'plustienspelereen
         '
         Me.plustienspelereen.Cursor = System.Windows.Forms.Cursors.Default
-        Me.plustienspelereen.Location = New System.Drawing.Point(241, 28)
+        Me.plustienspelereen.Location = New System.Drawing.Point(297, 25)
         Me.plustienspelereen.Name = "plustienspelereen"
         Me.plustienspelereen.Size = New System.Drawing.Size(39, 23)
         Me.plustienspelereen.TabIndex = 4
@@ -115,7 +115,7 @@ Partial Class Edit
         'Button2
         '
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button2.Location = New System.Drawing.Point(196, 68)
+        Me.Button2.Location = New System.Drawing.Point(252, 65)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(39, 23)
         Me.Button2.TabIndex = 11
@@ -125,7 +125,7 @@ Partial Class Edit
         'Button3
         '
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button3.Location = New System.Drawing.Point(241, 68)
+        Me.Button3.Location = New System.Drawing.Point(297, 65)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(39, 23)
         Me.Button3.TabIndex = 10
@@ -145,7 +145,7 @@ Partial Class Edit
         'Button4
         '
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button4.Location = New System.Drawing.Point(77, 68)
+        Me.Button4.Location = New System.Drawing.Point(133, 65)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(39, 23)
         Me.Button4.TabIndex = 8
@@ -156,7 +156,7 @@ Partial Class Edit
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(166, 71)
+        Me.Label4.Location = New System.Drawing.Point(222, 68)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(24, 17)
         Me.Label4.TabIndex = 7
@@ -165,7 +165,7 @@ Partial Class Edit
         'Button5
         '
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button5.Location = New System.Drawing.Point(122, 68)
+        Me.Button5.Location = New System.Drawing.Point(178, 65)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(39, 23)
         Me.Button5.TabIndex = 6
@@ -175,7 +175,7 @@ Partial Class Edit
         'Button6
         '
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button6.Location = New System.Drawing.Point(196, 111)
+        Me.Button6.Location = New System.Drawing.Point(252, 108)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(39, 23)
         Me.Button6.TabIndex = 17
@@ -185,7 +185,7 @@ Partial Class Edit
         'Button7
         '
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button7.Location = New System.Drawing.Point(241, 111)
+        Me.Button7.Location = New System.Drawing.Point(297, 108)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(39, 23)
         Me.Button7.TabIndex = 16
@@ -205,7 +205,7 @@ Partial Class Edit
         'Button8
         '
         Me.Button8.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button8.Location = New System.Drawing.Point(77, 111)
+        Me.Button8.Location = New System.Drawing.Point(133, 108)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(39, 23)
         Me.Button8.TabIndex = 14
@@ -216,7 +216,7 @@ Partial Class Edit
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(166, 114)
+        Me.Label6.Location = New System.Drawing.Point(222, 111)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(24, 17)
         Me.Label6.TabIndex = 13
@@ -225,7 +225,7 @@ Partial Class Edit
         'Button9
         '
         Me.Button9.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Button9.Location = New System.Drawing.Point(122, 111)
+        Me.Button9.Location = New System.Drawing.Point(178, 108)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(39, 23)
         Me.Button9.TabIndex = 12
@@ -254,7 +254,7 @@ Partial Class Edit
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(296, 150)
+        Me.GroupBox1.Size = New System.Drawing.Size(361, 150)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Pas punten aan"
@@ -267,39 +267,12 @@ Partial Class Edit
         Me.GroupBox2.Controls.Add(Me.Button12)
         Me.GroupBox2.Controls.Add(Me.Button11)
         Me.GroupBox2.Controls.Add(Me.Button10)
-        Me.GroupBox2.Location = New System.Drawing.Point(330, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(391, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(215, 150)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Verander Ronde"
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(18, 108)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(75, 23)
-        Me.Button12.TabIndex = 2
-        Me.Button12.Text = "Ronde 3"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(18, 65)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 23)
-        Me.Button11.TabIndex = 1
-        Me.Button11.Text = "Ronde 2"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(18, 25)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "Ronde 1"
-        Me.Button10.UseVisualStyleBackColor = True
         '
         'Button13
         '
@@ -328,11 +301,38 @@ Partial Class Edit
         Me.Button15.Text = "Ronde 4"
         Me.Button15.UseVisualStyleBackColor = True
         '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(18, 108)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(75, 23)
+        Me.Button12.TabIndex = 2
+        Me.Button12.Text = "Ronde 3"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(18, 65)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(75, 23)
+        Me.Button11.TabIndex = 1
+        Me.Button11.Text = "Ronde 2"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(18, 25)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "Ronde 1"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
         'Edit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(564, 184)
+        Me.ClientSize = New System.Drawing.Size(618, 184)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Edit"
