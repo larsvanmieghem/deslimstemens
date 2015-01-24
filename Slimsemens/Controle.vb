@@ -365,6 +365,16 @@ Public Class Controle
         ronde2foto2.Visible = True
         ronde2foto3.Visible = True
     End Sub
+    Public Sub startronde1()
+        actieveronde = actieverondeenum.driezesnegen
+        GroupBox4.Enabled = True
+        ronde2startronde.Visible = False
+        ronde1actievevraag = 1
+        aandebeurt = aandebeurtenum.Jan
+        ronde2foto1.Visible = False
+        ronde2foto2.Visible = False
+        ronde2foto3.Visible = False
+    End Sub
     '---Ronde2---
 
 

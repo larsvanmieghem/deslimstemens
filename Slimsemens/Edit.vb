@@ -77,4 +77,8 @@
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Controle.startronde2()
     End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Controle.startronde1()
+    End Sub
 End Class
