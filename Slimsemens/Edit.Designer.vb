@@ -257,7 +257,7 @@ Partial Class Edit
         Me.GroupBox1.Size = New System.Drawing.Size(361, 150)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Pas punten aan"
+        Me.GroupBox1.Text = "Pas de punten aan"
         '
         'GroupBox2
         '
@@ -272,7 +272,7 @@ Partial Class Edit
         Me.GroupBox2.Size = New System.Drawing.Size(215, 150)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Verander Ronde"
+        Me.GroupBox2.Text = "Verander de ronde"
         '
         'Button13
         '
