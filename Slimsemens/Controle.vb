@@ -272,7 +272,6 @@ Public Class Controle
                 ronde2start.Enabled = True
             End If
             End If
-
             publiekvenster.synchroniseer()
     End Sub
 
@@ -350,10 +349,16 @@ Public Class Controle
 
         Select Case aandebeurt
             Case aandebeurtenum.Jan
-                If (ronde2antw1chk.Checked = True) And (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked = True) And (ronde2antwoord4chk.Checked = True) Then
-
-                End If
                 jan.Istelleraan = False
+                If (ronde2antw1chk.Checked = True) And (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked = True) And (ronde2antwoord4chk.Checked = True) Then
+                    Select Case ronde2actievevraag
+                        Case ronde2actievevraagem.links
+                            ronde2foto1.Visible = False
+                        Case ronde2actievevraagem.centraal
+                        Case ronde2actievevraagem.rechts
+                    End Select
+                End If
+
             Case aandebeurtenum.Platypus
                 platypus.Istelleraan = False
             Case aandebeurtenum.Miauw
@@ -385,6 +390,7 @@ Public Class Controle
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
+        ronde2actievevraag = ronde2actievevraagem.links
     End Sub
 
     Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
@@ -393,6 +399,7 @@ Public Class Controle
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
+        ronde2actievevraag = ronde2actievevraagem.centraal
     End Sub
 
     Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
@@ -401,6 +408,7 @@ Public Class Controle
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
+        ronde2actievevraag = ronde2actievevraagem.rechts
     End Sub
 
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged

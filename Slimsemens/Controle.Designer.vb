@@ -514,9 +514,9 @@ Partial Class Controle
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents label1 As System.Windows.Forms.Label
     Friend WithEvents labelteller As System.Windows.Forms.Timer
     Friend WithEvents Label2 As System.Windows.Forms.Label
