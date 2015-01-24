@@ -55,7 +55,7 @@ Partial Class Publiek
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(55, 482)
+        Me.Label1.Location = New System.Drawing.Point(35, 497)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 22)
         Me.Label1.TabIndex = 0
@@ -66,7 +66,7 @@ Partial Class Publiek
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(385, 482)
+        Me.Label2.Location = New System.Drawing.Point(414, 497)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(34, 22)
         Me.Label2.TabIndex = 1
@@ -77,7 +77,7 @@ Partial Class Publiek
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(827, 482)
+        Me.Label3.Location = New System.Drawing.Point(808, 497)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(34, 22)
         Me.Label3.TabIndex = 2
@@ -88,7 +88,7 @@ Partial Class Publiek
         Me.Naam1label.AutoSize = True
         Me.Naam1label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam1label.ForeColor = System.Drawing.Color.White
-        Me.Naam1label.Location = New System.Drawing.Point(55, 448)
+        Me.Naam1label.Location = New System.Drawing.Point(35, 460)
         Me.Naam1label.Name = "Naam1label"
         Me.Naam1label.Size = New System.Drawing.Size(43, 22)
         Me.Naam1label.TabIndex = 3
@@ -99,7 +99,7 @@ Partial Class Publiek
         Me.Naam2label.AutoSize = True
         Me.Naam2label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam2label.ForeColor = System.Drawing.Color.White
-        Me.Naam2label.Location = New System.Drawing.Point(357, 448)
+        Me.Naam2label.Location = New System.Drawing.Point(384, 460)
         Me.Naam2label.Name = "Naam2label"
         Me.Naam2label.Size = New System.Drawing.Size(96, 22)
         Me.Naam2label.TabIndex = 4
@@ -110,7 +110,7 @@ Partial Class Publiek
         Me.Naam3label.AutoSize = True
         Me.Naam3label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam3label.ForeColor = System.Drawing.Color.White
-        Me.Naam3label.Location = New System.Drawing.Point(808, 448)
+        Me.Naam3label.Location = New System.Drawing.Point(784, 460)
         Me.Naam3label.Name = "Naam3label"
         Me.Naam3label.Size = New System.Drawing.Size(77, 22)
         Me.Naam3label.TabIndex = 5
@@ -134,9 +134,9 @@ Partial Class Publiek
         Me.GroupBox2.Controls.Add(Me.r1v2)
         Me.GroupBox2.Controls.Add(Me.r1v1)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 382)
+        Me.GroupBox2.Location = New System.Drawing.Point(27, 382)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(849, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(834, 63)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vraag "
@@ -157,7 +157,7 @@ Partial Class Publiek
         Me.r1v14.AutoSize = True
         Me.r1v14.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.r1v14.ForeColor = System.Drawing.Color.White
-        Me.r1v14.Location = New System.Drawing.Point(737, 28)
+        Me.r1v14.Location = New System.Drawing.Point(756, 28)
         Me.r1v14.Name = "r1v14"
         Me.r1v14.Size = New System.Drawing.Size(34, 22)
         Me.r1v14.TabIndex = 13
@@ -168,7 +168,7 @@ Partial Class Publiek
         Me.r1v13.AutoSize = True
         Me.r1v13.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.r1v13.ForeColor = System.Drawing.Color.White
-        Me.r1v13.Location = New System.Drawing.Point(673, 28)
+        Me.r1v13.Location = New System.Drawing.Point(694, 28)
         Me.r1v13.Name = "r1v13"
         Me.r1v13.Size = New System.Drawing.Size(34, 22)
         Me.r1v13.TabIndex = 12
@@ -289,7 +289,7 @@ Partial Class Publiek
         Me.r1v2.AutoSize = True
         Me.r1v2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.r1v2.ForeColor = System.Drawing.Color.White
-        Me.r1v2.Location = New System.Drawing.Point(39, 28)
+        Me.r1v2.Location = New System.Drawing.Point(43, 28)
         Me.r1v2.Name = "r1v2"
         Me.r1v2.Size = New System.Drawing.Size(22, 22)
         Me.r1v2.TabIndex = 1
@@ -321,7 +321,7 @@ Partial Class Publiek
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
-        Me.ClientSize = New System.Drawing.Size(891, 520)
+        Me.ClientSize = New System.Drawing.Size(891, 538)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Naam3label)

@@ -369,11 +369,27 @@ Public Class Controle
         actieveronde = actieverondeenum.driezesnegen
         GroupBox4.Enabled = True
         ronde2startronde.Visible = False
+        ronde2actievevraag = 0
         ronde1actievevraag = 1
         aandebeurt = aandebeurtenum.Jan
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
+        r1v1.BackColor = Color.Transparent
+        r1v2.BackColor = Color.Transparent
+        r1v3.BackColor = Color.Transparent
+        r1v4.BackColor = Color.Transparent
+        r1v5.BackColor = Color.Transparent
+        r1v6.BackColor = Color.Transparent
+        r1v7.BackColor = Color.Transparent
+        r1v8.BackColor = Color.Transparent
+        r1v9.BackColor = Color.Transparent
+        r1v10.BackColor = Color.Transparent
+        r1v11.BackColor = Color.Transparent
+        r1v12.BackColor = Color.Transparent
+        r1v13.BackColor = Color.Transparent
+        r1v14.BackColor = Color.Transparent
+        r1v15.BackColor = Color.Transparent
     End Sub
     '---Ronde2---
 
