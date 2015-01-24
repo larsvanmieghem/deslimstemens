@@ -41,6 +41,7 @@ Public Class Controle
         Miauw = 3
     End Enum
     Public aandebeurt As aandebeurtenum
+    Public origineelaandebeurt As aandebeurtenum 'Duid aan wie als eerste de vraag kreeg
     'Variabelen voor ronde 1
     Public ronde1actievevraag As Short
     Public ronde1rondgaan As Short 'Om te tellen of de vraag bij dezelfde persoon is aanbeland en door niemand juist beantwoord (i.p.v. door te gaan tot iemand het juist heeft)
@@ -53,7 +54,7 @@ Public Class Controle
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
-        Dim lezer As New StreamReader("spelbestand.txt")
+        Dim lezer As New StreamReader("spelbestandje.txt")
         lezer.ReadLine() '---Naam---
         jan.Naam = lezer.ReadLine() 'spelernaam 1
         platypus.Naam = lezer.ReadLine() 'spelernaam 2
@@ -373,6 +374,7 @@ Public Class Controle
         End Select
         If ronde2rondgaan = 4 Then
             ronde2stopvraag()
+            ronde2rondgaan = 1
         Else
             ronde2start.Enabled = True
         End If
@@ -394,7 +396,6 @@ Public Class Controle
         ronde2antwoord2chk.Enabled = True
         ronde2antwoord3chk.Enabled = True
         ronde2antwoord4chk.Enabled = True
-        ronde2rondgaan = 1
     End Sub
 
     Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
@@ -404,6 +405,7 @@ Public Class Controle
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
         ronde2actievevraag = ronde2actievevraagem.links
+        origineelaandebeurt = aandebeurt
     End Sub
     'Subs die ervoor zorgen dat de muis in een handje verandert als je over de afbeedingen gaat 
     Private Sub ronde2foto1_hover(sender As Object, e As EventArgs) Handles ronde2foto1.MouseEnter
@@ -431,6 +433,7 @@ Public Class Controle
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
         ronde2actievevraag = ronde2actievevraagem.centraal
+        origineelaandebeurt = aandebeurt
     End Sub
 
     Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
@@ -440,6 +443,7 @@ Public Class Controle
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
         ronde2actievevraag = ronde2actievevraagem.rechts
+        origineelaandebeurt = aandebeurt
     End Sub
 
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
@@ -607,7 +611,7 @@ Public Class Controle
             Case ronde2actievevraagem.centraal
                 ronde2foto2toonbaar = False
             Case ronde2actievevraagem.rechts
-                ronde2foto2toonbaar = False
+                ronde2foto3toonbaar = False
         End Select
         If ronde2foto1toonbaar = True Then
             ronde2foto1.Visible = True
@@ -619,7 +623,7 @@ Public Class Controle
             ronde2foto3.Visible = True
         End If
 
-        ronde2checkboxvpunten = False 'Zorgt dat de punten er niet terug af gaan bij het unchecken
+        ronde2checkboxvpunten = False 'Zorgt dat de punten er niet terug af gaan bij het unchecken 
 
         ronde2antwoord2chk.Checked = False
         ronde2antw1chk.Checked = False
@@ -635,7 +639,7 @@ Public Class Controle
         ronde2stop.Enabled = False
         GroupBox4.Enabled = False
 
-        Select Case aandebeurt
+        Select Case origineelaandebeurt
             Case aandebeurtenum.Jan
                 aandebeurt = aandebeurtenum.Platypus
             Case aandebeurtenum.Platypus
@@ -644,7 +648,18 @@ Public Class Controle
                 aandebeurt = aandebeurtenum.Jan
         End Select
         If (ronde2foto1toonbaar = False) And (ronde2foto2toonbaar = False) And (ronde2foto3toonbaar = False) Then
-
+            ronde2start.Visible = False
+            ronde2stop.Visible = False
+            ronde2antw1chk.Visible = False
+            ronde2antwoord2chk.Visible = False
+            ronde2antwoord3chk.Visible = False
+            ronde2antwoord4chk.Visible = False
+            Ronde3startronde.Visible = True
+            GroupBox4.Enabled = True
         End If
+    End Sub
+
+    Private Sub Ronde3startronde_Click(sender As Object, e As EventArgs) Handles Ronde3startronde.Click
+        actieveronde = actieverondeenum.Puzzel
     End Sub
 End Class

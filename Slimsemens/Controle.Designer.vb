@@ -65,6 +65,7 @@ Partial Class Controle
         Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
+        Me.Ronde3startronde = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -369,7 +370,7 @@ Partial Class Controle
         'AxWindowsMediaPlayer1
         '
         Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(29, 12)
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(12, 12)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
         Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(306, 237)
@@ -378,13 +379,14 @@ Partial Class Controle
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Ronde3startronde)
         Me.GroupBox4.Controls.Add(Me.ronde2antwoord4chk)
         Me.GroupBox4.Controls.Add(Me.ronde2antwoord3chk)
         Me.GroupBox4.Controls.Add(Me.ronde2antwoord2chk)
         Me.GroupBox4.Controls.Add(Me.ronde2antw1chk)
         Me.GroupBox4.Controls.Add(Me.ronde2stop)
         Me.GroupBox4.Controls.Add(Me.ronde2start)
-        Me.GroupBox4.Location = New System.Drawing.Point(499, 19)
+        Me.GroupBox4.Location = New System.Drawing.Point(500, 19)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(217, 236)
         Me.GroupBox4.TabIndex = 15
@@ -485,6 +487,16 @@ Partial Class Controle
         Me.ronde2foto1.TabIndex = 16
         Me.ronde2foto1.TabStop = False
         '
+        'Ronde3startronde
+        '
+        Me.Ronde3startronde.Location = New System.Drawing.Point(9, 19)
+        Me.Ronde3startronde.Name = "Ronde3startronde"
+        Me.Ronde3startronde.Size = New System.Drawing.Size(194, 68)
+        Me.Ronde3startronde.TabIndex = 6
+        Me.Ronde3startronde.Text = "Start ronde 3"
+        Me.Ronde3startronde.UseVisualStyleBackColor = True
+        Me.Ronde3startronde.Visible = False
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -514,9 +526,9 @@ Partial Class Controle
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents label1 As System.Windows.Forms.Label
     Friend WithEvents labelteller As System.Windows.Forms.Timer
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -558,5 +570,6 @@ End Sub
     Friend WithEvents ronde2foto1 As System.Windows.Forms.PictureBox
     Friend WithEvents ronde2foto2 As System.Windows.Forms.PictureBox
     Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
+    Friend WithEvents Ronde3startronde As System.Windows.Forms.Button
 
 End Class
