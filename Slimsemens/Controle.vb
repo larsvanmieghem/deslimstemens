@@ -405,7 +405,25 @@ Public Class Controle
         ronde2foto3.Visible = False
         ronde2actievevraag = ronde2actievevraagem.links
     End Sub
-
+    'Subs die ervoor zorgen dat de muis in een handje verandert als je over de afbeedingen gaat 
+    Private Sub ronde2foto1_hover(sender As Object, e As EventArgs) Handles ronde2foto1.MouseEnter
+        Me.Cursor = Cursors.Hand
+    End Sub
+    Private Sub ronde2foto2_hover(sender As Object, e As EventArgs) Handles ronde2foto2.MouseEnter
+        Me.Cursor = Cursors.Hand
+    End Sub
+    Private Sub ronde2foto3_hover(sender As Object, e As EventArgs) Handles ronde2foto3.MouseEnter
+        Me.Cursor = Cursors.Hand
+    End Sub
+    Private Sub ronde2foto1_unhover(sender As Object, e As EventArgs) Handles ronde2foto1.MouseLeave
+        Me.Cursor = Cursors.Default
+    End Sub
+    Private Sub ronde2foto2_unhover(sender As Object, e As EventArgs) Handles ronde2foto2.MouseLeave
+        Me.Cursor = Cursors.Default
+    End Sub
+    Private Sub ronde2foto3_unhover(sender As Object, e As EventArgs) Handles ronde2foto3.MouseLeave
+        Me.Cursor = Cursors.Default
+    End Sub
     Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
         GroupBox4.Enabled = True
         AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
