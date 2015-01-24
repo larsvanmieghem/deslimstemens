@@ -53,7 +53,7 @@ Public Class Controle
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
-        Dim lezer As New StreamReader("spelbestandje.txt")
+        Dim lezer As New StreamReader("spelbestand.txt")
         lezer.ReadLine() '---Naam---
         jan.Naam = lezer.ReadLine() 'spelernaam 1
         platypus.Naam = lezer.ReadLine() 'spelernaam 2
