@@ -53,60 +53,66 @@ Partial Class Publiek
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(55, 482)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 24)
+        Me.Label1.Size = New System.Drawing.Size(34, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "60"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(385, 482)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 24)
+        Me.Label2.Size = New System.Drawing.Size(34, 22)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "60"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(827, 482)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 24)
+        Me.Label3.Size = New System.Drawing.Size(34, 22)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "60"
         '
         'Naam1label
         '
         Me.Naam1label.AutoSize = True
-        Me.Naam1label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam1label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam1label.ForeColor = System.Drawing.Color.Gold
         Me.Naam1label.Location = New System.Drawing.Point(55, 448)
         Me.Naam1label.Name = "Naam1label"
-        Me.Naam1label.Size = New System.Drawing.Size(40, 24)
+        Me.Naam1label.Size = New System.Drawing.Size(43, 22)
         Me.Naam1label.TabIndex = 3
         Me.Naam1label.Text = "Jan"
         '
         'Naam2label
         '
         Me.Naam2label.AutoSize = True
-        Me.Naam2label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam2label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam2label.ForeColor = System.Drawing.Color.Gold
         Me.Naam2label.Location = New System.Drawing.Point(357, 448)
         Me.Naam2label.Name = "Naam2label"
-        Me.Naam2label.Size = New System.Drawing.Size(80, 24)
+        Me.Naam2label.Size = New System.Drawing.Size(96, 22)
         Me.Naam2label.TabIndex = 4
         Me.Naam2label.Text = "Platypus"
         '
         'Naam3label
         '
         Me.Naam3label.AutoSize = True
-        Me.Naam3label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam3label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Naam3label.ForeColor = System.Drawing.Color.Gold
         Me.Naam3label.Location = New System.Drawing.Point(808, 448)
         Me.Naam3label.Name = "Naam3label"
-        Me.Naam3label.Size = New System.Drawing.Size(65, 24)
+        Me.Naam3label.Size = New System.Drawing.Size(77, 22)
         Me.Naam3label.TabIndex = 5
         Me.Naam3label.Text = "Miauw"
         '
@@ -127,9 +133,9 @@ Partial Class Publiek
         Me.GroupBox2.Controls.Add(Me.r1v3)
         Me.GroupBox2.Controls.Add(Me.r1v2)
         Me.GroupBox2.Controls.Add(Me.r1v1)
-        Me.GroupBox2.Location = New System.Drawing.Point(58, 382)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 382)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(345, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(849, 63)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vraag "
@@ -275,7 +281,7 @@ Partial Class Publiek
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(58, 12)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(557, 364)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(248, 178)
         Me.AxWindowsMediaPlayer1.TabIndex = 15
         Me.AxWindowsMediaPlayer1.Visible = False
         '
@@ -283,6 +289,7 @@ Partial Class Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(891, 520)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.GroupBox2)

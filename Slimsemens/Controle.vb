@@ -21,6 +21,9 @@ Public Class Controle
     Public antwoordenronde5video2(5, 2) As String
     Public antwoordenronde5video3(5, 2) As String
     Public ticknaspelen As Short
+    Public ronde2foto1toonbaar = True
+    Public ronde2foto2toonbaar = True
+    Public ronde2foto3toonbaar = True
     Public Enum actieverondeenum As Short
         driezesnegen = 1
         Opendeur = 2
@@ -344,13 +347,7 @@ Public Class Controle
         actieveronde = actieverondeenum.Opendeur
         GroupBox4.Enabled = False
         ronde2startronde.Visible = False
-        If (jan.Seconden < platypus.Seconden) And (jan.Seconden < miauw.Seconden) Then
-            aandebeurt = aandebeurtenum.Jan
-        ElseIf (platypus.Seconden < jan.Seconden) And (platypus.Seconden < miauw.Seconden) Then
-            aandebeurt = aandebeurtenum.Platypus
-        ElseIf (miauw.Seconden < jan.Seconden) And (miauw.Seconden < platypus.Seconden) Then
-            aandebeurt = aandebeurtenum.Miauw
-        End If
+        aandebeurt = aandebeurtenum.Jan
         ronde2foto1.Visible = True
         ronde2foto2.Visible = True
         ronde2foto3.Visible = True
@@ -437,6 +434,9 @@ Public Class Controle
                     miauw.Seconden += 20
                     miauw.Istelleraan = True
             End Select
+            If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                ronde2stopvraag()
+            End If
         ElseIf ronde2antw1chk.Checked = False Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -470,6 +470,9 @@ Public Class Controle
                     miauw.Seconden += 20
                     miauw.Istelleraan = True
             End Select
+            If (ronde2antw1chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                ronde2stopvraag()
+            End If
         ElseIf ronde2antwoord2chk.Checked = False Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -504,6 +507,9 @@ Public Class Controle
                     miauw.Seconden += 20
                     miauw.Istelleraan = True
             End Select
+            If (ronde2antwoord2chk.Checked = True) And (ronde2antw1chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                ronde2stopvraag()
+            End If
         ElseIf ronde2antwoord3chk.Checked = False Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -538,6 +544,9 @@ Public Class Controle
                     miauw.Seconden += 20
                     miauw.Istelleraan = True
             End Select
+            If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antw1chk.Checked) Then
+                ronde2stopvraag()
+            End If
         ElseIf ronde2antwoord4chk.Checked = False Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -553,6 +562,53 @@ Public Class Controle
                     miauw.Seconden -= 20
                     miauw.Istelleraan = True
             End Select
+        End If
+    End Sub
+
+    Public Sub ronde2stopvraag()
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
+        Select Case ronde2actievevraag
+            Case ronde2actievevraagem.links
+                ronde2foto1toonbaar = False
+            Case ronde2actievevraagem.centraal
+                ronde2foto2toonbaar = False
+            Case ronde2actievevraagem.rechts
+                ronde2foto2toonbaar = False
+        End Select
+        If ronde2foto1toonbaar = True Then
+            ronde2foto1.Visible = True
+        End If
+        If ronde2foto2toonbaar = True Then
+            ronde2foto2.Visible = True
+        End If
+        If ronde2foto3toonbaar = True Then
+            ronde2foto3.Visible = True
+        End If
+        ronde2antwoord2chk.Checked = False
+        ronde2antw1chk.Checked = False
+        ronde2antwoord3chk.Checked = False
+        ronde2antwoord4chk.Checked = False
+
+        ronde2antwoord2chk.Enabled = False
+        ronde2antw1chk.Enabled = False
+        ronde2antwoord3chk.Enabled = False
+        ronde2antwoord4chk.Enabled = False
+        ronde2start.Enabled = False
+        ronde2stop.Enabled = False
+        GroupBox4.Enabled = False
+
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                aandebeurt = aandebeurtenum.Platypus
+            Case aandebeurtenum.Platypus
+                aandebeurt = aandebeurtenum.Miauw
+            Case aandebeurtenum.Miauw
+                aandebeurt = aandebeurtenum.Jan
+        End Select
+        If (ronde2foto1toonbaar = False) And (ronde2foto2toonbaar = False) And (ronde2foto3toonbaar = False) Then
+
         End If
     End Sub
 End Class
