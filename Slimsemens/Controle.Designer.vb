@@ -56,6 +56,7 @@ Partial Class Controle
         Me.ronde1antwoordtekstlbl = New System.Windows.Forms.Label()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Ronde3startronde = New System.Windows.Forms.Button()
         Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord3chk = New System.Windows.Forms.CheckBox()
         Me.ronde2antwoord2chk = New System.Windows.Forms.CheckBox()
@@ -65,7 +66,7 @@ Partial Class Controle
         Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
-        Me.Ronde3startronde = New System.Windows.Forms.Button()
+        Me.Edit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -92,7 +93,7 @@ Partial Class Controle
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(326, 42)
+        Me.Label2.Location = New System.Drawing.Point(257, 42)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(19, 13)
         Me.Label2.TabIndex = 1
@@ -101,7 +102,7 @@ Partial Class Controle
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(613, 42)
+        Me.Label3.Location = New System.Drawing.Point(464, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(19, 13)
         Me.Label3.TabIndex = 2
@@ -119,7 +120,7 @@ Partial Class Controle
         'Naam2label
         '
         Me.Naam2label.AutoSize = True
-        Me.Naam2label.Location = New System.Drawing.Point(326, 16)
+        Me.Naam2label.Location = New System.Drawing.Point(257, 16)
         Me.Naam2label.Name = "Naam2label"
         Me.Naam2label.Size = New System.Drawing.Size(47, 13)
         Me.Naam2label.TabIndex = 4
@@ -128,7 +129,7 @@ Partial Class Controle
         'Naam3label
         '
         Me.Naam3label.AutoSize = True
-        Me.Naam3label.Location = New System.Drawing.Point(613, 16)
+        Me.Naam3label.Location = New System.Drawing.Point(464, 16)
         Me.Naam3label.Name = "Naam3label"
         Me.Naam3label.Size = New System.Drawing.Size(38, 13)
         Me.Naam3label.TabIndex = 5
@@ -144,7 +145,7 @@ Partial Class Controle
         Me.GroupBox1.Controls.Add(Me.label1)
         Me.GroupBox1.Location = New System.Drawing.Point(29, 335)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(662, 66)
+        Me.GroupBox1.Size = New System.Drawing.Size(565, 66)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Seconden"
@@ -394,6 +395,16 @@ Partial Class Controle
         Me.GroupBox4.Text = "Bedieningspaneel ronde 2"
         Me.GroupBox4.Visible = False
         '
+        'Ronde3startronde
+        '
+        Me.Ronde3startronde.Location = New System.Drawing.Point(9, 19)
+        Me.Ronde3startronde.Name = "Ronde3startronde"
+        Me.Ronde3startronde.Size = New System.Drawing.Size(194, 68)
+        Me.Ronde3startronde.TabIndex = 6
+        Me.Ronde3startronde.Text = "Start ronde 3"
+        Me.Ronde3startronde.UseVisualStyleBackColor = True
+        Me.Ronde3startronde.Visible = False
+        '
         'ronde2antwoord4chk
         '
         Me.ronde2antwoord4chk.AutoSize = True
@@ -487,21 +498,21 @@ Partial Class Controle
         Me.ronde2foto1.TabIndex = 16
         Me.ronde2foto1.TabStop = False
         '
-        'Ronde3startronde
+        'Edit
         '
-        Me.Ronde3startronde.Location = New System.Drawing.Point(9, 19)
-        Me.Ronde3startronde.Name = "Ronde3startronde"
-        Me.Ronde3startronde.Size = New System.Drawing.Size(194, 68)
-        Me.Ronde3startronde.TabIndex = 6
-        Me.Ronde3startronde.Text = "Start ronde 3"
-        Me.Ronde3startronde.UseVisualStyleBackColor = True
-        Me.Ronde3startronde.Visible = False
+        Me.Edit.Location = New System.Drawing.Point(613, 351)
+        Me.Edit.Name = "Edit"
+        Me.Edit.Size = New System.Drawing.Size(78, 38)
+        Me.Edit.TabIndex = 19
+        Me.Edit.Text = "Edit"
+        Me.Edit.UseVisualStyleBackColor = True
         '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(729, 413)
+        Me.Controls.Add(Me.Edit)
         Me.Controls.Add(Me.ronde2foto3)
         Me.Controls.Add(Me.ronde2foto2)
         Me.Controls.Add(Me.ronde2foto1)
@@ -571,5 +582,6 @@ Partial Class Controle
     Friend WithEvents ronde2foto2 As System.Windows.Forms.PictureBox
     Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
     Friend WithEvents Ronde3startronde As System.Windows.Forms.Button
+    Friend WithEvents Edit As System.Windows.Forms.Button
 
 End Class

@@ -300,8 +300,14 @@ Public Class Controle
             publiekvenster.synchroniseer()
     End Sub
 
+    '--Editwindow--
 
-
+    Private Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
+        Dim editvenster As New Edit
+        editvenster.Enabled = True
+        editvenster.Visible = True
+        editvenster.initieer()
+    End Sub
     '---Ronde1---
 
     Private Sub ronde1j_Click(sender As Object, e As EventArgs) Handles ronde1j.Click 'Speler heeft het antwoord juist (ronde 1)s
