@@ -203,7 +203,24 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = True
                 AxWindowsMediaPlayer1.Visible = True
-               
+
+                Select Case ronde2actievevraag
+                    Case ronde2actievevraagem.links
+                        ronde2antw1chk.Text = antwoordenronde2links(1, 1)
+                        ronde2antwoord2chk.Text = antwoordenronde2links(2, 1)
+                        ronde2antwoord3chk.Text = antwoordenronde2links(3, 1)
+                        ronde2antwoord4chk.Text = antwoordenronde2links(4, 1)
+                    Case ronde2actievevraagem.centraal
+                        ronde2antw1chk.Text = antwoordenronde2centraal(1, 1)
+                        ronde2antwoord2chk.Text = antwoordenronde2centraal(2, 1)
+                        ronde2antwoord3chk.Text = antwoordenronde2centraal(3, 1)
+                        ronde2antwoord4chk.Text = antwoordenronde2centraal(4, 1)
+                    Case ronde2actievevraagem.rechts
+                        ronde2antw1chk.Text = antwoordenronde2rechts(1, 1)
+                        ronde2antwoord2chk.Text = antwoordenronde2rechts(2, 1)
+                        ronde2antwoord3chk.Text = antwoordenronde2rechts(3, 1)
+                        ronde2antwoord4chk.Text = antwoordenronde2rechts(4, 1)
+                End Select
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
@@ -271,7 +288,9 @@ Public Class Controle
             If ticknaspelen < 2 Then
                 ronde2start.Enabled = True
             End If
-            End If
+        End If
+       
+
             publiekvenster.synchroniseer()
     End Sub
 
@@ -350,15 +369,6 @@ Public Class Controle
         Select Case aandebeurt
             Case aandebeurtenum.Jan
                 jan.Istelleraan = False
-                If (ronde2antw1chk.Checked = True) And (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked = True) And (ronde2antwoord4chk.Checked = True) Then
-                    Select Case ronde2actievevraag
-                        Case ronde2actievevraagem.links
-                            ronde2foto1.Visible = False
-                        Case ronde2actievevraagem.centraal
-                        Case ronde2actievevraagem.rechts
-                    End Select
-                End If
-
             Case aandebeurtenum.Platypus
                 platypus.Istelleraan = False
             Case aandebeurtenum.Miauw
