@@ -73,4 +73,8 @@
         Controle.miauw.Seconden = Controle.miauw.Seconden + 10
         initieer()
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Controle.startronde2()
+    End Sub
 End Class

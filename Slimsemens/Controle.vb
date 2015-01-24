@@ -353,6 +353,10 @@ Public Class Controle
     End Sub
 
     Private Sub ronde2startronde_Click(sender As Object, e As EventArgs) Handles ronde2startronde.Click
+        startronde2()
+    End Sub
+
+    Public Sub startronde2()
         actieveronde = actieverondeenum.Opendeur
         GroupBox4.Enabled = False
         ronde2startronde.Visible = False
@@ -362,7 +366,7 @@ Public Class Controle
         ronde2foto3.Visible = True
     End Sub
     '---Ronde2---
-  
+
 
     Private Sub ronde2stop_Click(sender As Object, e As EventArgs) Handles ronde2stop.Click
         ronde2stop.Enabled = False
@@ -370,13 +374,13 @@ Public Class Controle
         platypus.Istelleraan = False
         miauw.Istelleraan = False
         ronde2rondgaan += 1
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    aandebeurt = aandebeurtenum.Platypus
-                Case aandebeurtenum.Platypus
-                    aandebeurt = aandebeurtenum.Miauw
-                Case aandebeurtenum.Miauw
-                    aandebeurt = aandebeurtenum.Jan
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                aandebeurt = aandebeurtenum.Platypus
+            Case aandebeurtenum.Platypus
+                aandebeurt = aandebeurtenum.Miauw
+            Case aandebeurtenum.Miauw
+                aandebeurt = aandebeurtenum.Jan
         End Select
         If ronde2rondgaan = 4 Then
             ronde2stopvraag()
