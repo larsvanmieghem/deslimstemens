@@ -21,9 +21,11 @@ Public Class Controle
     Public antwoordenronde5video2(5, 2) As String
     Public antwoordenronde5video3(5, 2) As String
     Public ticknaspelen As Short
-    Public ronde2foto1toonbaar = True
-    Public ronde2foto2toonbaar = True
-    Public ronde2foto3toonbaar = True
+    Public ronde2foto1toonbaar As Boolean = True
+    Public ronde2foto2toonbaar As Boolean = True
+    Public ronde2foto3toonbaar As Boolean = True
+    Public ronde2checkboxvpunten As Boolean = True
+    Public ronde2rondgaan As Short = 1
     Public Enum actieverondeenum As Short
         driezesnegen = 1
         Opendeur = 2
@@ -357,20 +359,23 @@ Public Class Controle
 
     Private Sub ronde2stop_Click(sender As Object, e As EventArgs) Handles ronde2stop.Click
         ronde2stop.Enabled = False
-        GroupBox4.Enabled = False
-        ronde2antw1chk.Enabled = False
-        ronde2antwoord2chk.Enabled = False
-        ronde2antwoord3chk.Enabled = False
-        ronde2antwoord4chk.Enabled = False
-
-        Select Case aandebeurt
-            Case aandebeurtenum.Jan
-                jan.Istelleraan = False
-            Case aandebeurtenum.Platypus
-                platypus.Istelleraan = False
-            Case aandebeurtenum.Miauw
-                miauw.Istelleraan = False
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
+        ronde2rondgaan += 1
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    aandebeurt = aandebeurtenum.Platypus
+                Case aandebeurtenum.Platypus
+                    aandebeurt = aandebeurtenum.Miauw
+                Case aandebeurtenum.Miauw
+                    aandebeurt = aandebeurtenum.Jan
         End Select
+        If ronde2rondgaan = 4 Then
+            ronde2stopvraag()
+        Else
+            ronde2start.Enabled = True
+        End If
 
     End Sub
 
@@ -389,6 +394,7 @@ Public Class Controle
         ronde2antwoord2chk.Enabled = True
         ronde2antwoord3chk.Enabled = True
         ronde2antwoord4chk.Enabled = True
+        ronde2rondgaan = 1
     End Sub
 
     Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
@@ -419,149 +425,157 @@ Public Class Controle
     End Sub
 
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
-        If ronde2antw1chk.Checked = True Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden += 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden += 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden += 20
-                    miauw.Istelleraan = True
-            End Select
-            If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
-                ronde2stopvraag()
+        If ronde2checkboxvpunten = True Then
+            If ronde2antw1chk.Checked = True Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden += 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden += 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden += 20
+                        miauw.Istelleraan = True
+                End Select
+                If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                    ronde2stopvraag()
+                End If
+            ElseIf ronde2antw1chk.Checked = False Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden -= 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden -= 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden -= 20
+                        miauw.Istelleraan = True
+                End Select
             End If
-        ElseIf ronde2antw1chk.Checked = False Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden -= 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden -= 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden -= 20
-                    miauw.Istelleraan = True
-            End Select
         End If
     End Sub
     Private Sub ronde2antwoord2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord2chk.CheckedChanged
-        If ronde2antwoord2chk.Checked = True Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden += 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden += 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden += 20
-                    miauw.Istelleraan = True
-            End Select
-            If (ronde2antw1chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
-                ronde2stopvraag()
+        If ronde2checkboxvpunten = True Then
+            If ronde2antwoord2chk.Checked = True Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden += 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden += 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden += 20
+                        miauw.Istelleraan = True
+                End Select
+                If (ronde2antw1chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                    ronde2stopvraag()
+                End If
+            ElseIf ronde2antwoord2chk.Checked = False Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden -= 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden -= 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden -= 20
+                        miauw.Istelleraan = True
+                End Select
             End If
-        ElseIf ronde2antwoord2chk.Checked = False Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden -= 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden -= 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden -= 20
-                    miauw.Istelleraan = True
-            End Select
         End If
     End Sub
 
     Private Sub ronde2antwoord3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord3chk.CheckedChanged
-        If ronde2antwoord3chk.Checked = True Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden += 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden += 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden += 20
-                    miauw.Istelleraan = True
-            End Select
-            If (ronde2antwoord2chk.Checked = True) And (ronde2antw1chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
-                ronde2stopvraag()
+        If ronde2checkboxvpunten = True Then
+            If ronde2antwoord3chk.Checked = True Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden += 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden += 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden += 20
+                        miauw.Istelleraan = True
+                End Select
+                If (ronde2antwoord2chk.Checked = True) And (ronde2antw1chk.Checked) = True And (ronde2antwoord4chk.Checked) Then
+                    ronde2stopvraag()
+                End If
+            ElseIf ronde2antwoord3chk.Checked = False Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden -= 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden -= 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden -= 20
+                        miauw.Istelleraan = True
+                End Select
             End If
-        ElseIf ronde2antwoord3chk.Checked = False Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden -= 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden -= 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden -= 20
-                    miauw.Istelleraan = True
-            End Select
         End If
     End Sub
 
     Private Sub ronde2antwoord4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord4chk.CheckedChanged
-        If ronde2antwoord4chk.Checked = True Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden += 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden += 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden += 20
-                    miauw.Istelleraan = True
-            End Select
-            If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antw1chk.Checked) Then
-                ronde2stopvraag()
+        If ronde2checkboxvpunten = True Then
+            If ronde2antwoord4chk.Checked = True Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden += 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden += 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden += 20
+                        miauw.Istelleraan = True
+                End Select
+                If (ronde2antwoord2chk.Checked = True) And (ronde2antwoord3chk.Checked) = True And (ronde2antw1chk.Checked) Then
+                    ronde2stopvraag()
+                End If
+            ElseIf ronde2antwoord4chk.Checked = False Then
+                Select Case aandebeurt
+                    Case aandebeurtenum.Jan
+                        jan.Istelleraan = False
+                        jan.Seconden -= 20
+                        jan.Istelleraan = True
+                    Case aandebeurtenum.Platypus
+                        platypus.Istelleraan = False
+                        platypus.Seconden -= 20
+                        platypus.Istelleraan = True
+                    Case aandebeurtenum.Miauw
+                        miauw.Istelleraan = False
+                        miauw.Seconden -= 20
+                        miauw.Istelleraan = True
+                End Select
             End If
-        ElseIf ronde2antwoord4chk.Checked = False Then
-            Select Case aandebeurt
-                Case aandebeurtenum.Jan
-                    jan.Istelleraan = False
-                    jan.Seconden -= 20
-                    jan.Istelleraan = True
-                Case aandebeurtenum.Platypus
-                    platypus.Istelleraan = False
-                    platypus.Seconden -= 20
-                    platypus.Istelleraan = True
-                Case aandebeurtenum.Miauw
-                    miauw.Istelleraan = False
-                    miauw.Seconden -= 20
-                    miauw.Istelleraan = True
-            End Select
         End If
     End Sub
 
@@ -586,10 +600,14 @@ Public Class Controle
         If ronde2foto3toonbaar = True Then
             ronde2foto3.Visible = True
         End If
+
+        ronde2checkboxvpunten = False 'Zorgt dat de punten er niet terug af gaan bij het unchecken
+
         ronde2antwoord2chk.Checked = False
         ronde2antw1chk.Checked = False
         ronde2antwoord3chk.Checked = False
         ronde2antwoord4chk.Checked = False
+        ronde2checkboxvpunten = True
 
         ronde2antwoord2chk.Enabled = False
         ronde2antw1chk.Enabled = False

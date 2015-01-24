@@ -133,6 +133,7 @@ Partial Class Publiek
         Me.GroupBox2.Controls.Add(Me.r1v3)
         Me.GroupBox2.Controls.Add(Me.r1v2)
         Me.GroupBox2.Controls.Add(Me.r1v1)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(12, 382)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(849, 63)
