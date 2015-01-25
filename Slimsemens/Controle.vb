@@ -51,7 +51,12 @@ Public Class Controle
         rechts = 3
     End Enum
     Public ronde2actievevraag As ronde2actievevraagem
-
+    Public Enum ronde3actievevraagem As Short
+        puzzelvoorjan = 1
+        puzzelvoorplatypus = 2
+        puzzelvoormiauw = 3
+    End Enum
+    Public ronde3actievevraag As ronde3actievevraagem
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
         Dim lezer As New StreamReader("spelbestandje.txt")
@@ -201,6 +206,8 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde1/6: 3-6-9"
 
             Case actieverondeenum.Opendeur
@@ -209,6 +216,8 @@ Public Class Controle
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = True
                 AxWindowsMediaPlayer1.Visible = True
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
 
                 Select Case ronde2actievevraag
                     Case ronde2actievevraagem.links
@@ -240,7 +249,104 @@ Public Class Controle
                 ronde2foto3.Visible = False
 
                 GroupBox5.Visible = True
-                TableLayoutPanel1.Visible = True
+                GroupBox6.Visible = True
+
+                Select Case ronde3actievevraag
+                    Case ronde3actievevraagem.puzzelvoorjan
+                        Ronde3chkantw1.Text = antwoordenronde3puzzel1(1, 1)
+                        Ronde3chkantw2.Text = antwoordenronde3puzzel1(2, 1)
+                        Ronde3chkantw3.Text = antwoordenronde3puzzel1(3, 1)
+                        'Antwoord 1
+                        ronde3label3.Text = tipsronde3puzzel1(1, 1) '314
+                        ronde3label1.Text = tipsronde3puzzel1(2, 1)
+                        ronde3label4.Text = tipsronde3puzzel1(3, 1)
+                        ronde3label3.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label4.ForeColor = Ronde3chkantw1.ForeColor
+                        'Antwoord2
+                        ronde3label2.Text = tipsronde3puzzel1(4, 1) '256
+                        ronde3label5.Text = tipsronde3puzzel1(5, 1)
+                        ronde3label6.Text = tipsronde3puzzel1(6, 1)
+                        ronde3label2.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label5.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label6.ForeColor = Ronde3chkantw2.ForeColor
+                        'Antwoord3
+                        ronde3label9.Text = tipsronde3puzzel1(7, 1) '978
+                        ronde3label8.Text = tipsronde3puzzel1(8, 1)
+                        ronde3label7.Text = tipsronde3puzzel1(9, 1)
+                        ronde3label9.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label8.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label7.ForeColor = Ronde3chkantw3.ForeColor
+
+
+                    Case ronde3actievevraagem.puzzelvoorplatypus
+                        Ronde3chkantw1.Text = antwoordenronde3puzzel2(1, 1)
+                        Ronde3chkantw2.Text = antwoordenronde3puzzel2(2, 1)
+                        Ronde3chkantw3.Text = antwoordenronde3puzzel2(3, 1)
+                        'Antwoord 1
+                        ronde3label2.Text = tipsronde3puzzel2(1, 1) '271
+                        ronde3label7.Text = tipsronde3puzzel2(2, 1)
+                        ronde3label1.Text = tipsronde3puzzel2(3, 1)
+                        ronde3label2.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label7.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
+                        'Antwoord 2
+                        ronde3label8.Text = tipsronde3puzzel2(4, 1) '843
+                        ronde3label4.Text = tipsronde3puzzel2(5, 1)
+                        ronde3label3.Text = tipsronde3puzzel2(6, 1)
+                        ronde3label8.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label4.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label3.ForeColor = Ronde3chkantw2.ForeColor
+                        'Antwoord3
+                        ronde3label5.Text = tipsronde3puzzel2(7, 1) '596
+                        ronde3label9.Text = tipsronde3puzzel2(8, 1)
+                        ronde3label6.Text = tipsronde3puzzel2(9, 1)
+                        ronde3label5.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label9.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label6.ForeColor = Ronde3chkantw3.ForeColor
+
+
+
+                    Case ronde3actievevraagem.puzzelvoormiauw
+                        Ronde3chkantw1.Text = antwoordenronde3puzzel3(1, 1)
+                        Ronde3chkantw2.Text = antwoordenronde3puzzel3(2, 1)
+                        Ronde3chkantw3.Text = antwoordenronde3puzzel3(3, 1)
+                        'Antwoord 1
+                        ronde3label1.Text = tipsronde3puzzel3(1, 1) '173
+                        ronde3label7.Text = tipsronde3puzzel3(2, 1)
+                        ronde3label3.Text = tipsronde3puzzel3(3, 1)
+                        ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label7.ForeColor = Ronde3chkantw1.ForeColor
+                        ronde3label3.ForeColor = Ronde3chkantw1.ForeColor
+                        'Antwoord 2
+                        ronde3label4.Text = tipsronde3puzzel3(4, 1) '498
+                        ronde3label9.Text = tipsronde3puzzel3(5, 1)
+                        ronde3label8.Text = tipsronde3puzzel3(6, 1)
+                        ronde3label4.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label9.ForeColor = Ronde3chkantw2.ForeColor
+                        ronde3label8.ForeColor = Ronde3chkantw2.ForeColor
+                        'Antwoord3
+                        ronde3label2.Text = tipsronde3puzzel3(7, 1) '265
+                        ronde3label6.Text = tipsronde3puzzel3(8, 1)
+                        ronde3label5.Text = tipsronde3puzzel3(9, 1)
+                        ronde3label2.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label6.ForeColor = Ronde3chkantw3.ForeColor
+                        ronde3label5.ForeColor = Ronde3chkantw3.ForeColor
+
+
+
+
+                End Select
+
+
+
+
+
+
+
+
+
+
                 ToolStripStatusLabel1.Text = "Ronde3/6: Puzzel"
 
             Case actieverondeenum.Galerij
@@ -252,6 +358,8 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde4/6: Galerij"
 
             Case actieverondeenum.Collectiefgeheugen
@@ -263,6 +371,8 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde5/6: Colleftief Geheugen"
 
             Case actieverondeenum.Finale
@@ -274,6 +384,8 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde 6/6: finale"
         End Select
 
@@ -706,5 +818,6 @@ Public Class Controle
 
     Private Sub Ronde3startronde_Click(sender As Object, e As EventArgs) Handles Ronde3startronde.Click
         actieveronde = actieverondeenum.Puzzel
+        ronde3actievevraag = ronde3actievevraagem.puzzelvoorjan
     End Sub
 End Class
