@@ -67,6 +67,19 @@ Partial Class Controle
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
         Me.Edit = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ronde3label1 = New System.Windows.Forms.Label()
+        Me.ronde3label2 = New System.Windows.Forms.Label()
+        Me.ronde3label4 = New System.Windows.Forms.Label()
+        Me.ronde3label5 = New System.Windows.Forms.Label()
+        Me.ronde3label3 = New System.Windows.Forms.Label()
+        Me.ronde3label7 = New System.Windows.Forms.Label()
+        Me.ronde3label8 = New System.Windows.Forms.Label()
+        Me.ronde3label6 = New System.Windows.Forms.Label()
+        Me.ronde3label9 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -75,6 +88,8 @@ Partial Class Controle
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'label1
@@ -507,11 +522,149 @@ Partial Class Controle
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label2, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label4, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label5, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label3, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label7, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label8, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label6, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ronde3label9, 2, 2)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 12)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(306, 237)
+        Me.TableLayoutPanel1.TabIndex = 20
+        Me.TableLayoutPanel1.Visible = False
+        '
+        'ronde3label1
+        '
+        Me.ronde3label1.AutoSize = True
+        Me.ronde3label1.Location = New System.Drawing.Point(3, 0)
+        Me.ronde3label1.Name = "ronde3label1"
+        Me.ronde3label1.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label1.TabIndex = 0
+        Me.ronde3label1.Text = "Label1"
+        '
+        'ronde3label2
+        '
+        Me.ronde3label2.AutoSize = True
+        Me.ronde3label2.Location = New System.Drawing.Point(104, 0)
+        Me.ronde3label2.Name = "ronde3label2"
+        Me.ronde3label2.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label2.TabIndex = 1
+        Me.ronde3label2.Text = "Label2"
+        Me.ronde3label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ronde3label4
+        '
+        Me.ronde3label4.AutoSize = True
+        Me.ronde3label4.Location = New System.Drawing.Point(3, 78)
+        Me.ronde3label4.Name = "ronde3label4"
+        Me.ronde3label4.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label4.TabIndex = 2
+        Me.ronde3label4.Text = "Label4"
+        '
+        'ronde3label5
+        '
+        Me.ronde3label5.AutoSize = True
+        Me.ronde3label5.Location = New System.Drawing.Point(104, 78)
+        Me.ronde3label5.Name = "ronde3label5"
+        Me.ronde3label5.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label5.TabIndex = 3
+        Me.ronde3label5.Text = "Label5"
+        '
+        'ronde3label3
+        '
+        Me.ronde3label3.AutoSize = True
+        Me.ronde3label3.Location = New System.Drawing.Point(205, 0)
+        Me.ronde3label3.Name = "ronde3label3"
+        Me.ronde3label3.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label3.TabIndex = 4
+        Me.ronde3label3.Text = "Label3"
+        '
+        'ronde3label7
+        '
+        Me.ronde3label7.AutoSize = True
+        Me.ronde3label7.Location = New System.Drawing.Point(3, 156)
+        Me.ronde3label7.Name = "ronde3label7"
+        Me.ronde3label7.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label7.TabIndex = 5
+        Me.ronde3label7.Text = "Label7"
+        '
+        'ronde3label8
+        '
+        Me.ronde3label8.AutoSize = True
+        Me.ronde3label8.Location = New System.Drawing.Point(104, 156)
+        Me.ronde3label8.Name = "ronde3label8"
+        Me.ronde3label8.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label8.TabIndex = 6
+        Me.ronde3label8.Text = "Label8"
+        '
+        'ronde3label6
+        '
+        Me.ronde3label6.AutoSize = True
+        Me.ronde3label6.Location = New System.Drawing.Point(205, 78)
+        Me.ronde3label6.Name = "ronde3label6"
+        Me.ronde3label6.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label6.TabIndex = 7
+        Me.ronde3label6.Text = "Label6"
+        '
+        'ronde3label9
+        '
+        Me.ronde3label9.AutoSize = True
+        Me.ronde3label9.Location = New System.Drawing.Point(205, 156)
+        Me.ronde3label9.Name = "ronde3label9"
+        Me.ronde3label9.Size = New System.Drawing.Size(39, 13)
+        Me.ronde3label9.TabIndex = 8
+        Me.ronde3label9.Text = "Label9"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Location = New System.Drawing.Point(499, 12)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(218, 243)
+        Me.GroupBox5.TabIndex = 21
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Bedieningspaneel ronde 3"
+        Me.GroupBox5.Visible = False
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 403)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(730, 22)
+        Me.StatusStrip1.TabIndex = 22
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(121, 17)
+        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(729, 413)
+        Me.ClientSize = New System.Drawing.Size(730, 425)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Edit)
         Me.Controls.Add(Me.ronde2foto3)
         Me.Controls.Add(Me.ronde2foto2)
@@ -536,6 +689,10 @@ Partial Class Controle
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -583,5 +740,18 @@ Partial Class Controle
     Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
     Friend WithEvents Ronde3startronde As System.Windows.Forms.Button
     Friend WithEvents Edit As System.Windows.Forms.Button
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents ronde3label1 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label2 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label4 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label5 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label3 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label7 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label8 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label6 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label9 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
 
 End Class

@@ -201,7 +201,7 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
-
+                ToolStripStatusLabel1.Text = "Ronde1/6: 3-6-9"
 
             Case actieverondeenum.Opendeur
                 GroupBox2.Visible = False
@@ -227,6 +227,7 @@ Public Class Controle
                         ronde2antwoord3chk.Text = antwoordenronde2rechts(3, 1)
                         ronde2antwoord4chk.Text = antwoordenronde2rechts(4, 1)
                 End Select
+                ToolStripStatusLabel1.Text = "Ronde2/6: Open Deur"
 
             Case actieverondeenum.Puzzel
                 GroupBox2.Visible = False
@@ -238,6 +239,10 @@ Public Class Controle
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
 
+                GroupBox5.Visible = True
+                TableLayoutPanel1.Visible = True
+                ToolStripStatusLabel1.Text = "Ronde3/6: Puzzel"
+
             Case actieverondeenum.Galerij
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
@@ -247,6 +252,7 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                ToolStripStatusLabel1.Text = "Ronde4/6: Galerij"
 
             Case actieverondeenum.Collectiefgeheugen
                 GroupBox2.Visible = False
@@ -257,6 +263,7 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                ToolStripStatusLabel1.Text = "Ronde5/6: Colleftief Geheugen"
 
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
@@ -267,7 +274,9 @@ Public Class Controle
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
+                ToolStripStatusLabel1.Text = "Ronde 6/6: finale"
         End Select
+
         'Toont wie er aan de beurt is
         Select Case aandebeurt
             Case aandebeurtenum.Jan
