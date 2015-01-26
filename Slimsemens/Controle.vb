@@ -84,9 +84,21 @@ Public Class Controle
         For i = 1 To 3
             antwoordenronde3puzzel1(i, 1) = lezer.ReadLine() 'Antwoorden eerste puzzel derde ronde
         Next
+        lezer.ReadLine() 'Ronde3puzzel1tips---
+        For i = 1 To 9
+            tipsronde3puzzel1(i, 1) = lezer.ReadLine() 'Tips puzzel 1
+        Next
         lezer.ReadLine() '---Ronde3puzzel2---
         For i = 1 To 3
             antwoordenronde3puzzel2(i, 1) = lezer.ReadLine() 'Antwoorden tweede puzzel derde ronde
+        Next
+        lezer.ReadLine() 'Ronde3puzzel2tips---
+        For i = 1 To 9
+            tipsronde3puzzel2(i, 1) = lezer.ReadLine() 'Tips puzzel 2
+        Next
+        lezer.ReadLine() 'Ronde3puzzel3tips---
+        For i = 1 To 9
+            tipsronde3puzzel3(i, 1) = lezer.ReadLine() 'Tips puzzel 3
         Next
         lezer.ReadLine() '---Ronde3puzzel3---
         For i = 1 To 3
@@ -416,9 +428,9 @@ Public Class Controle
                 ronde2start.Enabled = True
             End If
         End If
-       
 
-            publiekvenster.synchroniseer()
+
+        publiekvenster.synchroniseer()
     End Sub
 
     '--Editwindow--
@@ -815,9 +827,22 @@ Public Class Controle
             GroupBox4.Enabled = True
         End If
     End Sub
-
+    '---Ronde 3---
     Private Sub Ronde3startronde_Click(sender As Object, e As EventArgs) Handles Ronde3startronde.Click
+        startronde3()
+    End Sub
+    Public Sub startronde3()
         actieveronde = actieverondeenum.Puzzel
         ronde3actievevraag = ronde3actievevraagem.puzzelvoorjan
     End Sub
+    Public Sub startronde4()
+        actieveronde = actieverondeenum.Galerij
+    End Sub
+    Public Sub startronde5()
+        actieveronde = actieverondeenum.Collectiefgeheugen
+    End Sub
+    Public Sub startronde6()
+        actieveronde = actieverondeenum.Finale
+    End Sub
+
 End Class

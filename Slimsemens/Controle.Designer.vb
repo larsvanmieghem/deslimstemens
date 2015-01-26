@@ -67,22 +67,22 @@ Partial Class Controle
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
         Me.Edit = New System.Windows.Forms.Button()
-        Me.ronde3label1 = New System.Windows.Forms.Label()
-        Me.ronde3label2 = New System.Windows.Forms.Label()
-        Me.ronde3label4 = New System.Windows.Forms.Label()
-        Me.ronde3label5 = New System.Windows.Forms.Label()
-        Me.ronde3label3 = New System.Windows.Forms.Label()
-        Me.ronde3label7 = New System.Windows.Forms.Label()
-        Me.ronde3label8 = New System.Windows.Forms.Label()
-        Me.ronde3label6 = New System.Windows.Forms.Label()
-        Me.ronde3label9 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Ronde3chkantw3 = New System.Windows.Forms.CheckBox()
+        Me.Ronde3chkantw2 = New System.Windows.Forms.CheckBox()
+        Me.Ronde3chkantw1 = New System.Windows.Forms.CheckBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Ronde3chkantw1 = New System.Windows.Forms.CheckBox()
-        Me.Ronde3chkantw2 = New System.Windows.Forms.CheckBox()
-        Me.Ronde3chkantw3 = New System.Windows.Forms.CheckBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ronde3label1 = New System.Windows.Forms.Label()
+        Me.ronde3label2 = New System.Windows.Forms.Label()
+        Me.ronde3label3 = New System.Windows.Forms.Label()
+        Me.ronde3label4 = New System.Windows.Forms.Label()
+        Me.ronde3label5 = New System.Windows.Forms.Label()
+        Me.ronde3label6 = New System.Windows.Forms.Label()
+        Me.ronde3label7 = New System.Windows.Forms.Label()
+        Me.ronde3label8 = New System.Windows.Forms.Label()
+        Me.ronde3label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -526,88 +526,6 @@ Partial Class Controle
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = True
         '
-        'ronde3label1
-        '
-        Me.ronde3label1.AutoSize = True
-        Me.ronde3label1.Location = New System.Drawing.Point(14, 24)
-        Me.ronde3label1.Name = "ronde3label1"
-        Me.ronde3label1.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label1.TabIndex = 0
-        Me.ronde3label1.Text = "Label1"
-        '
-        'ronde3label2
-        '
-        Me.ronde3label2.AutoSize = True
-        Me.ronde3label2.Location = New System.Drawing.Point(122, 24)
-        Me.ronde3label2.Name = "ronde3label2"
-        Me.ronde3label2.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label2.TabIndex = 1
-        Me.ronde3label2.Text = "Label2"
-        Me.ronde3label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'ronde3label4
-        '
-        Me.ronde3label4.AutoSize = True
-        Me.ronde3label4.Location = New System.Drawing.Point(14, 104)
-        Me.ronde3label4.Name = "ronde3label4"
-        Me.ronde3label4.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label4.TabIndex = 2
-        Me.ronde3label4.Text = "Label4"
-        '
-        'ronde3label5
-        '
-        Me.ronde3label5.AutoSize = True
-        Me.ronde3label5.Location = New System.Drawing.Point(122, 104)
-        Me.ronde3label5.Name = "ronde3label5"
-        Me.ronde3label5.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label5.TabIndex = 3
-        Me.ronde3label5.Text = "Label5"
-        '
-        'ronde3label3
-        '
-        Me.ronde3label3.AutoSize = True
-        Me.ronde3label3.Location = New System.Drawing.Point(232, 24)
-        Me.ronde3label3.Name = "ronde3label3"
-        Me.ronde3label3.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label3.TabIndex = 4
-        Me.ronde3label3.Text = "Label3"
-        '
-        'ronde3label7
-        '
-        Me.ronde3label7.AutoSize = True
-        Me.ronde3label7.Location = New System.Drawing.Point(14, 185)
-        Me.ronde3label7.Name = "ronde3label7"
-        Me.ronde3label7.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label7.TabIndex = 5
-        Me.ronde3label7.Text = "Label7"
-        '
-        'ronde3label8
-        '
-        Me.ronde3label8.AutoSize = True
-        Me.ronde3label8.Location = New System.Drawing.Point(122, 185)
-        Me.ronde3label8.Name = "ronde3label8"
-        Me.ronde3label8.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label8.TabIndex = 6
-        Me.ronde3label8.Text = "Label8"
-        '
-        'ronde3label6
-        '
-        Me.ronde3label6.AutoSize = True
-        Me.ronde3label6.Location = New System.Drawing.Point(232, 104)
-        Me.ronde3label6.Name = "ronde3label6"
-        Me.ronde3label6.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label6.TabIndex = 7
-        Me.ronde3label6.Text = "Label6"
-        '
-        'ronde3label9
-        '
-        Me.ronde3label9.AutoSize = True
-        Me.ronde3label9.Location = New System.Drawing.Point(232, 185)
-        Me.ronde3label9.Name = "ronde3label9"
-        Me.ronde3label9.Size = New System.Drawing.Size(39, 13)
-        Me.ronde3label9.TabIndex = 8
-        Me.ronde3label9.Text = "Label9"
-        '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw3)
@@ -620,6 +538,38 @@ Partial Class Controle
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Bedieningspaneel ronde 3"
         Me.GroupBox5.Visible = False
+        '
+        'Ronde3chkantw3
+        '
+        Me.Ronde3chkantw3.AutoSize = True
+        Me.Ronde3chkantw3.ForeColor = System.Drawing.Color.ForestGreen
+        Me.Ronde3chkantw3.Location = New System.Drawing.Point(21, 94)
+        Me.Ronde3chkantw3.Name = "Ronde3chkantw3"
+        Me.Ronde3chkantw3.Size = New System.Drawing.Size(83, 17)
+        Me.Ronde3chkantw3.TabIndex = 2
+        Me.Ronde3chkantw3.Text = "Antwoord 3 "
+        Me.Ronde3chkantw3.UseVisualStyleBackColor = True
+        '
+        'Ronde3chkantw2
+        '
+        Me.Ronde3chkantw2.AutoSize = True
+        Me.Ronde3chkantw2.ForeColor = System.Drawing.Color.Red
+        Me.Ronde3chkantw2.Location = New System.Drawing.Point(21, 61)
+        Me.Ronde3chkantw2.Name = "Ronde3chkantw2"
+        Me.Ronde3chkantw2.Size = New System.Drawing.Size(80, 17)
+        Me.Ronde3chkantw2.TabIndex = 1
+        Me.Ronde3chkantw2.Text = "Antwoord 2"
+        Me.Ronde3chkantw2.UseVisualStyleBackColor = True
+        '
+        'Ronde3chkantw1
+        '
+        Me.Ronde3chkantw1.AutoSize = True
+        Me.Ronde3chkantw1.Location = New System.Drawing.Point(21, 31)
+        Me.Ronde3chkantw1.Name = "Ronde3chkantw1"
+        Me.Ronde3chkantw1.Size = New System.Drawing.Size(80, 17)
+        Me.Ronde3chkantw1.TabIndex = 0
+        Me.Ronde3chkantw1.Text = "Antwoord 1"
+        Me.Ronde3chkantw1.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
@@ -636,49 +586,17 @@ Partial Class Controle
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(121, 17)
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
-        'Ronde3chkantw1
-        '
-        Me.Ronde3chkantw1.AutoSize = True
-        Me.Ronde3chkantw1.Location = New System.Drawing.Point(21, 31)
-        Me.Ronde3chkantw1.Name = "Ronde3chkantw1"
-        Me.Ronde3chkantw1.Size = New System.Drawing.Size(80, 17)
-        Me.Ronde3chkantw1.TabIndex = 0
-        Me.Ronde3chkantw1.Text = "Antwoord 1"
-        Me.Ronde3chkantw1.UseVisualStyleBackColor = True
-        '
-        'Ronde3chkantw2
-        '
-        Me.Ronde3chkantw2.AutoSize = True
-        Me.Ronde3chkantw2.ForeColor = System.Drawing.Color.Red
-        Me.Ronde3chkantw2.Location = New System.Drawing.Point(21, 61)
-        Me.Ronde3chkantw2.Name = "Ronde3chkantw2"
-        Me.Ronde3chkantw2.Size = New System.Drawing.Size(80, 17)
-        Me.Ronde3chkantw2.TabIndex = 1
-        Me.Ronde3chkantw2.Text = "Antwoord 2"
-        Me.Ronde3chkantw2.UseVisualStyleBackColor = True
-        '
-        'Ronde3chkantw3
-        '
-        Me.Ronde3chkantw3.AutoSize = True
-        Me.Ronde3chkantw3.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Ronde3chkantw3.Location = New System.Drawing.Point(21, 94)
-        Me.Ronde3chkantw3.Name = "Ronde3chkantw3"
-        Me.Ronde3chkantw3.Size = New System.Drawing.Size(83, 17)
-        Me.Ronde3chkantw3.TabIndex = 2
-        Me.Ronde3chkantw3.Text = "Antwoord 3 "
-        Me.Ronde3chkantw3.UseVisualStyleBackColor = True
-        '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.ronde3label7)
-        Me.GroupBox6.Controls.Add(Me.ronde3label8)
         Me.GroupBox6.Controls.Add(Me.ronde3label9)
-        Me.GroupBox6.Controls.Add(Me.ronde3label1)
-        Me.GroupBox6.Controls.Add(Me.ronde3label5)
-        Me.GroupBox6.Controls.Add(Me.ronde3label3)
-        Me.GroupBox6.Controls.Add(Me.ronde3label4)
+        Me.GroupBox6.Controls.Add(Me.ronde3label8)
+        Me.GroupBox6.Controls.Add(Me.ronde3label7)
         Me.GroupBox6.Controls.Add(Me.ronde3label6)
+        Me.GroupBox6.Controls.Add(Me.ronde3label5)
+        Me.GroupBox6.Controls.Add(Me.ronde3label4)
+        Me.GroupBox6.Controls.Add(Me.ronde3label3)
         Me.GroupBox6.Controls.Add(Me.ronde3label2)
+        Me.GroupBox6.Controls.Add(Me.ronde3label1)
         Me.GroupBox6.Location = New System.Drawing.Point(9, 6)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(309, 249)
@@ -686,6 +604,87 @@ Partial Class Controle
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Puzzel"
         Me.GroupBox6.Visible = False
+        '
+        'ronde3label1
+        '
+        Me.ronde3label1.AutoSize = True
+        Me.ronde3label1.Location = New System.Drawing.Point(22, 20)
+        Me.ronde3label1.Name = "ronde3label1"
+        Me.ronde3label1.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label1.TabIndex = 0
+        Me.ronde3label1.Text = "Tip 1"
+        '
+        'ronde3label2
+        '
+        Me.ronde3label2.AutoSize = True
+        Me.ronde3label2.Location = New System.Drawing.Point(123, 20)
+        Me.ronde3label2.Name = "ronde3label2"
+        Me.ronde3label2.Size = New System.Drawing.Size(34, 13)
+        Me.ronde3label2.TabIndex = 1
+        Me.ronde3label2.Text = "Tip 2 "
+        '
+        'ronde3label3
+        '
+        Me.ronde3label3.AutoSize = True
+        Me.ronde3label3.Location = New System.Drawing.Point(242, 20)
+        Me.ronde3label3.Name = "ronde3label3"
+        Me.ronde3label3.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label3.TabIndex = 2
+        Me.ronde3label3.Text = "Tip 3"
+        '
+        'ronde3label4
+        '
+        Me.ronde3label4.AutoSize = True
+        Me.ronde3label4.Location = New System.Drawing.Point(22, 123)
+        Me.ronde3label4.Name = "ronde3label4"
+        Me.ronde3label4.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label4.TabIndex = 3
+        Me.ronde3label4.Text = "Tip 4"
+        '
+        'ronde3label5
+        '
+        Me.ronde3label5.AutoSize = True
+        Me.ronde3label5.Location = New System.Drawing.Point(122, 123)
+        Me.ronde3label5.Name = "ronde3label5"
+        Me.ronde3label5.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label5.TabIndex = 4
+        Me.ronde3label5.Text = "Tip 5"
+        '
+        'ronde3label6
+        '
+        Me.ronde3label6.AutoSize = True
+        Me.ronde3label6.Location = New System.Drawing.Point(242, 123)
+        Me.ronde3label6.Name = "ronde3label6"
+        Me.ronde3label6.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label6.TabIndex = 5
+        Me.ronde3label6.Text = "Tip 6"
+        '
+        'ronde3label7
+        '
+        Me.ronde3label7.AutoSize = True
+        Me.ronde3label7.Location = New System.Drawing.Point(22, 205)
+        Me.ronde3label7.Name = "ronde3label7"
+        Me.ronde3label7.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label7.TabIndex = 6
+        Me.ronde3label7.Text = "Tip 7"
+        '
+        'ronde3label8
+        '
+        Me.ronde3label8.AutoSize = True
+        Me.ronde3label8.Location = New System.Drawing.Point(117, 205)
+        Me.ronde3label8.Name = "ronde3label8"
+        Me.ronde3label8.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label8.TabIndex = 7
+        Me.ronde3label8.Text = "Tip 8"
+        '
+        'ronde3label9
+        '
+        Me.ronde3label9.AutoSize = True
+        Me.ronde3label9.Location = New System.Drawing.Point(242, 205)
+        Me.ronde3label9.Name = "ronde3label9"
+        Me.ronde3label9.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label9.TabIndex = 8
+        Me.ronde3label9.Text = "Tip 9"
         '
         'Controle
         '
@@ -772,15 +771,6 @@ Partial Class Controle
     Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
     Friend WithEvents Ronde3startronde As System.Windows.Forms.Button
     Friend WithEvents Edit As System.Windows.Forms.Button
-    Friend WithEvents ronde3label1 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label2 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label4 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label5 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label3 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label7 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label8 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label6 As System.Windows.Forms.Label
-    Friend WithEvents ronde3label9 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
@@ -788,5 +778,14 @@ Partial Class Controle
     Friend WithEvents Ronde3chkantw2 As System.Windows.Forms.CheckBox
     Friend WithEvents Ronde3chkantw1 As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents ronde3label9 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label8 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label7 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label6 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label5 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label4 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label3 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label2 As System.Windows.Forms.Label
+    Friend WithEvents ronde3label1 As System.Windows.Forms.Label
 
 End Class
