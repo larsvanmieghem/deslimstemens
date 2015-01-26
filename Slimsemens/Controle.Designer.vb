@@ -83,6 +83,8 @@ Partial Class Controle
         Me.ronde3label7 = New System.Windows.Forms.Label()
         Me.ronde3label8 = New System.Windows.Forms.Label()
         Me.ronde3label9 = New System.Windows.Forms.Label()
+        Me.ronde3start = New System.Windows.Forms.Button()
+        Me.ronde3stop = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -528,6 +530,8 @@ Partial Class Controle
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.ronde3stop)
+        Me.GroupBox5.Controls.Add(Me.ronde3start)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw3)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw2)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw1)
@@ -686,6 +690,24 @@ Partial Class Controle
         Me.ronde3label9.TabIndex = 8
         Me.ronde3label9.Text = "Tip 9"
         '
+        'ronde3start
+        '
+        Me.ronde3start.Location = New System.Drawing.Point(19, 191)
+        Me.ronde3start.Name = "ronde3start"
+        Me.ronde3start.Size = New System.Drawing.Size(75, 29)
+        Me.ronde3start.TabIndex = 3
+        Me.ronde3start.Text = "Start"
+        Me.ronde3start.UseVisualStyleBackColor = True
+        '
+        'ronde3stop
+        '
+        Me.ronde3stop.Location = New System.Drawing.Point(128, 191)
+        Me.ronde3stop.Name = "ronde3stop"
+        Me.ronde3stop.Size = New System.Drawing.Size(75, 31)
+        Me.ronde3stop.TabIndex = 4
+        Me.ronde3stop.Text = "Stop"
+        Me.ronde3stop.UseVisualStyleBackColor = True
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -787,5 +809,7 @@ Partial Class Controle
     Friend WithEvents ronde3label3 As System.Windows.Forms.Label
     Friend WithEvents ronde3label2 As System.Windows.Forms.Label
     Friend WithEvents ronde3label1 As System.Windows.Forms.Label
+    Friend WithEvents ronde3stop As System.Windows.Forms.Button
+    Friend WithEvents ronde3start As System.Windows.Forms.Button
 
 End Class

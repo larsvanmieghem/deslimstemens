@@ -831,10 +831,41 @@ Public Class Controle
     Private Sub Ronde3startronde_Click(sender As Object, e As EventArgs) Handles Ronde3startronde.Click
         startronde3()
     End Sub
-    Public Sub startronde3()
+    Public Sub startronde3() 'Start de ronde en zet alle benodigde variabelen en properties op begininstellingen
         actieveronde = actieverondeenum.Puzzel
         ronde3actievevraag = ronde3actievevraagem.puzzelvoorjan
+        ronde3start.Enabled = True
+        ronde3stop.Enabled = False
+        Ronde3chkantw1.Enabled = False
+        Ronde3chkantw2.Enabled = False
+        Ronde3chkantw3.Enabled = False
+        origineelaandebeurt = aandebeurtenum.Jan
     End Sub
+
+    Private Sub ronde3start_Click(sender As Object, e As EventArgs) Handles ronde3start.Click 'Start het beantwoorden van de vraag
+        ronde3start.Enabled = False
+        ronde3stop.Enabled = True
+        Ronde3chkantw1.Enabled = True
+        Ronde3chkantw2.Enabled = True
+        Ronde3chkantw3.Enabled = True
+
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = True
+        End Select
+
+    End Sub
+
+
+
+
+
+
+
     Public Sub startronde4()
         actieveronde = actieverondeenum.Galerij
     End Sub
@@ -843,6 +874,63 @@ Public Class Controle
     End Sub
     Public Sub startronde6()
         actieveronde = actieverondeenum.Finale
+    End Sub
+
+   
+    Private Sub Ronde3chkantw1_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw1.CheckedChanged
+        If Ronde3chkantw1.Checked = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += 30
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += 30
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += 30
+                    miauw.Istelleraan = True
+            End Select
+
+            If (Ronde3chkantw1.Checked = True) And (Ronde3chkantw2.Checked = True) And (Ronde3chkantw3.Checked = True) Then
+                ronde3stopactievevraag()
+            End If
+        ElseIf Ronde3chkantw1.Checked = False Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= 30
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= 30
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= 30
+                    miauw.Istelleraan = True
+            End Select
+
+        End If
+    End Sub
+    Public Sub ronde3stopactievevraag()
+        Ronde3chkantw1.Enabled = False
+        Ronde3chkantw2.Enabled = False
+        Ronde3chkantw3.Enabled = False
+        Ronde3stop.enabled = False
+        Ronde3start.enabled = True
+Select origineelaandebeurt
+            Case aandebeurtenum.Jan
+                aandebeurt = aandebeurtenum.Platypus
+                origineelaandebeurt += 1
+            Case aandebeurtenum.Platypus
+                aandebeurt = aandebeurtenum.Miauw
+                origineelaandebeurt += 1
+            Case aandebeurtenum.Miauw
+        End Select
+
     End Sub
 
 End Class
