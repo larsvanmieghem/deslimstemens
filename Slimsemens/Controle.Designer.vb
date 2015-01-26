@@ -68,23 +68,23 @@ Partial Class Controle
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
         Me.Edit = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ronde3stop = New System.Windows.Forms.Button()
+        Me.ronde3start = New System.Windows.Forms.Button()
         Me.Ronde3chkantw3 = New System.Windows.Forms.CheckBox()
         Me.Ronde3chkantw2 = New System.Windows.Forms.CheckBox()
         Me.Ronde3chkantw1 = New System.Windows.Forms.CheckBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.ronde3label1 = New System.Windows.Forms.Label()
-        Me.ronde3label2 = New System.Windows.Forms.Label()
-        Me.ronde3label3 = New System.Windows.Forms.Label()
-        Me.ronde3label4 = New System.Windows.Forms.Label()
-        Me.ronde3label5 = New System.Windows.Forms.Label()
-        Me.ronde3label6 = New System.Windows.Forms.Label()
-        Me.ronde3label7 = New System.Windows.Forms.Label()
-        Me.ronde3label8 = New System.Windows.Forms.Label()
         Me.ronde3label9 = New System.Windows.Forms.Label()
-        Me.ronde3start = New System.Windows.Forms.Button()
-        Me.ronde3stop = New System.Windows.Forms.Button()
+        Me.ronde3label8 = New System.Windows.Forms.Label()
+        Me.ronde3label7 = New System.Windows.Forms.Label()
+        Me.ronde3label6 = New System.Windows.Forms.Label()
+        Me.ronde3label5 = New System.Windows.Forms.Label()
+        Me.ronde3label4 = New System.Windows.Forms.Label()
+        Me.ronde3label3 = New System.Windows.Forms.Label()
+        Me.ronde3label2 = New System.Windows.Forms.Label()
+        Me.ronde3label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -543,6 +543,24 @@ Partial Class Controle
         Me.GroupBox5.Text = "Bedieningspaneel ronde 3"
         Me.GroupBox5.Visible = False
         '
+        'ronde3stop
+        '
+        Me.ronde3stop.Location = New System.Drawing.Point(128, 191)
+        Me.ronde3stop.Name = "ronde3stop"
+        Me.ronde3stop.Size = New System.Drawing.Size(75, 31)
+        Me.ronde3stop.TabIndex = 4
+        Me.ronde3stop.Text = "Stop"
+        Me.ronde3stop.UseVisualStyleBackColor = True
+        '
+        'ronde3start
+        '
+        Me.ronde3start.Location = New System.Drawing.Point(19, 191)
+        Me.ronde3start.Name = "ronde3start"
+        Me.ronde3start.Size = New System.Drawing.Size(75, 29)
+        Me.ronde3start.TabIndex = 3
+        Me.ronde3start.Text = "Start"
+        Me.ronde3start.UseVisualStyleBackColor = True
+        '
         'Ronde3chkantw3
         '
         Me.Ronde3chkantw3.AutoSize = True
@@ -609,68 +627,14 @@ Partial Class Controle
         Me.GroupBox6.Text = "Puzzel"
         Me.GroupBox6.Visible = False
         '
-        'ronde3label1
+        'ronde3label9
         '
-        Me.ronde3label1.AutoSize = True
-        Me.ronde3label1.Location = New System.Drawing.Point(22, 20)
-        Me.ronde3label1.Name = "ronde3label1"
-        Me.ronde3label1.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label1.TabIndex = 0
-        Me.ronde3label1.Text = "Tip 1"
-        '
-        'ronde3label2
-        '
-        Me.ronde3label2.AutoSize = True
-        Me.ronde3label2.Location = New System.Drawing.Point(123, 20)
-        Me.ronde3label2.Name = "ronde3label2"
-        Me.ronde3label2.Size = New System.Drawing.Size(34, 13)
-        Me.ronde3label2.TabIndex = 1
-        Me.ronde3label2.Text = "Tip 2 "
-        '
-        'ronde3label3
-        '
-        Me.ronde3label3.AutoSize = True
-        Me.ronde3label3.Location = New System.Drawing.Point(242, 20)
-        Me.ronde3label3.Name = "ronde3label3"
-        Me.ronde3label3.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label3.TabIndex = 2
-        Me.ronde3label3.Text = "Tip 3"
-        '
-        'ronde3label4
-        '
-        Me.ronde3label4.AutoSize = True
-        Me.ronde3label4.Location = New System.Drawing.Point(22, 123)
-        Me.ronde3label4.Name = "ronde3label4"
-        Me.ronde3label4.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label4.TabIndex = 3
-        Me.ronde3label4.Text = "Tip 4"
-        '
-        'ronde3label5
-        '
-        Me.ronde3label5.AutoSize = True
-        Me.ronde3label5.Location = New System.Drawing.Point(122, 123)
-        Me.ronde3label5.Name = "ronde3label5"
-        Me.ronde3label5.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label5.TabIndex = 4
-        Me.ronde3label5.Text = "Tip 5"
-        '
-        'ronde3label6
-        '
-        Me.ronde3label6.AutoSize = True
-        Me.ronde3label6.Location = New System.Drawing.Point(242, 123)
-        Me.ronde3label6.Name = "ronde3label6"
-        Me.ronde3label6.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label6.TabIndex = 5
-        Me.ronde3label6.Text = "Tip 6"
-        '
-        'ronde3label7
-        '
-        Me.ronde3label7.AutoSize = True
-        Me.ronde3label7.Location = New System.Drawing.Point(22, 205)
-        Me.ronde3label7.Name = "ronde3label7"
-        Me.ronde3label7.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label7.TabIndex = 6
-        Me.ronde3label7.Text = "Tip 7"
+        Me.ronde3label9.AutoSize = True
+        Me.ronde3label9.Location = New System.Drawing.Point(242, 205)
+        Me.ronde3label9.Name = "ronde3label9"
+        Me.ronde3label9.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label9.TabIndex = 8
+        Me.ronde3label9.Text = "Tip 9"
         '
         'ronde3label8
         '
@@ -681,32 +645,68 @@ Partial Class Controle
         Me.ronde3label8.TabIndex = 7
         Me.ronde3label8.Text = "Tip 8"
         '
-        'ronde3label9
+        'ronde3label7
         '
-        Me.ronde3label9.AutoSize = True
-        Me.ronde3label9.Location = New System.Drawing.Point(242, 205)
-        Me.ronde3label9.Name = "ronde3label9"
-        Me.ronde3label9.Size = New System.Drawing.Size(31, 13)
-        Me.ronde3label9.TabIndex = 8
-        Me.ronde3label9.Text = "Tip 9"
+        Me.ronde3label7.AutoSize = True
+        Me.ronde3label7.Location = New System.Drawing.Point(22, 205)
+        Me.ronde3label7.Name = "ronde3label7"
+        Me.ronde3label7.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label7.TabIndex = 6
+        Me.ronde3label7.Text = "Tip 7"
         '
-        'ronde3start
+        'ronde3label6
         '
-        Me.ronde3start.Location = New System.Drawing.Point(19, 191)
-        Me.ronde3start.Name = "ronde3start"
-        Me.ronde3start.Size = New System.Drawing.Size(75, 29)
-        Me.ronde3start.TabIndex = 3
-        Me.ronde3start.Text = "Start"
-        Me.ronde3start.UseVisualStyleBackColor = True
+        Me.ronde3label6.AutoSize = True
+        Me.ronde3label6.Location = New System.Drawing.Point(242, 123)
+        Me.ronde3label6.Name = "ronde3label6"
+        Me.ronde3label6.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label6.TabIndex = 5
+        Me.ronde3label6.Text = "Tip 6"
         '
-        'ronde3stop
+        'ronde3label5
         '
-        Me.ronde3stop.Location = New System.Drawing.Point(128, 191)
-        Me.ronde3stop.Name = "ronde3stop"
-        Me.ronde3stop.Size = New System.Drawing.Size(75, 31)
-        Me.ronde3stop.TabIndex = 4
-        Me.ronde3stop.Text = "Stop"
-        Me.ronde3stop.UseVisualStyleBackColor = True
+        Me.ronde3label5.AutoSize = True
+        Me.ronde3label5.Location = New System.Drawing.Point(122, 123)
+        Me.ronde3label5.Name = "ronde3label5"
+        Me.ronde3label5.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label5.TabIndex = 4
+        Me.ronde3label5.Text = "Tip 5"
+        '
+        'ronde3label4
+        '
+        Me.ronde3label4.AutoSize = True
+        Me.ronde3label4.Location = New System.Drawing.Point(22, 123)
+        Me.ronde3label4.Name = "ronde3label4"
+        Me.ronde3label4.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label4.TabIndex = 3
+        Me.ronde3label4.Text = "Tip 4"
+        '
+        'ronde3label3
+        '
+        Me.ronde3label3.AutoSize = True
+        Me.ronde3label3.Location = New System.Drawing.Point(242, 20)
+        Me.ronde3label3.Name = "ronde3label3"
+        Me.ronde3label3.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label3.TabIndex = 2
+        Me.ronde3label3.Text = "Tip 3"
+        '
+        'ronde3label2
+        '
+        Me.ronde3label2.AutoSize = True
+        Me.ronde3label2.Location = New System.Drawing.Point(123, 20)
+        Me.ronde3label2.Name = "ronde3label2"
+        Me.ronde3label2.Size = New System.Drawing.Size(34, 13)
+        Me.ronde3label2.TabIndex = 1
+        Me.ronde3label2.Text = "Tip 2 "
+        '
+        'ronde3label1
+        '
+        Me.ronde3label1.AutoSize = True
+        Me.ronde3label1.Location = New System.Drawing.Point(22, 20)
+        Me.ronde3label1.Name = "ronde3label1"
+        Me.ronde3label1.Size = New System.Drawing.Size(31, 13)
+        Me.ronde3label1.TabIndex = 0
+        Me.ronde3label1.Text = "Tip 1"
         '
         'Controle
         '
