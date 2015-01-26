@@ -534,6 +534,10 @@ Public Class Controle
         jan.Istelleraan = False
         platypus.Istelleraan = False
         miauw.Istelleraan = False
+        ronde2antw1chk.Enabled = False
+        ronde2antwoord2chk.Enabled = False
+        ronde2antwoord3chk.Enabled = False
+        ronde2antwoord4chk.Enabled = False
         ronde2rondgaan += 1
         Select Case aandebeurt
             Case aandebeurtenum.Jan
@@ -828,6 +832,7 @@ Public Class Controle
             Ronde3startronde.Visible = True
             GroupBox4.Enabled = True
         End If
+        ronde2rondgaan = 1
     End Sub
     '---Ronde 3---
     Private Sub Ronde3startronde_Click(sender As Object, e As EventArgs) Handles Ronde3startronde.Click
@@ -1031,6 +1036,7 @@ Select origineelaandebeurt
             Case ronde3actievevraagem.puzzelvoorplatypus
                 ronde3actievevraag = ronde3actievevraagem.puzzelvoormiauw
         End Select
+        ronde3rondgaan = 1
     End Sub
 
     Private Sub ronde3stop_Click(sender As Object, e As EventArgs) Handles ronde3stop.Click
