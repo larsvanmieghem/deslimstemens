@@ -26,7 +26,7 @@ Public Class Controle
     Public ronde2foto3toonbaar As Boolean = True
     Public ronde2checkboxvpunten As Boolean = True
     Public ronde2rondgaan As Short = 1
-    Public actievevideo As String
+    Public ronde4actievefoto As Short = 1
 
     Public Enum actieverondeenum As Short
         driezesnegen = 1
@@ -61,6 +61,12 @@ Public Class Controle
     Public ronde3actievevraag As ronde3actievevraagem
     Public ronde3rondgaan As Short
     Public ronde3checkboxvpunten As Boolean = True
+    Public ronde4actievereeks As ronde4actievereeksenum
+    Public Enum ronde4actievereeksenum As Short
+        reeks1 = 1
+        reeks2 = 2
+        reeks3 = 3
+    End Enum
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
         Dim lezer As New StreamReader("spelbestandje.txt")
@@ -224,6 +230,9 @@ Public Class Controle
                 ronde2foto3.Visible = False
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde1/6: 3-6-9"
 
             Case actieverondeenum.Opendeur
@@ -234,6 +243,9 @@ Public Class Controle
                 Groupbox7.Visible = True
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
 
                 Select Case ronde2actievevraag
                     Case ronde2actievevraagem.links
@@ -266,6 +278,9 @@ Public Class Controle
 
                 GroupBox5.Visible = True
                 GroupBox6.Visible = True
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
 
                 Select Case ronde3actievevraag
                     Case ronde3actievevraagem.puzzelvoorjan
@@ -376,7 +391,67 @@ Public Class Controle
                 ronde2foto3.Visible = False
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
+                GroupBox8.Visible = True
+                GroupBox9.Visible = True
                 ToolStripStatusLabel1.Text = "Ronde4/6: Galerij"
+
+                Select Case ronde4actievereeks
+                    Case ronde4actievereeksenum.reeks1
+                        ronde4antw1chk.Text = antwoordenronde4fotos1(1, 1)
+                        ronde4antw2chk.Text = antwoordenronde4fotos1(2, 1)
+                        ronde4antw3chk.Text = antwoordenronde4fotos1(3, 1)
+                        ronde4antw4chk.Text = antwoordenronde4fotos1(4, 1)
+                        ronde4antw5chk.Text = antwoordenronde4fotos1(5, 1)
+                        ronde4antw6chk.Text = antwoordenronde4fotos1(6, 1)
+                        ronde4antw7chk.Text = antwoordenronde4fotos1(7, 1)
+                        ronde4antw8chk.Text = antwoordenronde4fotos1(8, 1)
+                        ronde4antw9chk.Text = antwoordenronde4fotos1(9, 1)
+                        ronde4antw10chk.Text = antwoordenronde4fotos1(10, 1)
+
+                    Case ronde4actievereeksenum.reeks2
+                        ronde4antw1chk.Text = antwoordenronde4fotos2(1, 1)
+                        ronde4antw2chk.Text = antwoordenronde4fotos2(2, 1)
+                        ronde4antw3chk.Text = antwoordenronde4fotos2(3, 1)
+                        ronde4antw4chk.Text = antwoordenronde4fotos2(4, 1)
+                        ronde4antw5chk.Text = antwoordenronde4fotos2(5, 1)
+                        ronde4antw6chk.Text = antwoordenronde4fotos2(6, 1)
+                        ronde4antw7chk.Text = antwoordenronde4fotos2(7, 1)
+                        ronde4antw8chk.Text = antwoordenronde4fotos2(8, 1)
+                        ronde4antw9chk.Text = antwoordenronde4fotos2(9, 1)
+                        ronde4antw10chk.Text = antwoordenronde4fotos2(10, 1)
+
+                    Case ronde4actievereeksenum.reeks3
+                        ronde4antw1chk.Text = antwoordenronde4fotos3(1, 1)
+                        ronde4antw2chk.Text = antwoordenronde4fotos3(2, 1)
+                        ronde4antw3chk.Text = antwoordenronde4fotos3(3, 1)
+                        ronde4antw4chk.Text = antwoordenronde4fotos3(4, 1)
+                        ronde4antw5chk.Text = antwoordenronde4fotos3(5, 1)
+                        ronde4antw6chk.Text = antwoordenronde4fotos3(6, 1)
+                        ronde4antw7chk.Text = antwoordenronde4fotos3(7, 1)
+                        ronde4antw8chk.Text = antwoordenronde4fotos3(8, 1)
+                        ronde4antw9chk.Text = antwoordenronde4fotos3(9, 1)
+                        ronde4antw10chk.Text = antwoordenronde4fotos3(10, 1)
+
+                End Select
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             Case actieverondeenum.Collectiefgeheugen
                 GroupBox2.Visible = False
@@ -389,8 +464,10 @@ Public Class Controle
                 ronde2foto3.Visible = False
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
-                ToolStripStatusLabel1.Text = "Ronde5/6: Colleftief Geheugen"
-
+                ToolStripStatusLabel1.Text = "Ronde5/6: Collectief Geheugen"
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox2.Visible = False
@@ -402,6 +479,9 @@ Public Class Controle
                 ronde2foto3.Visible = False
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde 6/6: finale"
         End Select
 
@@ -1069,9 +1149,29 @@ Select origineelaandebeurt
     End Sub
 
     Public Sub startronde4()
+        aandebeurt = aandebeurtenum.Jan
         actieveronde = actieverondeenum.Galerij
+        PictureBox1.Load("reeks1foto1.jpg")
+        ronde4actievereeks = ronde4actievereeksenum.reeks1
+        PictureBox1.Visible = False
+        GroupBox9.Enabled = False
     End Sub
-
+    Private Sub Ronde4startreeks_Click(sender As Object, e As EventArgs) Handles ronde4startreeks.Click
+        origineelaandebeurt = aandebeurt
+        ronde4startreeks.Enabled = False
+        ronde4juist.Enabled = True
+        ronde4pas.Enabled = True
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = True
+        End Select
+        PictureBox1.Visible = True
+        ronde4actievefoto = 1
+    End Sub
 
 
 
@@ -1087,4 +1187,345 @@ Select origineelaandebeurt
         actieveronde = actieverondeenum.Finale
     End Sub
 
+    
+    Private Sub ronde4juist_Click(sender As Object, e As EventArgs) Handles ronde4juist.Click
+        If ronde4actievereeks = ronde4actievereeksenum.reeks1 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks1foto2.jpg")
+                    ronde4antw1chk.Checked = True
+                Case 2
+                    PictureBox1.Load("reeks1foto3.jpg")
+                    ronde4antw2chk.Checked = True
+                Case 3
+                    PictureBox1.Load("reeks1foto4.jpg")
+                    ronde4antw3chk.Checked = True
+                Case 4
+                    PictureBox1.Load("reeks1foto5.jpg")
+                    ronde4antw4chk.Checked = True
+                Case 5
+                    PictureBox1.Load("reeks1foto6.jpg")
+                    ronde4antw5chk.Checked = True
+                Case 6
+                    PictureBox1.Load("reeks1foto7.jpg")
+                    ronde4antw6chk.Checked = True
+                Case 7
+                    PictureBox1.Load("reeks1foto8.jpg")
+                    ronde4antw7chk.Checked = True
+                Case 8
+                    PictureBox1.Load("reeks1foto9.jpg")
+                    ronde4antw8chk.Checked = True
+                Case 9
+                    ronde4antw9chk.Checked = True
+                    PictureBox1.Load("reeks1foto10.jpg")
+                Case 10
+                    ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks2 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks2foto2.jpg")
+                    ronde4antw1chk.Checked = True
+                Case 2
+                    PictureBox1.Load("reeks2foto3.jpg")
+                    ronde4antw2chk.Checked = True
+                Case 3
+                    PictureBox1.Load("reeks2foto4.jpg")
+                    ronde4antw3chk.Checked = True
+                Case 4
+                    PictureBox1.Load("reeks2foto5.jpg")
+                    ronde4antw4chk.Checked = True
+                Case 5
+                    PictureBox1.Load("reeks2foto6.jpg")
+                    ronde4antw5chk.Checked = True
+                Case 6
+                    PictureBox1.Load("reeks2foto7.jpg")
+                    ronde4antw6chk.Checked = True
+                Case 7
+                    PictureBox1.Load("reeks2foto8.jpg")
+                    ronde4antw7chk.Checked = True
+                Case 8
+                    PictureBox1.Load("reeks2foto9.jpg")
+                    ronde4antw8chk.Checked = True
+                Case 9
+                    ronde4antw9chk.Checked = True
+                    PictureBox1.Load("reeks2foto10.jpg")
+                Case 10
+                    ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks3 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks3foto2.jpg")
+                    ronde4antw1chk.Checked = True
+                Case 2
+                    PictureBox1.Load("reeks3foto3.jpg")
+                    ronde4antw2chk.Checked = True
+                Case 3
+                    PictureBox1.Load("reeks3foto4.jpg")
+                    ronde4antw3chk.Checked = True
+                Case 4
+                    PictureBox1.Load("reeks3foto5.jpg")
+                    ronde4antw4chk.Checked = True
+                Case 5
+                    PictureBox1.Load("reeks3foto6.jpg")
+                    ronde4antw5chk.Checked = True
+                Case 6
+                    PictureBox1.Load("reeks3foto7.jpg")
+                    ronde4antw6chk.Checked = True
+                Case 7
+                    PictureBox1.Load("reeks3foto8.jpg")
+                    ronde4antw7chk.Checked = True
+                Case 8
+                    PictureBox1.Load("reeks3foto9.jpg")
+                    ronde4antw8chk.Checked = True
+                Case 9
+                    ronde4antw9chk.Checked = True
+                    PictureBox1.Load("reeks3foto10.jpg")
+                Case 10
+                    ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        End If
+        ronde4actievefoto += 1
+    End Sub
+
+    Private Sub ronde4pas_Click(sender As Object, e As EventArgs) Handles ronde4pas.Click
+        If ronde4actievereeks = ronde4actievereeksenum.reeks1 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks1foto2.jpg")
+
+                Case 2
+                    PictureBox1.Load("reeks1foto3.jpg")
+
+                Case 3
+                    PictureBox1.Load("reeks1foto4.jpg")
+
+                Case 4
+                    PictureBox1.Load("reeks1foto5.jpg")
+
+                Case 5
+                    PictureBox1.Load("reeks1foto6.jpg")
+
+                Case 6
+                    PictureBox1.Load("reeks1foto7.jpg")
+
+                Case 7
+                    PictureBox1.Load("reeks1foto8.jpg")
+
+                Case 8
+                    PictureBox1.Load("reeks1foto9.jpg")
+
+                Case 9
+
+                    PictureBox1.Load("reeks1foto10.jpg")
+                Case 10
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks2 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks2foto2.jpg")
+
+                Case 2
+                    PictureBox1.Load("reeks2foto3.jpg")
+
+                Case 3
+                    PictureBox1.Load("reeks2foto4.jpg")
+
+                Case 4
+                    PictureBox1.Load("reeks2foto5.jpg")
+
+                Case 5
+                    PictureBox1.Load("reeks2foto6.jpg")
+
+                Case 6
+                    PictureBox1.Load("reeks2foto7.jpg")
+
+                Case 7
+                    PictureBox1.Load("reeks2foto8.jpg")
+
+                Case 8
+                    PictureBox1.Load("reeks2foto9.jpg")
+
+                Case 9
+
+                    PictureBox1.Load("reeks2foto10.jpg")
+                Case 10
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks3 Then
+            Select Case ronde4actievefoto
+                Case 1
+                    PictureBox1.Load("reeks3foto2.jpg")
+
+                Case 2
+                    PictureBox1.Load("reeks3foto3.jpg")
+
+                Case 3
+                    PictureBox1.Load("reeks3foto4.jpg")
+
+                Case 4
+                    PictureBox1.Load("reeks3foto5.jpg")
+
+                Case 5
+                    PictureBox1.Load("reeks3foto6.jpg")
+
+                Case 6
+                    PictureBox1.Load("reeks3foto7.jpg")
+
+                Case 7
+                    PictureBox1.Load("reeks3foto8.jpg")
+
+                Case 8
+                    PictureBox1.Load("reeks3foto9.jpg")
+
+                Case 9
+                    PictureBox1.Load("reeks3foto10.jpg")
+                Case 10
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
+                    ronde4juist.Enabled = False
+                    ronde4pas.Enabled = False
+            End Select
+        End If
+        ronde4actievefoto += 1
+    End Sub
+
+    Private Sub ronde4antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw1chk.CheckedChanged
+        If ronde4antw1chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw2chk.CheckedChanged
+        If ronde4antw2chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw3chk.CheckedChanged
+        If ronde4antw3chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw4chk.CheckedChanged
+
+        If ronde4antw4chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw5chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw5chk.CheckedChanged
+        If ronde4antw5chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw6chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw6chk.CheckedChanged
+        If ronde4antw6chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw7chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw7chk.CheckedChanged
+        If ronde4antw7chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw8chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw8chk.CheckedChanged
+        If ronde4antw8chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw9chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw9chk.CheckedChanged
+        If ronde4antw9chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde4antw10chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde4antw10chk.CheckedChanged
+        If ronde4antw10chk.Checked = True Then
+            ronde4telpuntenbij()
+        Else
+            ronde4trekpuntenaf()
+        End If
+    End Sub
+    Private Sub ronde4telpuntenbij()
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = False
+                jan.Seconden += 10
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = False
+                platypus.Seconden += 10
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = False
+                miauw.Seconden += 10
+                miauw.Istelleraan = True
+        End Select
+    End Sub
+    Private Sub ronde4trekpuntenaf()
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = False
+                jan.Seconden -= 10
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = False
+                platypus.Seconden -= 10
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = False
+                miauw.Seconden -= 10
+                miauw.Istelleraan = True
+        End Select
+    End Sub
 End Class
