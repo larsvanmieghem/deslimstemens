@@ -103,6 +103,8 @@ Partial Class Controle
         Me.ronde4antw10chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw5chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw1chk = New System.Windows.Forms.CheckBox()
+        Me.ronde4start = New System.Windows.Forms.Button()
+        Me.ronde4stop = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -761,6 +763,8 @@ Partial Class Controle
         '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.ronde4stop)
+        Me.GroupBox8.Controls.Add(Me.ronde4start)
         Me.GroupBox8.Controls.Add(Me.ronde4pas)
         Me.GroupBox8.Controls.Add(Me.ronde4juist)
         Me.GroupBox8.Controls.Add(Me.ronde4startreeks)
@@ -921,6 +925,26 @@ Partial Class Controle
         Me.ronde4antw1chk.Text = "CheckBox1"
         Me.ronde4antw1chk.UseVisualStyleBackColor = True
         '
+        'ronde4start
+        '
+        Me.ronde4start.Enabled = False
+        Me.ronde4start.Location = New System.Drawing.Point(12, 168)
+        Me.ronde4start.Name = "ronde4start"
+        Me.ronde4start.Size = New System.Drawing.Size(71, 23)
+        Me.ronde4start.TabIndex = 3
+        Me.ronde4start.Text = "Start"
+        Me.ronde4start.UseVisualStyleBackColor = True
+        '
+        'ronde4stop
+        '
+        Me.ronde4stop.Enabled = False
+        Me.ronde4stop.Location = New System.Drawing.Point(119, 168)
+        Me.ronde4stop.Name = "ronde4stop"
+        Me.ronde4stop.Size = New System.Drawing.Size(75, 23)
+        Me.ronde4stop.TabIndex = 4
+        Me.ronde4stop.Text = "Stop"
+        Me.ronde4stop.UseVisualStyleBackColor = True
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1050,5 +1074,7 @@ Partial Class Controle
     Friend WithEvents ronde4antw10chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde4antw5chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde4antw1chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde4stop As System.Windows.Forms.Button
+    Friend WithEvents ronde4start As System.Windows.Forms.Button
 
 End Class
