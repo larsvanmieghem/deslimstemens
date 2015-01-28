@@ -26,6 +26,8 @@ Public Class Controle
     Public ronde2foto3toonbaar As Boolean = True
     Public ronde2checkboxvpunten As Boolean = True
     Public ronde2rondgaan As Short = 1
+    Public actievevideo As String
+
     Public Enum actieverondeenum As Short
         driezesnegen = 1
         Opendeur = 2
@@ -168,7 +170,7 @@ Public Class Controle
                 GroupBox4.Visible = False
                 ronde1antwoordtekstlbl.Text = antwoordenronde1(ronde1actievevraag) 'Toont het actieve antwoord   
                 ronde1antwoordtekstlbl.Visible = True
-                AxWindowsMediaPlayer1.Visible = False
+                Groupbox7.Visible = False
                 'Geeft aan wat de actieve vraag is
                 Select Case ronde1actievevraag
                     Case 1
@@ -229,7 +231,7 @@ Public Class Controle
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = True
-                AxWindowsMediaPlayer1.Visible = True
+                Groupbox7.Visible = True
                 GroupBox5.Visible = False
                 GroupBox6.Visible = False
 
@@ -257,7 +259,7 @@ Public Class Controle
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
-                AxWindowsMediaPlayer1.Visible = False
+                Groupbox7.Visible = False
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
@@ -368,7 +370,7 @@ Public Class Controle
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
-                AxWindowsMediaPlayer1.Visible = False
+                Groupbox7.Visible = False
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
@@ -381,7 +383,7 @@ Public Class Controle
                 GroupBox3.Visible = False
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox4.Visible = False
-                AxWindowsMediaPlayer1.Visible = True
+                Groupbox7.Visible = True
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
@@ -394,7 +396,7 @@ Public Class Controle
                 GroupBox2.Visible = False
                 GroupBox3.Visible = False
                 GroupBox4.Visible = False
-                AxWindowsMediaPlayer1.Visible = False
+                Groupbox7.Visible = False
                 ronde2foto1.Visible = False
                 ronde2foto2.Visible = False
                 ronde2foto3.Visible = False
@@ -421,14 +423,19 @@ Public Class Controle
 
         'Zorgt ervoor dat de speler nog niet kan beginnen als de video aan staat 
 
-        If AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying Then
+        If publiekvenster.AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying Then
             ronde2start.Enabled = False
             ticknaspelen = 0
+            publiekvenster.AxWindowsMediaPlayer1.Visible = True
+            publiekvenster.AxWindowsMediaPlayer1.uiMode = "none"
+            ronde2aanhetspelen.Text = "Aan het spelen"
         Else
             ticknaspelen += 1
             If ticknaspelen < 2 Then
                 ronde2start.Enabled = True
             End If
+            publiekvenster.AxWindowsMediaPlayer1.Visible = False
+            ronde2aanhetspelen.Text = "Niet actief"
         End If
 
 
@@ -575,7 +582,7 @@ Public Class Controle
 
     Private Sub ronde2foto1_Click(sender As Object, e As EventArgs) Handles ronde2foto1.Click
         GroupBox4.Enabled = True
-        AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
+        publiekvenster.AxWindowsMediaPlayer1.URL = "openbeurtlinks.wmv"
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
@@ -603,7 +610,7 @@ Public Class Controle
     End Sub
     Private Sub ronde2foto2_Click(sender As Object, e As EventArgs) Handles ronde2foto2.Click
         GroupBox4.Enabled = True
-        AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
+        publiekvenster.AxWindowsMediaPlayer1.URL = "openbeurtcentraal.wmv"
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
@@ -613,7 +620,7 @@ Public Class Controle
 
     Private Sub ronde2foto3_Click(sender As Object, e As EventArgs) Handles ronde2foto3.Click
         GroupBox4.Enabled = True
-        AxWindowsMediaPlayer1.URL = "openbeurtrechts.wmv"
+        publiekvenster.AxWindowsMediaPlayer1.URL = "openbeurtrechts.wmv"
         ronde2foto1.Visible = False
         ronde2foto2.Visible = False
         ronde2foto3.Visible = False
@@ -873,15 +880,6 @@ Public Class Controle
 
 
 
-    Public Sub startronde4()
-        actieveronde = actieverondeenum.Galerij
-    End Sub
-    Public Sub startronde5()
-        actieveronde = actieverondeenum.Collectiefgeheugen
-    End Sub
-    Public Sub startronde6()
-        actieveronde = actieverondeenum.Finale
-    End Sub
 
    
     Private Sub Ronde3chkantw1_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw1.CheckedChanged
@@ -1028,7 +1026,12 @@ Select origineelaandebeurt
                 aandebeurt = aandebeurtenum.Miauw
                 origineelaandebeurt += 1
             Case aandebeurtenum.Miauw
-
+                ronde3start.Visible = False
+                ronde3stop.Visible = False
+                Ronde3chkantw1.Visible = False
+                Ronde3chkantw2.Visible = False
+                Ronde3chkantw3.Visible = False
+                ronde4startronde.Visible = True
         End Select
         Select Case ronde3actievevraag
             Case ronde3actievevraagem.puzzelvoorjan
@@ -1060,4 +1063,28 @@ Select origineelaandebeurt
         End If
 
     End Sub
+
+    Private Sub ronde4startronde_Click(sender As Object, e As EventArgs) Handles ronde4startronde.Click
+        startronde4()
+    End Sub
+
+    Public Sub startronde4()
+        actieveronde = actieverondeenum.Galerij
+    End Sub
+
+
+
+
+
+
+
+
+
+    Public Sub startronde5()
+        actieveronde = actieverondeenum.Collectiefgeheugen
+    End Sub
+    Public Sub startronde6()
+        actieveronde = actieverondeenum.Finale
+    End Sub
+
 End Class

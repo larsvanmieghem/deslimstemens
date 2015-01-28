@@ -79,5 +79,65 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ---Naam---
+        '''Jan1
+        '''Platypus1
+        '''Miauw1
+        '''---Ronde1---
+        '''Antw1
+        '''Antw2
+        '''Antw3
+        '''Antw4
+        '''Antw5
+        '''Antw6
+        '''Antw7
+        '''Antw8
+        '''Antw9
+        '''Antw10
+        '''Antw11
+        '''Antw12
+        '''Antw13
+        '''Antw14
+        '''Antw15
+        '''---Ronde2links---
+        '''Antw1
+        '''ANtw2
+        '''ANtw3
+        '''ANtw4
+        '''---Ronde2centraal---
+        '''ANtw1
+        '''ANtw2
+        '''ANtw3
+        '''ANtw4
+        '''---Ronde2rechts
+        '''ANtw1
+        '''ANtw2
+        '''ANtw3
+        '''ANtw4
+        '''---Ronde3puzzel1---
+        '''Antw1
+        '''Antw2
+        '''Anwt3
+        '''---Ronde3puzzel1tips---
+        '''Vraag1tip1
+        '''Vraag1tip2
+        '''Vraag1tip3
+        '''Vraag2tip1
+        '''Vraag2tip2
+        '''Vraag2tip3
+        '''Vraag3tip1
+        '''Vraag3tip2
+        '''Vraag3tip3
+        '''---Ronde3puzzel2---
+        '''ANtw1
+        '''ANtw2 [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property spelbestandje() As String
+            Get
+                Return ResourceManager.GetString("spelbestandje", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

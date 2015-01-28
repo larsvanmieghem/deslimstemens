@@ -5,6 +5,7 @@
     Dim mistelleraan As Boolean
     Dim mtellernaam As String
     Dim WithEvents timer As New Timer
+    Dim mleeftijd As Short
     'Contructor
     Public Sub New()
         mnaam = "Heusnoorn"
@@ -48,6 +49,14 @@
                     timer.Enabled = False
                 End If
             End If
+        End Set
+    End Property
+    Public Property leeftijd() As Short
+        Get
+            Return mleeftijd
+        End Get
+        Set(value As Short)
+            value = mleeftijd
         End Set
     End Property
 

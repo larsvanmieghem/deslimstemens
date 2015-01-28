@@ -54,7 +54,6 @@ Partial Class Controle
         Me.ronde2startronde = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ronde1antwoordtekstlbl = New System.Windows.Forms.Label()
-        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Ronde3startronde = New System.Windows.Forms.Button()
         Me.ronde2antwoord4chk = New System.Windows.Forms.CheckBox()
@@ -68,6 +67,7 @@ Partial Class Controle
         Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
         Me.Edit = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ronde4startronde = New System.Windows.Forms.Button()
         Me.ronde3stop = New System.Windows.Forms.Button()
         Me.ronde3start = New System.Windows.Forms.Button()
         Me.Ronde3chkantw3 = New System.Windows.Forms.CheckBox()
@@ -85,10 +85,11 @@ Partial Class Controle
         Me.ronde3label3 = New System.Windows.Forms.Label()
         Me.ronde3label2 = New System.Windows.Forms.Label()
         Me.ronde3label1 = New System.Windows.Forms.Label()
+        Me.Groupbox7 = New System.Windows.Forms.GroupBox()
+        Me.ronde2aanhetspelen = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,6 +97,7 @@ Partial Class Controle
         Me.GroupBox5.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
+        Me.Groupbox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'label1
@@ -164,9 +166,9 @@ Partial Class Controle
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 335)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 335)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(565, 66)
+        Me.GroupBox1.Size = New System.Drawing.Size(576, 66)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Seconden"
@@ -188,9 +190,9 @@ Partial Class Controle
         Me.GroupBox2.Controls.Add(Me.r1v3)
         Me.GroupBox2.Controls.Add(Me.r1v2)
         Me.GroupBox2.Controls.Add(Me.r1v1)
-        Me.GroupBox2.Location = New System.Drawing.Point(29, 255)
+        Me.GroupBox2.Location = New System.Drawing.Point(18, 255)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(662, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(673, 63)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vraag "
@@ -389,16 +391,6 @@ Partial Class Controle
         Me.ronde1antwoordtekstlbl.TabIndex = 13
         Me.ronde1antwoordtekstlbl.Text = "Antwoordtekst"
         '
-        'AxWindowsMediaPlayer1
-        '
-        Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(12, 12)
-        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
-        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(306, 237)
-        Me.AxWindowsMediaPlayer1.TabIndex = 14
-        Me.AxWindowsMediaPlayer1.Visible = False
-        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Ronde3startronde)
@@ -530,6 +522,7 @@ Partial Class Controle
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.ronde4startronde)
         Me.GroupBox5.Controls.Add(Me.ronde3stop)
         Me.GroupBox5.Controls.Add(Me.ronde3start)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw3)
@@ -542,6 +535,16 @@ Partial Class Controle
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Bedieningspaneel ronde 3"
         Me.GroupBox5.Visible = False
+        '
+        'ronde4startronde
+        '
+        Me.ronde4startronde.Location = New System.Drawing.Point(6, 14)
+        Me.ronde4startronde.Name = "ronde4startronde"
+        Me.ronde4startronde.Size = New System.Drawing.Size(205, 80)
+        Me.ronde4startronde.TabIndex = 5
+        Me.ronde4startronde.Text = "Start ronde 4"
+        Me.ronde4startronde.UseVisualStyleBackColor = True
+        Me.ronde4startronde.Visible = False
         '
         'ronde3stop
         '
@@ -619,7 +622,7 @@ Partial Class Controle
         Me.GroupBox6.Controls.Add(Me.ronde3label3)
         Me.GroupBox6.Controls.Add(Me.ronde3label2)
         Me.GroupBox6.Controls.Add(Me.ronde3label1)
-        Me.GroupBox6.Location = New System.Drawing.Point(9, 6)
+        Me.GroupBox6.Location = New System.Drawing.Point(18, 6)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(309, 249)
         Me.GroupBox6.TabIndex = 23
@@ -708,12 +711,32 @@ Partial Class Controle
         Me.ronde3label1.TabIndex = 0
         Me.ronde3label1.Text = "Tip 1"
         '
+        'Groupbox7
+        '
+        Me.Groupbox7.Controls.Add(Me.ronde2aanhetspelen)
+        Me.Groupbox7.Location = New System.Drawing.Point(12, 12)
+        Me.Groupbox7.Name = "Groupbox7"
+        Me.Groupbox7.Size = New System.Drawing.Size(293, 111)
+        Me.Groupbox7.TabIndex = 24
+        Me.Groupbox7.TabStop = False
+        Me.Groupbox7.Text = "Video"
+        '
+        'ronde2aanhetspelen
+        '
+        Me.ronde2aanhetspelen.AutoSize = True
+        Me.ronde2aanhetspelen.Location = New System.Drawing.Point(119, 48)
+        Me.ronde2aanhetspelen.Name = "ronde2aanhetspelen"
+        Me.ronde2aanhetspelen.Size = New System.Drawing.Size(48, 13)
+        Me.ronde2aanhetspelen.TabIndex = 0
+        Me.ronde2aanhetspelen.Text = "Indicator"
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 425)
         Me.Controls.Add(Me.GroupBox6)
+        Me.Controls.Add(Me.Groupbox7)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.Edit)
@@ -721,7 +744,6 @@ Partial Class Controle
         Me.Controls.Add(Me.ronde2foto2)
         Me.Controls.Add(Me.ronde2foto1)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.ronde1antwoordtekstlbl)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
@@ -734,7 +756,6 @@ Partial Class Controle
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -746,6 +767,8 @@ Partial Class Controle
         Me.StatusStrip1.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        Me.Groupbox7.ResumeLayout(False)
+        Me.Groupbox7.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -780,7 +803,6 @@ Partial Class Controle
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ronde1antwoordtekstlbl As System.Windows.Forms.Label
     Friend WithEvents ronde2startronde As System.Windows.Forms.Button
-    Friend WithEvents AxWindowsMediaPlayer1 As AxWMPLib.AxWindowsMediaPlayer
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents ronde2antwoord4chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde2antwoord3chk As System.Windows.Forms.CheckBox
@@ -811,5 +833,8 @@ Partial Class Controle
     Friend WithEvents ronde3label1 As System.Windows.Forms.Label
     Friend WithEvents ronde3stop As System.Windows.Forms.Button
     Friend WithEvents ronde3start As System.Windows.Forms.Button
+    Friend WithEvents ronde4startronde As System.Windows.Forms.Button
+    Friend WithEvents Groupbox7 As System.Windows.Forms.GroupBox
+    Friend WithEvents ronde2aanhetspelen As System.Windows.Forms.Label
 
 End Class
