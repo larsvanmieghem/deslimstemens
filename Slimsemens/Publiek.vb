@@ -146,6 +146,30 @@
     Sub ronde2()
         Panel1.Visible = False
         vragen.Visible = False
+        If Controle.ronde2antw1chk.Checked Then
+            Antw1.Visible = True
+            Antw1.Text = Controle.ronde2antw1chk.Text
+        Else
+            Antw1.Visible = False
+        End If
+        If Controle.ronde2antwoord2chk.Checked Then
+            Antw2.Visible = True
+            Antw2.Text = Controle.ronde2antwoord2chk.Text
+        Else
+            Antw2.Visible = False
+        End If
+        If Controle.ronde2antwoord3chk.Checked Then
+            Antw3.Visible = True
+            Antw3.Text = Controle.ronde2antwoord3chk.Text
+        Else
+            Antw3.Visible = False
+        End If
+        If Controle.ronde2antwoord4chk.Checked Then
+            Antw4.Visible = True
+            Antw4.Text = Controle.ronde2antwoord4chk.Text
+        Else
+            Antw4.Visible = False
+        End If
     End Sub
     Sub ronde3()
 

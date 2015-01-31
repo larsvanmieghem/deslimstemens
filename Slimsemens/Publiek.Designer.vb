@@ -47,6 +47,10 @@ Partial Class Publiek
         Me.r1v2 = New System.Windows.Forms.Label()
         Me.r1v1 = New System.Windows.Forms.Label()
         Me.vragen = New System.Windows.Forms.Label()
+        Me.Antw1 = New System.Windows.Forms.Label()
+        Me.Antw2 = New System.Windows.Forms.Label()
+        Me.Antw3 = New System.Windows.Forms.Label()
+        Me.Antw4 = New System.Windows.Forms.Label()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -326,12 +330,64 @@ Partial Class Publiek
         Me.vragen.TabIndex = 17
         Me.vragen.Text = "Vragen"
         '
+        'Antw1
+        '
+        Me.Antw1.AutoSize = True
+        Me.Antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Antw1.ForeColor = System.Drawing.Color.White
+        Me.Antw1.Location = New System.Drawing.Point(36, 83)
+        Me.Antw1.Name = "Antw1"
+        Me.Antw1.Size = New System.Drawing.Size(72, 22)
+        Me.Antw1.TabIndex = 18
+        Me.Antw1.Text = "Antw1"
+        Me.Antw1.Visible = False
+        '
+        'Antw2
+        '
+        Me.Antw2.AutoSize = True
+        Me.Antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Antw2.ForeColor = System.Drawing.Color.White
+        Me.Antw2.Location = New System.Drawing.Point(32, 144)
+        Me.Antw2.Name = "Antw2"
+        Me.Antw2.Size = New System.Drawing.Size(76, 22)
+        Me.Antw2.TabIndex = 19
+        Me.Antw2.Text = "Label4"
+        Me.Antw2.Visible = False
+        '
+        'Antw3
+        '
+        Me.Antw3.AutoSize = True
+        Me.Antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Antw3.ForeColor = System.Drawing.Color.White
+        Me.Antw3.Location = New System.Drawing.Point(32, 211)
+        Me.Antw3.Name = "Antw3"
+        Me.Antw3.Size = New System.Drawing.Size(76, 22)
+        Me.Antw3.TabIndex = 20
+        Me.Antw3.Text = "Label5"
+        Me.Antw3.Visible = False
+        '
+        'Antw4
+        '
+        Me.Antw4.AutoSize = True
+        Me.Antw4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Antw4.ForeColor = System.Drawing.Color.White
+        Me.Antw4.Location = New System.Drawing.Point(32, 277)
+        Me.Antw4.Name = "Antw4"
+        Me.Antw4.Size = New System.Drawing.Size(76, 22)
+        Me.Antw4.TabIndex = 21
+        Me.Antw4.Text = "Label6"
+        Me.Antw4.Visible = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.Antw4)
+        Me.Controls.Add(Me.Antw3)
+        Me.Controls.Add(Me.Antw2)
+        Me.Controls.Add(Me.Antw1)
         Me.Controls.Add(Me.vragen)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
@@ -375,4 +431,8 @@ Partial Class Publiek
     Friend WithEvents r1v2 As System.Windows.Forms.Label
     Friend WithEvents r1v1 As System.Windows.Forms.Label
     Friend WithEvents vragen As System.Windows.Forms.Label
+    Friend WithEvents Antw1 As System.Windows.Forms.Label
+    Friend WithEvents Antw2 As System.Windows.Forms.Label
+    Friend WithEvents Antw3 As System.Windows.Forms.Label
+    Friend WithEvents Antw4 As System.Windows.Forms.Label
 End Class
