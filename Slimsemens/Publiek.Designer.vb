@@ -122,7 +122,7 @@ Partial Class Publiek
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(27, 26)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(210, 133)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(834, 431)
         Me.AxWindowsMediaPlayer1.TabIndex = 15
         '
         'Panel1

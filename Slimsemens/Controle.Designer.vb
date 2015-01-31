@@ -78,7 +78,6 @@ Partial Class Controle
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.ronde3label9 = New System.Windows.Forms.Label()
         Me.ronde3label8 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ronde3label7 = New System.Windows.Forms.Label()
         Me.ronde3label6 = New System.Windows.Forms.Label()
         Me.ronde3label5 = New System.Windows.Forms.Label()
@@ -86,6 +85,7 @@ Partial Class Controle
         Me.ronde3label3 = New System.Windows.Forms.Label()
         Me.ronde3label2 = New System.Windows.Forms.Label()
         Me.ronde3label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Groupbox7 = New System.Windows.Forms.GroupBox()
         Me.ronde2aanhetspelen = New System.Windows.Forms.Label()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
@@ -107,14 +107,15 @@ Partial Class Controle
         Me.ronde4antw5chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw1chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Ronde5stop = New System.Windows.Forms.Button()
+        Me.Ronde5start = New System.Windows.Forms.Button()
         Me.ronde5antw5chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw4chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw3chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw2chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw1chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.ronde5toonvideo = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -681,17 +682,6 @@ Partial Class Controle
         Me.ronde3label8.TabIndex = 7
         Me.ronde3label8.Text = "Tip 8"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Slimsemens.My.Resources.Resources.platypus
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(322, 249)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 25
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Visible = False
-        '
         'ronde3label7
         '
         Me.ronde3label7.AutoSize = True
@@ -754,6 +744,17 @@ Partial Class Controle
         Me.ronde3label1.Size = New System.Drawing.Size(31, 13)
         Me.ronde3label1.TabIndex = 0
         Me.ronde3label1.Text = "Tip 1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Slimsemens.My.Resources.Resources.platypus
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(322, 249)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'Groupbox7
         '
@@ -971,8 +972,9 @@ Partial Class Controle
         '
         'GroupBox10
         '
-        Me.GroupBox10.Controls.Add(Me.Button2)
-        Me.GroupBox10.Controls.Add(Me.Button1)
+        Me.GroupBox10.Controls.Add(Me.ronde5toonvideo)
+        Me.GroupBox10.Controls.Add(Me.Ronde5stop)
+        Me.GroupBox10.Controls.Add(Me.Ronde5start)
         Me.GroupBox10.Controls.Add(Me.ronde5antw5chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw4chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw3chk)
@@ -986,23 +988,23 @@ Partial Class Controle
         Me.GroupBox10.Text = "Bedieningspaneel ronde 5 "
         Me.GroupBox10.Visible = False
         '
-        'Button2
+        'Ronde5stop
         '
-        Me.Button2.Location = New System.Drawing.Point(132, 212)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Stop"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Ronde5stop.Location = New System.Drawing.Point(149, 212)
+        Me.Ronde5stop.Name = "Ronde5stop"
+        Me.Ronde5stop.Size = New System.Drawing.Size(58, 23)
+        Me.Ronde5stop.TabIndex = 6
+        Me.Ronde5stop.Text = "Stop"
+        Me.Ronde5stop.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Ronde5start
         '
-        Me.Button1.Location = New System.Drawing.Point(17, 213)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Start"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Ronde5start.Location = New System.Drawing.Point(86, 213)
+        Me.Ronde5start.Name = "Ronde5start"
+        Me.Ronde5start.Size = New System.Drawing.Size(57, 23)
+        Me.Ronde5start.TabIndex = 5
+        Me.Ronde5start.Text = "Start"
+        Me.Ronde5start.UseVisualStyleBackColor = True
         '
         'ronde5antw5chk
         '
@@ -1062,6 +1064,15 @@ Partial Class Controle
         Me.GroupBox11.Size = New System.Drawing.Size(328, 264)
         Me.GroupBox11.TabIndex = 9
         Me.GroupBox11.TabStop = False
+        '
+        'ronde5toonvideo
+        '
+        Me.ronde5toonvideo.Location = New System.Drawing.Point(8, 213)
+        Me.ronde5toonvideo.Name = "ronde5toonvideo"
+        Me.ronde5toonvideo.Size = New System.Drawing.Size(75, 23)
+        Me.ronde5toonvideo.TabIndex = 7
+        Me.ronde5toonvideo.Text = "Toon video"
+        Me.ronde5toonvideo.UseVisualStyleBackColor = True
         '
         'Controle
         '
@@ -1199,8 +1210,8 @@ Partial Class Controle
     Friend WithEvents ronde4stop As System.Windows.Forms.Button
     Friend WithEvents ronde4start As System.Windows.Forms.Button
     Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Ronde5stop As System.Windows.Forms.Button
+    Friend WithEvents Ronde5start As System.Windows.Forms.Button
     Friend WithEvents ronde5antw5chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde5antw4chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde5antw3chk As System.Windows.Forms.CheckBox
@@ -1208,5 +1219,6 @@ Partial Class Controle
     Friend WithEvents ronde5antw1chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde5startronde As System.Windows.Forms.Button
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
+    Friend WithEvents ronde5toonvideo As System.Windows.Forms.Button
 
 End Class

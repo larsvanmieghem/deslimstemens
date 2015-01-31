@@ -68,6 +68,13 @@ Public Class Controle
         reeks3 = 3
     End Enum
     Public ronde4checkboxvpunten As Boolean = False
+    Public Enum ronde5actievevraagenum
+        fragment1 = 1
+        fragment2 = 2
+        fragment3 = 3
+    End Enum
+    Public ronde5actievevraag As ronde5actievevraagenum
+    Public ronde5antwtel As Short = 1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
         Dim lezer As New StreamReader("spelbestandje.txt")
@@ -474,7 +481,26 @@ Public Class Controle
                 GroupBox9.Visible = False
                 GroupBox10.Visible = True
                 GroupBox11.Visible = False
-
+                Select Case ronde5actievevraag
+                    Case ronde5actievevraagenum.fragment1
+                        ronde5antw1chk.Text = antwoordenronde5video1(1, 1)
+                        ronde5antw2chk.Text = antwoordenronde5video1(2, 1)
+                        ronde5antw3chk.Text = antwoordenronde5video1(3, 1)
+                        ronde5antw4chk.Text = antwoordenronde5video1(4, 1)
+                        ronde5antw5chk.Text = antwoordenronde5video1(5, 1)
+                    Case ronde5actievevraagenum.fragment2
+                        ronde5antw1chk.Text = antwoordenronde5video2(1, 1)
+                        ronde5antw2chk.Text = antwoordenronde5video2(2, 1)
+                        ronde5antw3chk.Text = antwoordenronde5video2(3, 1)
+                        ronde5antw4chk.Text = antwoordenronde5video2(4, 1)
+                        ronde5antw5chk.Text = antwoordenronde5video2(5, 1)
+                    Case ronde5actievevraagenum.fragment3
+                        ronde5antw1chk.Text = antwoordenronde5video3(1, 1)
+                        ronde5antw2chk.Text = antwoordenronde5video3(2, 1)
+                        ronde5antw3chk.Text = antwoordenronde5video3(3, 1)
+                        ronde5antw4chk.Text = antwoordenronde5video3(4, 1)
+                        ronde5antw5chk.Text = antwoordenronde5video3(5, 1)
+                End Select
 
 
 
@@ -516,6 +542,7 @@ Public Class Controle
 
         If publiekvenster.AxWindowsMediaPlayer1.playState = WMPLib.WMPPlayState.wmppsPlaying Then
             ronde2start.Enabled = False
+            Ronde5start.Enabled = False
             ticknaspelen = 0
             publiekvenster.AxWindowsMediaPlayer1.Visible = True
             publiekvenster.AxWindowsMediaPlayer1.uiMode = "none"
@@ -524,6 +551,7 @@ Public Class Controle
             ticknaspelen += 1
             If ticknaspelen < 2 Then
                 ronde2start.Enabled = True
+                Ronde5start.Enabled = True
             End If
             publiekvenster.AxWindowsMediaPlayer1.Visible = False
             ronde2aanhetspelen.Text = "Niet actief"
@@ -1668,11 +1696,48 @@ Select origineelaandebeurt
         startronde5()
     End Sub
     Public Sub startronde5()
+        ronde5antwtel = 1
         actieveronde = actieverondeenum.Collectiefgeheugen
         aandebeurt = aandebeurtenum.Jan
         origineelaandebeurt = aandebeurt
+        ronde5actievevraag = ronde5actievevraagenum.fragment1
+        ronde5antw1chk.Enabled = False
+        ronde5antw2chk.Enabled = False
+        ronde5antw3chk.Enabled = False
+        ronde5antw4chk.Enabled = False
+        ronde5antw5chk.Enabled = False
+        Ronde5start.Enabled = False
+        Ronde5stop.Enabled = False
+        ronde5antw1chk.Visible = True
+        ronde5antw2chk.Visible = True
+        ronde5antw3chk.Visible = True
+        ronde5antw4chk.Visible = True
+        ronde5antw5chk.Visible = True
+        ronde5toonvideo.Visible = True
+        Ronde5start.Visible = True
+        Ronde5stop.Visible = True
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
     End Sub
 
+    Private Sub Ronde5start_Click(sender As Object, e As EventArgs) Handles Ronde5start.Click
+        Ronde5start.Enabled = False
+        Ronde5stop.Enabled = True
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = True
+        End Select
+        ronde5antw1chk.Enabled = True
+        ronde5antw2chk.Enabled = True
+        ronde5antw3chk.Enabled = True
+        ronde5antw4chk.Enabled = True
+        ronde5antw5chk.Enabled = True
+    End Sub
 
 
 
@@ -1681,5 +1746,81 @@ Select origineelaandebeurt
 
     Public Sub startronde6()
         actieveronde = actieverondeenum.Finale
+    End Sub
+
+    Private Sub ronde5toonvideo_Click(sender As Object, e As EventArgs) Handles ronde5toonvideo.Click
+        origineelaandebeurt = aandebeurt
+        ronde5toonvideo.Enabled = False
+        Select Case ronde5actievevraag
+            Case ronde5actievevraagenum.fragment1
+                publiekvenster.AxWindowsMediaPlayer1.URL = "ronde5video1.wmv"
+            Case ronde5actievevraagenum.fragment2
+                publiekvenster.AxWindowsMediaPlayer1.URL = "ronde5video2.wmv"
+            Case ronde5actievevraagenum.fragment3
+                publiekvenster.AxWindowsMediaPlayer1.URL = "ronde5video3.wmv"
+        End Select
+    End Sub
+
+    Private Sub ronde5antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw1chk.CheckedChanged
+        If ronde5antw1chk.Checked = True Then
+            ronde5telpuntenbij()
+        Else
+            ronde5trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde5antw2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw2chk.CheckedChanged
+        If ronde5antw2chk.Checked = True Then
+            ronde5telpuntenbij()
+        Else
+            ronde5trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde5antw3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw3chk.CheckedChanged
+        If ronde5antw3chk.Checked = True Then
+            ronde5telpuntenbij()
+        Else
+            ronde5trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde5antw4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw4chk.CheckedChanged
+        If ronde5antw4chk.Checked = True Then
+            ronde5telpuntenbij()
+        Else
+            ronde5trekpuntenaf()
+        End If
+    End Sub
+
+    Private Sub ronde5antw5chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw5chk.CheckedChanged
+        If ronde5antw5chk.Checked = True Then
+            ronde5telpuntenbij()
+        Else
+            ronde5trekpuntenaf()
+        End If
+    End Sub
+    Private Sub ronde5telpuntenbij()
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                jan.Istelleraan = False
+                jan.Seconden += (ronde5antwtel * 10)
+                jan.Istelleraan = True
+            Case aandebeurtenum.Platypus
+                platypus.Istelleraan = False
+                platypus.Seconden += (ronde5antwtel * 10)
+                platypus.Istelleraan = True
+            Case aandebeurtenum.Miauw
+                miauw.Istelleraan = False
+                miauw.Seconden += (ronde5antwtel * 10)
+                miauw.Istelleraan = True
+        End Select
+        ronde5antwtel += 1
+        If ronde5antwtel = 6 Then
+
+        End If
+    End Sub
+    Private Sub ronde5trekpuntenaf()
+
     End Sub
 End Class
