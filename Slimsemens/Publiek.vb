@@ -14,11 +14,27 @@
 
     Public Sub synchroniseer()
        
-
+        If Controle.actieveronde = Controle.actieverondeenum.driezesnegen Then
+            ronde1()
+        End If
+        If Controle.actieveronde = Controle.actieverondeenum.Opendeur Then
+            ronde2()
+        End If
+        If Controle.actieveronde = Controle.actieverondeenum.Puzzel Then
+            ronde3()
+        End If
+        If Controle.actieveronde = Controle.actieverondeenum.Galerij Then
+            ronde4()
+        End If
+        If Controle.actieveronde = Controle.actieverondeenum.Collectiefgeheugen Then
+            ronde5()
+        End If
+        If Controle.actieveronde = Controle.actieverondeenum.Finale Then
+            ronde6()
+        End If
         'Toont de juiste elementen afhankelijk van de ronde
         algemeen()
-        ronde1()
-       
+
 
 
 
