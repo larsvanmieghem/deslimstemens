@@ -73,6 +73,7 @@
      
     End Sub
     Sub ronde1()
+        vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
         Select Case Controle.ronde1actievevraag
             Case 1
                 r1v1.ForeColor = Color.Gold
@@ -143,7 +144,8 @@
         r1v15.Location = New Point(Panel1.Width * (29 / 32), r1v1.Location.Y)
     End Sub
     Sub ronde2()
-
+        Panel1.Visible = False
+        vragen.Visible = False
     End Sub
     Sub ronde3()
 

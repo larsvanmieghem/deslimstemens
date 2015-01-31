@@ -226,7 +226,7 @@ Partial Class Controle
         Me.GroupBox2.Controls.Add(Me.r1v1)
         Me.GroupBox2.Location = New System.Drawing.Point(18, 255)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(352, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(673, 63)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vraag "

@@ -46,6 +46,7 @@ Partial Class Publiek
         Me.r1v3 = New System.Windows.Forms.Label()
         Me.r1v2 = New System.Windows.Forms.Label()
         Me.r1v1 = New System.Windows.Forms.Label()
+        Me.vragen = New System.Windows.Forms.Label()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -314,12 +315,24 @@ Partial Class Publiek
         Me.r1v1.TabIndex = 15
         Me.r1v1.Text = "1"
         '
+        'vragen
+        '
+        Me.vragen.AutoSize = True
+        Me.vragen.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.vragen.ForeColor = System.Drawing.Color.White
+        Me.vragen.Location = New System.Drawing.Point(35, 42)
+        Me.vragen.Name = "vragen"
+        Me.vragen.Size = New System.Drawing.Size(81, 22)
+        Me.vragen.TabIndex = 17
+        Me.vragen.Text = "Vragen"
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.vragen)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Naam3label)
@@ -361,4 +374,5 @@ Partial Class Publiek
     Friend WithEvents r1v3 As System.Windows.Forms.Label
     Friend WithEvents r1v2 As System.Windows.Forms.Label
     Friend WithEvents r1v1 As System.Windows.Forms.Label
+    Friend WithEvents vragen As System.Windows.Forms.Label
 End Class

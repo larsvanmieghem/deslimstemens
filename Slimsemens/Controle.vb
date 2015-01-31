@@ -5,6 +5,7 @@ Public Class Controle
     Public miauw As New Speler()
     Dim publiekvenster As New Publiek
     Public antwoordenronde1(15) As String
+    Public vragenronde1(15) As String
     Public antwoordenronde2links(4, 2) As String
     Public antwoordenronde2centraal(4, 2) As String
     Public antwoordenronde2rechts(4, 2) As String
@@ -84,9 +85,13 @@ Public Class Controle
         jan.Naam = lezer.ReadLine().Trim 'spelernaam 1
         platypus.Naam = lezer.ReadLine().Trim 'spelernaam 2
         miauw.Naam = lezer.ReadLine().Trim 'spelernaam 3
-        lezer.ReadLine() '---Ronde1---
+        lezer.ReadLine() '---Ronde1-Antwoorden---
         For i = 1 To 15
             antwoordenronde1(i) = lezer.ReadLine() 'Antwoorden van de eerste ronde
+        Next
+        lezer.ReadLine() '---Ronde1-Vragen---
+        For i = 1 To 15
+            vragenronde1(i) = lezer.ReadLine() 'Vragen van de eerste ronde
         Next
         lezer.ReadLine() '---Ronde2links---
         For i = 1 To 4
