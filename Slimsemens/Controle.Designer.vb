@@ -78,6 +78,7 @@ Partial Class Controle
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.ronde3label9 = New System.Windows.Forms.Label()
         Me.ronde3label8 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ronde3label7 = New System.Windows.Forms.Label()
         Me.ronde3label6 = New System.Windows.Forms.Label()
         Me.ronde3label5 = New System.Windows.Forms.Label()
@@ -87,8 +88,10 @@ Partial Class Controle
         Me.ronde3label1 = New System.Windows.Forms.Label()
         Me.Groupbox7 = New System.Windows.Forms.GroupBox()
         Me.ronde2aanhetspelen = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.ronde5startronde = New System.Windows.Forms.Button()
+        Me.ronde4stop = New System.Windows.Forms.Button()
+        Me.ronde4start = New System.Windows.Forms.Button()
         Me.ronde4pas = New System.Windows.Forms.Button()
         Me.ronde4juist = New System.Windows.Forms.Button()
         Me.ronde4startreeks = New System.Windows.Forms.Button()
@@ -103,8 +106,15 @@ Partial Class Controle
         Me.ronde4antw10chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw5chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw1chk = New System.Windows.Forms.CheckBox()
-        Me.ronde4start = New System.Windows.Forms.Button()
-        Me.ronde4stop = New System.Windows.Forms.Button()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ronde5antw5chk = New System.Windows.Forms.CheckBox()
+        Me.ronde5antw4chk = New System.Windows.Forms.CheckBox()
+        Me.ronde5antw3chk = New System.Windows.Forms.CheckBox()
+        Me.ronde5antw2chk = New System.Windows.Forms.CheckBox()
+        Me.ronde5antw1chk = New System.Windows.Forms.CheckBox()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -115,10 +125,12 @@ Partial Class Controle
         Me.GroupBox5.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
-        Me.Groupbox7.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Groupbox7.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
         Me.SuspendLayout()
         '
         'label1
@@ -213,7 +225,7 @@ Partial Class Controle
         Me.GroupBox2.Controls.Add(Me.r1v1)
         Me.GroupBox2.Location = New System.Drawing.Point(18, 255)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(673, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(352, 63)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Vraag "
@@ -669,6 +681,17 @@ Partial Class Controle
         Me.ronde3label8.TabIndex = 7
         Me.ronde3label8.Text = "Tip 8"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Slimsemens.My.Resources.Resources.platypus
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(322, 249)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
+        '
         'ronde3label7
         '
         Me.ronde3label7.AutoSize = True
@@ -751,30 +774,51 @@ Partial Class Controle
         Me.ronde2aanhetspelen.TabIndex = 0
         Me.ronde2aanhetspelen.Text = "Indicator"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(309, 249)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 25
-        Me.PictureBox1.TabStop = False
-        Me.PictureBox1.Visible = False
-        '
         'GroupBox8
         '
+        Me.GroupBox8.Controls.Add(Me.ronde5startronde)
         Me.GroupBox8.Controls.Add(Me.ronde4stop)
         Me.GroupBox8.Controls.Add(Me.ronde4start)
         Me.GroupBox8.Controls.Add(Me.ronde4pas)
         Me.GroupBox8.Controls.Add(Me.ronde4juist)
         Me.GroupBox8.Controls.Add(Me.ronde4startreeks)
-        Me.GroupBox8.Location = New System.Drawing.Point(497, 6)
+        Me.GroupBox8.Location = New System.Drawing.Point(504, 6)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(219, 249)
         Me.GroupBox8.TabIndex = 26
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Bedieningspaneel ronde 4"
         Me.GroupBox8.Visible = False
+        '
+        'ronde5startronde
+        '
+        Me.ronde5startronde.Location = New System.Drawing.Point(17, 23)
+        Me.ronde5startronde.Name = "ronde5startronde"
+        Me.ronde5startronde.Size = New System.Drawing.Size(189, 77)
+        Me.ronde5startronde.TabIndex = 5
+        Me.ronde5startronde.Text = "Start ronde 5"
+        Me.ronde5startronde.UseVisualStyleBackColor = True
+        Me.ronde5startronde.Visible = False
+        '
+        'ronde4stop
+        '
+        Me.ronde4stop.Enabled = False
+        Me.ronde4stop.Location = New System.Drawing.Point(119, 168)
+        Me.ronde4stop.Name = "ronde4stop"
+        Me.ronde4stop.Size = New System.Drawing.Size(75, 23)
+        Me.ronde4stop.TabIndex = 4
+        Me.ronde4stop.Text = "Stop"
+        Me.ronde4stop.UseVisualStyleBackColor = True
+        '
+        'ronde4start
+        '
+        Me.ronde4start.Enabled = False
+        Me.ronde4start.Location = New System.Drawing.Point(12, 168)
+        Me.ronde4start.Name = "ronde4start"
+        Me.ronde4start.Size = New System.Drawing.Size(71, 23)
+        Me.ronde4start.TabIndex = 3
+        Me.ronde4start.Text = "Start"
+        Me.ronde4start.UseVisualStyleBackColor = True
         '
         'ronde4pas
         '
@@ -925,34 +969,109 @@ Partial Class Controle
         Me.ronde4antw1chk.Text = "CheckBox1"
         Me.ronde4antw1chk.UseVisualStyleBackColor = True
         '
-        'ronde4start
+        'GroupBox10
         '
-        Me.ronde4start.Enabled = False
-        Me.ronde4start.Location = New System.Drawing.Point(12, 168)
-        Me.ronde4start.Name = "ronde4start"
-        Me.ronde4start.Size = New System.Drawing.Size(71, 23)
-        Me.ronde4start.TabIndex = 3
-        Me.ronde4start.Text = "Start"
-        Me.ronde4start.UseVisualStyleBackColor = True
+        Me.GroupBox10.Controls.Add(Me.Button2)
+        Me.GroupBox10.Controls.Add(Me.Button1)
+        Me.GroupBox10.Controls.Add(Me.ronde5antw5chk)
+        Me.GroupBox10.Controls.Add(Me.ronde5antw4chk)
+        Me.GroupBox10.Controls.Add(Me.ronde5antw3chk)
+        Me.GroupBox10.Controls.Add(Me.ronde5antw2chk)
+        Me.GroupBox10.Controls.Add(Me.ronde5antw1chk)
+        Me.GroupBox10.Location = New System.Drawing.Point(504, 6)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(220, 249)
+        Me.GroupBox10.TabIndex = 28
+        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.Text = "Bedieningspaneel ronde 5 "
+        Me.GroupBox10.Visible = False
         '
-        'ronde4stop
+        'Button2
         '
-        Me.ronde4stop.Enabled = False
-        Me.ronde4stop.Location = New System.Drawing.Point(119, 168)
-        Me.ronde4stop.Name = "ronde4stop"
-        Me.ronde4stop.Size = New System.Drawing.Size(75, 23)
-        Me.ronde4stop.TabIndex = 4
-        Me.ronde4stop.Text = "Stop"
-        Me.ronde4stop.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(132, 212)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Stop"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(17, 213)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Start"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ronde5antw5chk
+        '
+        Me.ronde5antw5chk.AutoSize = True
+        Me.ronde5antw5chk.Location = New System.Drawing.Point(18, 168)
+        Me.ronde5antw5chk.Name = "ronde5antw5chk"
+        Me.ronde5antw5chk.Size = New System.Drawing.Size(81, 17)
+        Me.ronde5antw5chk.TabIndex = 4
+        Me.ronde5antw5chk.Text = "CheckBox5"
+        Me.ronde5antw5chk.UseVisualStyleBackColor = True
+        '
+        'ronde5antw4chk
+        '
+        Me.ronde5antw4chk.AutoSize = True
+        Me.ronde5antw4chk.Location = New System.Drawing.Point(17, 134)
+        Me.ronde5antw4chk.Name = "ronde5antw4chk"
+        Me.ronde5antw4chk.Size = New System.Drawing.Size(81, 17)
+        Me.ronde5antw4chk.TabIndex = 3
+        Me.ronde5antw4chk.Text = "CheckBox4"
+        Me.ronde5antw4chk.UseVisualStyleBackColor = True
+        '
+        'ronde5antw3chk
+        '
+        Me.ronde5antw3chk.AutoSize = True
+        Me.ronde5antw3chk.Location = New System.Drawing.Point(17, 106)
+        Me.ronde5antw3chk.Name = "ronde5antw3chk"
+        Me.ronde5antw3chk.Size = New System.Drawing.Size(81, 17)
+        Me.ronde5antw3chk.TabIndex = 2
+        Me.ronde5antw3chk.Text = "CheckBox3"
+        Me.ronde5antw3chk.UseVisualStyleBackColor = True
+        '
+        'ronde5antw2chk
+        '
+        Me.ronde5antw2chk.AutoSize = True
+        Me.ronde5antw2chk.Location = New System.Drawing.Point(17, 77)
+        Me.ronde5antw2chk.Name = "ronde5antw2chk"
+        Me.ronde5antw2chk.Size = New System.Drawing.Size(81, 17)
+        Me.ronde5antw2chk.TabIndex = 1
+        Me.ronde5antw2chk.Text = "CheckBox2"
+        Me.ronde5antw2chk.UseVisualStyleBackColor = True
+        '
+        'ronde5antw1chk
+        '
+        Me.ronde5antw1chk.AutoSize = True
+        Me.ronde5antw1chk.Location = New System.Drawing.Point(18, 44)
+        Me.ronde5antw1chk.Name = "ronde5antw1chk"
+        Me.ronde5antw1chk.Size = New System.Drawing.Size(81, 17)
+        Me.ronde5antw1chk.TabIndex = 0
+        Me.ronde5antw1chk.Text = "CheckBox1"
+        Me.ronde5antw1chk.UseVisualStyleBackColor = True
+        '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.PictureBox1)
+        Me.GroupBox11.Location = New System.Drawing.Point(6, 0)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(328, 264)
+        Me.GroupBox11.TabIndex = 9
+        Me.GroupBox11.TabStop = False
         '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 425)
+        Me.Controls.Add(Me.GroupBox11)
+        Me.Controls.Add(Me.GroupBox10)
         Me.Controls.Add(Me.GroupBox9)
         Me.Controls.Add(Me.GroupBox8)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.Groupbox7)
         Me.Controls.Add(Me.StatusStrip1)
@@ -985,12 +1104,15 @@ Partial Class Controle
         Me.StatusStrip1.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Groupbox7.ResumeLayout(False)
         Me.Groupbox7.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox9.PerformLayout()
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1076,5 +1198,15 @@ Partial Class Controle
     Friend WithEvents ronde4antw1chk As System.Windows.Forms.CheckBox
     Friend WithEvents ronde4stop As System.Windows.Forms.Button
     Friend WithEvents ronde4start As System.Windows.Forms.Button
+    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ronde5antw5chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde5antw4chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde5antw3chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde5antw2chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde5antw1chk As System.Windows.Forms.CheckBox
+    Friend WithEvents ronde5startronde As System.Windows.Forms.Button
+    Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
 
 End Class

@@ -234,6 +234,7 @@ Public Class Controle
                 PictureBox1.Visible = False
                 GroupBox8.Visible = False
                 GroupBox9.Visible = False
+                GroupBox11.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde1/6: 3-6-9"
 
             Case actieverondeenum.Opendeur
@@ -247,7 +248,7 @@ Public Class Controle
                 PictureBox1.Visible = False
                 GroupBox8.Visible = False
                 GroupBox9.Visible = False
-
+                GroupBox11.Visible = False
                 Select Case ronde2actievevraag
                     Case ronde2actievevraagem.links
                         ronde2antw1chk.Text = antwoordenronde2links(1, 1)
@@ -282,6 +283,7 @@ Public Class Controle
                 PictureBox1.Visible = False
                 GroupBox8.Visible = False
                 GroupBox9.Visible = False
+                GroupBox11.Visible = False
 
                 Select Case ronde3actievevraag
                     Case ronde3actievevraagem.puzzelvoorjan
@@ -394,6 +396,7 @@ Public Class Controle
                 GroupBox6.Visible = False
                 GroupBox8.Visible = True
                 GroupBox9.Visible = True
+                GroupBox11.Visible = True
                 ToolStripStatusLabel1.Text = "Ronde4/6: Galerij"
 
                 Select Case ronde4actievereeks
@@ -469,6 +472,12 @@ Public Class Controle
                 PictureBox1.Visible = False
                 GroupBox8.Visible = False
                 GroupBox9.Visible = False
+                GroupBox10.Visible = True
+                GroupBox11.Visible = False
+
+
+
+
             Case actieverondeenum.Finale
                 ronde1antwoordtekstlbl.Visible = False
                 GroupBox2.Visible = False
@@ -483,6 +492,7 @@ Public Class Controle
                 PictureBox1.Visible = False
                 GroupBox8.Visible = False
                 GroupBox9.Visible = False
+                GroupBox11.Visible = False
                 ToolStripStatusLabel1.Text = "Ronde 6/6: finale"
         End Select
 
@@ -955,13 +965,6 @@ Public Class Controle
 
     End Sub
 
-
-
-
-
-
-
-
    
     Private Sub Ronde3chkantw1_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw1.CheckedChanged
         If ronde3checkboxvpunten = True Then
@@ -1144,7 +1147,7 @@ Select origineelaandebeurt
         End If
 
     End Sub
-
+    '---Ronde4---
     Private Sub ronde4startronde_Click(sender As Object, e As EventArgs) Handles ronde4startronde.Click
         startronde4()
     End Sub
@@ -1157,12 +1160,19 @@ Select origineelaandebeurt
         PictureBox1.Visible = False
         GroupBox9.Enabled = False
         ronde4rondgaan = 1
+        ronde5startronde.Visible = False
+        ronde4juist.Enabled = False
+        ronde4pas.Enabled = False
+        ronde4start.Enabled = False
+        ronde4stop.Enabled = False
     End Sub
     Private Sub Ronde4startreeks_Click(sender As Object, e As EventArgs) Handles ronde4startreeks.Click
         origineelaandebeurt = aandebeurt
         ronde4startreeks.Enabled = False
         ronde4juist.Enabled = True
         ronde4pas.Enabled = True
+        ronde4start.Enabled = False
+        ronde4stop.Enabled = False
         Select Case aandebeurt
             Case aandebeurtenum.Jan
                 jan.Istelleraan = True
@@ -1183,12 +1193,8 @@ Select origineelaandebeurt
 
 
 
-    Public Sub startronde5()
-        actieveronde = actieverondeenum.Collectiefgeheugen
-    End Sub
-    Public Sub startronde6()
-        actieveronde = actieverondeenum.Finale
-    End Sub
+    
+
 
     
     Private Sub ronde4juist_Click(sender As Object, e As EventArgs) Handles ronde4juist.Click
@@ -1222,8 +1228,10 @@ Select origineelaandebeurt
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks1foto10.jpg")
                 Case 10
+                    ronde4anderespelers()   'Zeer belangrijk dat dit voor chk10 = true komt => dit activeert de mogelijkheid voor de andere spelers 
+                    'om deze reeks te beantwoorden; als alles al juist is, dan zorgt chk10 = true voor het beïndigen van de reeks. Omgekeerd  niet zou de volgende reeks worden beïndigd en zouden de andere spelers vervolgens de kans krijgen om die reeks als eerste te beantwoorden, wat totaal 
+                    'niet de bedoeling is
                     ronde4antw10chk.Checked = True
-                    ronde4anderespelers()
             End Select
         ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks2 Then
             Select Case ronde4actievefoto
@@ -1255,8 +1263,8 @@ Select origineelaandebeurt
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks2foto10.jpg")
                 Case 10
-                    ronde4antw10chk.Checked = True
                     ronde4anderespelers()
+                    ronde4antw10chk.Checked = True
             End Select
         ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks3 Then
             Select Case ronde4actievefoto
@@ -1288,8 +1296,8 @@ Select origineelaandebeurt
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks3foto10.jpg")
                 Case 10
-                    ronde4antw10chk.Checked = True
                     ronde4anderespelers()
+                    ronde4antw10chk.Checked = True
             End Select
         End If
         ronde4actievefoto += 1
@@ -1577,6 +1585,12 @@ Select origineelaandebeurt
             Case aandebeurtenum.Platypus
                 aandebeurt = aandebeurtenum.Miauw
             Case aandebeurtenum.Miauw
+                GroupBox9.Visible = False
+                ronde5startronde.Visible = True
+                ronde4start.Visible = False
+                ronde4stop.Visible = False
+                ronde4juist.Visible = False
+                ronde4pas.Visible = False
         End Select
         ronde4checkboxvpunten = True
         ronde4antw1chk.Checked = False
@@ -1602,5 +1616,23 @@ Select origineelaandebeurt
         End Select
         origineelaandebeurt = aandebeurt
     End Sub
+    '---Ronde5---
+    Private Sub ronde5startronde_Click(sender As Object, e As EventArgs) Handles ronde5startronde.Click
+        startronde5()
+    End Sub
+    Public Sub startronde5()
+        actieveronde = actieverondeenum.Collectiefgeheugen
+        aandebeurt = aandebeurtenum.Jan
+        origineelaandebeurt = aandebeurt
+    End Sub
 
+
+
+
+
+
+
+    Public Sub startronde6()
+        actieveronde = actieverondeenum.Finale
+    End Sub
 End Class
