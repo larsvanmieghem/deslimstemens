@@ -14,12 +14,42 @@
     End Sub
 
     Public Sub synchroniseer()
+       
+
+        'Toont de juiste elementen afhankelijk van de ronde
+        algemeen()
+        ronde1()
+       
+
+
+
+
+
+
+
+    End Sub
+    Sub algemeen()
         Label1.Text = Controle.jan.Seconden.ToString
         Label2.Text = Controle.platypus.Seconden.ToString
         Label3.Text = Controle.miauw.Seconden.ToString
 
-        'Toont de juiste elementen afhankelijk van de ronde
-
+        'Toont wie er aan de beurt is
+        Select Case Controle.aandebeurt
+            Case Controle.aandebeurtenum.Jan
+                Naam1label.ForeColor = Color.Gold
+                Naam2label.ForeColor = Color.White
+                Naam3label.ForeColor = Color.White
+            Case Controle.aandebeurtenum.Platypus
+                Naam1label.ForeColor = Color.White
+                Naam2label.ForeColor = Color.Gold
+                Naam3label.ForeColor = Color.White
+            Case Controle.aandebeurtenum.Miauw
+                Naam1label.ForeColor = Color.White
+                Naam2label.ForeColor = Color.White
+                Naam3label.ForeColor = Color.Gold
+        End Select
+    End Sub
+    Sub ronde1()
         Select Case Controle.ronde1actievevraag
             Case 1
                 r1v1.ForeColor = Color.Gold
@@ -71,30 +101,20 @@
         Else
             Panel1.Visible = False
         End If
-
-
-
-
-
-
-
-        'Toont wie er aan de beurt is
-        Select Case Controle.aandebeurt
-            Case Controle.aandebeurtenum.Jan
-                Naam1label.ForeColor = Color.Gold
-                Naam2label.ForeColor = Color.White
-                Naam3label.ForeColor = Color.White
-            Case Controle.aandebeurtenum.Platypus
-                Naam1label.ForeColor = Color.White
-                Naam2label.ForeColor = Color.Gold
-                Naam3label.ForeColor = Color.White
-            Case Controle.aandebeurtenum.Miauw
-                Naam1label.ForeColor = Color.White
-                Naam2label.ForeColor = Color.White
-                Naam3label.ForeColor = Color.Gold
-        End Select
     End Sub
+    Sub ronde2()
 
+    End Sub
+    Sub ronde3()
 
+    End Sub
+    Sub ronde4()
 
+    End Sub
+    Sub ronde5()
+
+    End Sub
+    Sub ronde6()
+
+    End Sub
 End Class

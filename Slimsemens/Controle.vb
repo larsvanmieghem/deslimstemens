@@ -75,6 +75,8 @@ Public Class Controle
     End Enum
     Public ronde5actievevraag As ronde5actievevraagenum
     Public ronde5antwtel As Short = 1
+    Public ronde5checkv As Boolean = True
+    Public ronde5rondgaan As Short = 1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Inladen namen en vragen uit bestand koop een heusnoorn
         Dim lezer As New StreamReader("spelbestandje.txt")
@@ -1719,6 +1721,8 @@ Select origineelaandebeurt
         jan.Istelleraan = False
         platypus.Istelleraan = False
         miauw.Istelleraan = False
+        ronde5checkv = True
+        ronde5rondgaan = 1
     End Sub
 
     Private Sub Ronde5start_Click(sender As Object, e As EventArgs) Handles Ronde5start.Click
@@ -1801,26 +1805,104 @@ Select origineelaandebeurt
         End If
     End Sub
     Private Sub ronde5telpuntenbij()
-        Select Case aandebeurt
-            Case aandebeurtenum.Jan
-                jan.Istelleraan = False
-                jan.Seconden += (ronde5antwtel * 10)
-                jan.Istelleraan = True
-            Case aandebeurtenum.Platypus
-                platypus.Istelleraan = False
-                platypus.Seconden += (ronde5antwtel * 10)
-                platypus.Istelleraan = True
-            Case aandebeurtenum.Miauw
-                miauw.Istelleraan = False
-                miauw.Seconden += (ronde5antwtel * 10)
-                miauw.Istelleraan = True
-        End Select
-        ronde5antwtel += 1
-        If ronde5antwtel = 6 Then
-
+        If ronde5checkv = True Then
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden += (ronde5antwtel * 10)
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden += (ronde5antwtel * 10)
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden += (ronde5antwtel * 10)
+                    miauw.Istelleraan = True
+            End Select
+            ronde5antwtel += 1
+            If ronde5antwtel = 6 Then
+                ronde5volgendevraag()
+            End If
         End If
     End Sub
     Private Sub ronde5trekpuntenaf()
+        If ronde5checkv = True Then
+            ronde5antwtel -= 1
+            Select Case aandebeurt
+                Case aandebeurtenum.Jan
+                    jan.Istelleraan = False
+                    jan.Seconden -= (ronde5antwtel * 10)
+                    jan.Istelleraan = True
+                Case aandebeurtenum.Platypus
+                    platypus.Istelleraan = False
+                    platypus.Seconden -= (ronde5antwtel * 10)
+                    platypus.Istelleraan = True
+                Case aandebeurtenum.Miauw
+                    miauw.Istelleraan = False
+                    miauw.Seconden -= (10 * ronde5antwtel)
+                    miauw.Istelleraan = True
+            End Select
+
+        End If
+    End Sub
+
+    Private Sub Ronde5stop_Click(sender As Object, e As EventArgs) Handles Ronde5stop.Click
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
+        Ronde5stop.Enabled = False
+        Ronde5start.Enabled = True
+        ronde5antw1chk.Enabled = False
+        ronde5antw2chk.Enabled = False
+        ronde5antw3chk.Enabled = False
+        ronde5antw4chk.Enabled = False
+        ronde5antw5chk.Enabled = False
+        ronde5rondgaan += 1
+        Select Case aandebeurt
+            Case aandebeurtenum.Jan
+                aandebeurt = aandebeurtenum.Platypus
+            Case aandebeurtenum.Platypus
+                aandebeurt = aandebeurtenum.Miauw
+            Case aandebeurtenum.Miauw
+                aandebeurt = aandebeurtenum.Jan
+        End Select
+        If ronde5rondgaan >= 4 Then
+            ronde5volgendevraag()
+        End If
+    End Sub
+    Sub ronde5volgendevraag()
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
+        Ronde5start.Enabled = False
+        Ronde5stop.Enabled = False
+        ronde5toonvideo.Enabled = True
+        If ronde5actievevraag <= 2 Then
+            ronde5actievevraag += 1
+        End If
+        ronde5checkv = False
+        ronde5antw1chk.Checked = False
+        ronde5antw2chk.Checked = False
+        ronde5antw3chk.Checked = False
+        ronde5antw4chk.Checked = False
+        ronde5antw5chk.Checked = False
+        ronde5antw1chk.Enabled = False
+        ronde5antw2chk.Enabled = False
+        ronde5antw3chk.Enabled = False
+        ronde5antw4chk.Enabled = False
+        ronde5antw5chk.Enabled = False
+        ronde5checkv = True
+        ronde5rondgaan = 1
+        ronde5antwtel = 1
+        Select Case origineelaandebeurt
+            Case aandebeurtenum.Jan
+                aandebeurt = aandebeurtenum.Platypus
+            Case aandebeurtenum.Platypus
+                aandebeurt = aandebeurtenum.Miauw
+            Case aandebeurtenum.Miauw
+        End Select
+        origineelaandebeurt = aandebeurt
 
     End Sub
 End Class

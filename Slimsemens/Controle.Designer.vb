@@ -107,6 +107,7 @@ Partial Class Controle
         Me.ronde4antw5chk = New System.Windows.Forms.CheckBox()
         Me.ronde4antw1chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.ronde5toonvideo = New System.Windows.Forms.Button()
         Me.Ronde5stop = New System.Windows.Forms.Button()
         Me.Ronde5start = New System.Windows.Forms.Button()
         Me.ronde5antw5chk = New System.Windows.Forms.CheckBox()
@@ -115,7 +116,6 @@ Partial Class Controle
         Me.ronde5antw2chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw1chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
-        Me.ronde5toonvideo = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -988,6 +988,15 @@ Partial Class Controle
         Me.GroupBox10.Text = "Bedieningspaneel ronde 5 "
         Me.GroupBox10.Visible = False
         '
+        'ronde5toonvideo
+        '
+        Me.ronde5toonvideo.Location = New System.Drawing.Point(8, 213)
+        Me.ronde5toonvideo.Name = "ronde5toonvideo"
+        Me.ronde5toonvideo.Size = New System.Drawing.Size(75, 23)
+        Me.ronde5toonvideo.TabIndex = 7
+        Me.ronde5toonvideo.Text = "Toon video"
+        Me.ronde5toonvideo.UseVisualStyleBackColor = True
+        '
         'Ronde5stop
         '
         Me.Ronde5stop.Location = New System.Drawing.Point(149, 212)
@@ -1064,15 +1073,6 @@ Partial Class Controle
         Me.GroupBox11.Size = New System.Drawing.Size(328, 264)
         Me.GroupBox11.TabIndex = 9
         Me.GroupBox11.TabStop = False
-        '
-        'ronde5toonvideo
-        '
-        Me.ronde5toonvideo.Location = New System.Drawing.Point(8, 213)
-        Me.ronde5toonvideo.Name = "ronde5toonvideo"
-        Me.ronde5toonvideo.Size = New System.Drawing.Size(75, 23)
-        Me.ronde5toonvideo.TabIndex = 7
-        Me.ronde5toonvideo.Text = "Toon video"
-        Me.ronde5toonvideo.UseVisualStyleBackColor = True
         '
         'Controle
         '
