@@ -1231,7 +1231,21 @@ Select origineelaandebeurt
                     ronde4anderespelers()   'Zeer belangrijk dat dit voor chk10 = true komt => dit activeert de mogelijkheid voor de andere spelers 
                     'om deze reeks te beantwoorden; als alles al juist is, dan zorgt chk10 = true voor het beïndigen van de reeks. Omgekeerd  niet zou de volgende reeks worden beïndigd en zouden de andere spelers vervolgens de kans krijgen om die reeks als eerste te beantwoorden, wat totaal 
                     'niet de bedoeling is
+                    Select Case origineelaandebeurt
+                        Case aandebeurtenum.Jan
+                            platypus.Seconden -= 10
+                            jan.Seconden += 10
+                        Case aandebeurtenum.Platypus
+                            miauw.Seconden -= 10
+                            platypus.Seconden += 10
+                        Case aandebeurtenum.Miauw
+                            miauw.Seconden += 10
+                            jan.Seconden -= 10
+                    End Select
                     ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
             End Select
         ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks2 Then
             Select Case ronde4actievefoto
@@ -1264,7 +1278,21 @@ Select origineelaandebeurt
                     PictureBox1.Load("reeks2foto10.jpg")
                 Case 10
                     ronde4anderespelers()
+                    Select Case origineelaandebeurt
+                        Case aandebeurtenum.Jan
+                            platypus.Seconden -= 10
+                            jan.Seconden += 10
+                        Case aandebeurtenum.Platypus
+                            miauw.Seconden -= 10
+                            platypus.Seconden += 10
+                        Case aandebeurtenum.Miauw
+                            miauw.Seconden += 10
+                            jan.Seconden -= 10
+                    End Select
                     ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
             End Select
         ElseIf ronde4actievereeks = ronde4actievereeksenum.reeks3 Then
             Select Case ronde4actievefoto
@@ -1297,7 +1325,21 @@ Select origineelaandebeurt
                     PictureBox1.Load("reeks3foto10.jpg")
                 Case 10
                     ronde4anderespelers()
+                    Select Case origineelaandebeurt
+                        Case aandebeurtenum.Jan
+                            platypus.Seconden -= 10
+                            jan.Seconden += 10
+                        Case aandebeurtenum.Platypus
+                            miauw.Seconden -= 10
+                            platypus.Seconden += 10
+                        Case aandebeurtenum.Miauw
+                            miauw.Seconden += 10
+                            jan.Seconden -= 10
+                    End Select
                     ronde4antw10chk.Checked = True
+                    jan.Istelleraan = False
+                    platypus.Istelleraan = False
+                    miauw.Istelleraan = False
             End Select
         End If
         ronde4actievefoto += 1
@@ -1579,6 +1621,10 @@ Select origineelaandebeurt
     End Sub
     Private Sub ronde4volgendereeks()
         ronde4rondgaan = 1
+        jan.Istelleraan = False
+        platypus.Istelleraan = False
+        miauw.Istelleraan = False
+        ronde4start.Enabled = False
         Select Case origineelaandebeurt
             Case aandebeurtenum.Jan
                 aandebeurt = aandebeurtenum.Platypus
@@ -1606,6 +1652,7 @@ Select origineelaandebeurt
         ronde4checkboxvpunten = False
         ronde4stop.Enabled = False
         ronde4startreeks.Enabled = True
+        GroupBox9.Enabled = False
         Select Case ronde4actievereeks
             Case ronde4actievereeksenum.reeks1
                 ronde4actievereeks = ronde4actievereeksenum.reeks2
