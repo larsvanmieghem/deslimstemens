@@ -81,9 +81,9 @@ Public Class Controle
         'Inladen namen en vragen uit bestand koop een heusnoorn
         Dim lezer As New StreamReader("spelbestandje.txt")
         lezer.ReadLine() '---Naam---
-        jan.Naam = lezer.ReadLine() 'spelernaam 1
-        platypus.Naam = lezer.ReadLine() 'spelernaam 2
-        miauw.Naam = lezer.ReadLine() 'spelernaam 3
+        jan.Naam = lezer.ReadLine().Trim 'spelernaam 1
+        platypus.Naam = lezer.ReadLine().Trim 'spelernaam 2
+        miauw.Naam = lezer.ReadLine().Trim 'spelernaam 3
         lezer.ReadLine() '---Ronde1---
         For i = 1 To 15
             antwoordenronde1(i) = lezer.ReadLine() 'Antwoorden van de eerste ronde

@@ -1,5 +1,4 @@
 ﻿Public Class Publiek
-
     Public Sub initieer()
         'Past de weergegeven namen aan aan die van het bestand
         Naam1label.Text = Controle.jan.Naam
@@ -48,6 +47,14 @@
                 Naam2label.ForeColor = Color.White
                 Naam3label.ForeColor = Color.Gold
         End Select
+
+        Naam1label.Location = New Point(Me.Width * (1 / 10), Me.Height * (3 / 4))
+        Naam2label.Location = New Point(Me.Width * (4.5 / 10), Me.Height * (3 / 4))
+        Naam3label.Location = New Point(Me.Width * (8 / 10), Me.Height * (3 / 4))
+        Label1.Location = New Point((Me.Width * (1 / 10)) + (Naam1label.Width / 3), Me.Height * (8.5 / 10))
+        Label2.Location = New Point(Me.Width * (4.5 / 10) + (Naam2label.Width / 3), Me.Height * (8.5 / 10))
+        Label3.Location = New Point(Me.Width * (8 / 10) + (Naam3label.Width / 3), Me.Height * (8.5 / 10))
+     
     End Sub
     Sub ronde1()
         Select Case Controle.ronde1actievevraag
@@ -101,6 +108,23 @@
         Else
             Panel1.Visible = False
         End If
+        Panel1.Width = Me.Width
+        Panel1.Location = New Point(0, Me.Height * (2 / 4))
+        r1v1.Location = New Point(Panel1.Width * (1 / 32), r1v1.Location.Y)
+        r1v2.Location = New Point(Panel1.Width * (3 / 32), r1v1.Location.Y)
+        r1v3.Location = New Point(Panel1.Width * (5 / 32), r1v1.Location.Y)
+        r1v4.Location = New Point(Panel1.Width * (7 / 32), r1v1.Location.Y)
+        r1v5.Location = New Point(Panel1.Width * (9 / 32), r1v1.Location.Y)
+        r1v6.Location = New Point(Panel1.Width * (11 / 32), r1v1.Location.Y)
+        r1v7.Location = New Point(Panel1.Width * (13 / 32), r1v1.Location.Y)
+        r1v8.Location = New Point(Panel1.Width * (15 / 32), r1v1.Location.Y)
+        r1v9.Location = New Point(Panel1.Width * (17 / 32), r1v1.Location.Y)
+        r1v10.Location = New Point(Panel1.Width * (19 / 32), r1v1.Location.Y)
+        r1v11.Location = New Point(Panel1.Width * (21 / 32), r1v1.Location.Y)
+        r1v12.Location = New Point(Panel1.Width * (23 / 32), r1v1.Location.Y)
+        r1v13.Location = New Point(Panel1.Width * (25 / 32), r1v1.Location.Y)
+        r1v14.Location = New Point(Panel1.Width * (27 / 32), r1v1.Location.Y)
+        r1v15.Location = New Point(Panel1.Width * (29 / 32), r1v1.Location.Y)
     End Sub
     Sub ronde2()
 

@@ -101,6 +101,7 @@ Partial Class Publiek
         Me.Naam2label.ForeColor = System.Drawing.Color.White
         Me.Naam2label.Location = New System.Drawing.Point(384, 460)
         Me.Naam2label.Name = "Naam2label"
+        Me.Naam2label.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Naam2label.Size = New System.Drawing.Size(96, 22)
         Me.Naam2label.TabIndex = 4
         Me.Naam2label.Text = "Platypus"
@@ -307,7 +308,7 @@ Partial Class Publiek
         Me.r1v1.AutoSize = True
         Me.r1v1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.r1v1.ForeColor = System.Drawing.Color.White
-        Me.r1v1.Location = New System.Drawing.Point(12, 32)
+        Me.r1v1.Location = New System.Drawing.Point(8, 32)
         Me.r1v1.Name = "r1v1"
         Me.r1v1.Size = New System.Drawing.Size(22, 22)
         Me.r1v1.TabIndex = 15
