@@ -44,7 +44,7 @@
             If (mistelleraan <> value) Then
                 mistelleraan = value
                 If mistelleraan = True Then
-                        timer.Enabled = True
+                    timer.Enabled = True
                 ElseIf mistelleraan = False Then
                     timer.Enabled = False
                 End If

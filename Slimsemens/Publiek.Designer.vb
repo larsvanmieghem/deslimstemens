@@ -52,9 +52,17 @@ Partial Class Publiek
         Me.Antw3 = New System.Windows.Forms.Label()
         Me.Antw4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.AxVLCPlugin21 = New AxAXVLC.AxVLCPlugin2()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AxVLCPlugin21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -127,7 +135,7 @@ Partial Class Publiek
         'AxWindowsMediaPlayer1
         '
         Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(753, 21)
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(716, 12)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
         Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(126, 100)
@@ -390,12 +398,56 @@ Partial Class Publiek
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
+        Me.PictureBox2.Location = New System.Drawing.Point(-2, 460)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(31, 22)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 23
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
+        Me.PictureBox3.Location = New System.Drawing.Point(347, 460)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(31, 22)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 24
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
+        Me.PictureBox4.Location = New System.Drawing.Point(753, 460)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(31, 22)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 25
+        Me.PictureBox4.TabStop = False
+        '
+        'AxVLCPlugin21
+        '
+        Me.AxVLCPlugin21.Enabled = True
+        Me.AxVLCPlugin21.Location = New System.Drawing.Point(314, 225)
+        Me.AxVLCPlugin21.Name = "AxVLCPlugin21"
+        Me.AxVLCPlugin21.OcxState = CType(resources.GetObject("AxVLCPlugin21.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxVLCPlugin21.Size = New System.Drawing.Size(74, 42)
+        Me.AxVLCPlugin21.TabIndex = 26
+        Me.AxVLCPlugin21.Visible = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.AxVLCPlugin21)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Antw4)
         Me.Controls.Add(Me.Antw3)
@@ -417,6 +469,10 @@ Partial Class Publiek
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AxVLCPlugin21, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -450,4 +506,8 @@ Partial Class Publiek
     Friend WithEvents Antw3 As System.Windows.Forms.Label
     Friend WithEvents Antw4 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents AxVLCPlugin21 As AxAXVLC.AxVLCPlugin2
 End Class

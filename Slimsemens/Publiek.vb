@@ -1,4 +1,5 @@
 ﻿Public Class Publiek
+    Dim vlcaangeschakeld As Boolean = False
     Public Sub initieer()
         'Past de weergegeven namen aan aan die van het bestand
         Naam1label.Text = Controle.jan.Naam
@@ -47,30 +48,43 @@
         Label1.Text = Controle.jan.Seconden.ToString
         Label2.Text = Controle.platypus.Seconden.ToString
         Label3.Text = Controle.miauw.Seconden.ToString
+        If (Controle.jan.Istelleraan = True) Or (Controle.platypus.Istelleraan = True Or Controle.miauw.Istelleraan = True) Then
+            If vlcaangeschakeld = False Then
+                vlcaangeschakeld = True
+                AxVLCPlugin21.playlist.add("klok.mp3")
+                AxVLCPlugin21.playlist.play()
+            End If
+        Else
+            If vlcaangeschakeld = True Then
+                vlcaangeschakeld = False
+                AxVLCPlugin21.playlist.stop()
+            End If
+            End If
+            'Toont wie er aan de beurt is
+            Select Case Controle.aandebeurt
+                Case Controle.aandebeurtenum.Jan
+                    Naam1label.ForeColor = Color.Gold
+                    Naam2label.ForeColor = Color.White
+                    Naam3label.ForeColor = Color.White
+                Case Controle.aandebeurtenum.Platypus
+                    Naam1label.ForeColor = Color.White
+                    Naam2label.ForeColor = Color.Gold
+                    Naam3label.ForeColor = Color.White
+                Case Controle.aandebeurtenum.Miauw
+                    Naam1label.ForeColor = Color.White
+                    Naam2label.ForeColor = Color.White
+                    Naam3label.ForeColor = Color.Gold
+            End Select
 
-        'Toont wie er aan de beurt is
-        Select Case Controle.aandebeurt
-            Case Controle.aandebeurtenum.Jan
-                Naam1label.ForeColor = Color.Gold
-                Naam2label.ForeColor = Color.White
-                Naam3label.ForeColor = Color.White
-            Case Controle.aandebeurtenum.Platypus
-                Naam1label.ForeColor = Color.White
-                Naam2label.ForeColor = Color.Gold
-                Naam3label.ForeColor = Color.White
-            Case Controle.aandebeurtenum.Miauw
-                Naam1label.ForeColor = Color.White
-                Naam2label.ForeColor = Color.White
-                Naam3label.ForeColor = Color.Gold
-        End Select
-
-        Naam1label.Location = New Point(Me.Width * (1 / 10), Me.Height * (3 / 4))
-        Naam2label.Location = New Point(Me.Width * (4.5 / 10), Me.Height * (3 / 4))
-        Naam3label.Location = New Point(Me.Width * (8 / 10), Me.Height * (3 / 4))
-        Label1.Location = New Point((Me.Width * (1 / 10)) + (Naam1label.Width / 3), Me.Height * (8.5 / 10))
-        Label2.Location = New Point(Me.Width * (4.5 / 10) + (Naam2label.Width / 3), Me.Height * (8.5 / 10))
-        Label3.Location = New Point(Me.Width * (8 / 10) + (Naam3label.Width / 3), Me.Height * (8.5 / 10))
-
+            Naam1label.Location = New Point(Me.Width * (1 / 10), Me.Height * (3 / 4))
+            Naam2label.Location = New Point(Me.Width * (4.5 / 10), Me.Height * (3 / 4))
+            Naam3label.Location = New Point(Me.Width * (8 / 10), Me.Height * (3 / 4))
+            Label1.Location = New Point((Me.Width * (1 / 10)) + (Naam1label.Width / 3), Me.Height * (8.5 / 10))
+            Label2.Location = New Point(Me.Width * (4.5 / 10) + (Naam2label.Width / 3), Me.Height * (8.5 / 10))
+            Label3.Location = New Point(Me.Width * (8 / 10) + (Naam3label.Width / 3), Me.Height * (8.5 / 10))
+            PictureBox2.Location = New Point(Naam1label.Location.X - 40, Naam1label.Location.Y)
+            PictureBox3.Location = New Point(Naam2label.Location.X - 40, Naam1label.Location.Y)
+            PictureBox4.Location = New Point(Naam3label.Location.X - 40, Naam1label.Location.Y)
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -146,6 +160,7 @@
         PictureBox1.Width = Me.Width
         PictureBox1.Height = (Me.Height / 2)
         PictureBox1.Location = New Point(0, 0)
+
     End Sub
     Sub ronde2()
         Panel1.Visible = False
