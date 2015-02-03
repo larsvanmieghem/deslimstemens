@@ -51,8 +51,10 @@ Partial Class Publiek
         Me.Antw2 = New System.Windows.Forms.Label()
         Me.Antw3 = New System.Windows.Forms.Label()
         Me.Antw4 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -125,10 +127,10 @@ Partial Class Publiek
         'AxWindowsMediaPlayer1
         '
         Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(27, 26)
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(753, 21)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(834, 431)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(126, 100)
         Me.AxWindowsMediaPlayer1.TabIndex = 15
         '
         'Panel1
@@ -378,31 +380,43 @@ Partial Class Publiek
         Me.Antw4.Text = "Label6"
         Me.Antw4.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(27, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(621, 180)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 22
+        Me.PictureBox1.TabStop = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Antw4)
         Me.Controls.Add(Me.Antw3)
         Me.Controls.Add(Me.Antw2)
         Me.Controls.Add(Me.Antw1)
         Me.Controls.Add(Me.vragen)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.Naam3label)
         Me.Controls.Add(Me.Naam2label)
         Me.Controls.Add(Me.Naam1label)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Enabled = False
         Me.Name = "Publiek"
         Me.Text = "Publiek"
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -435,4 +449,5 @@ Partial Class Publiek
     Friend WithEvents Antw2 As System.Windows.Forms.Label
     Friend WithEvents Antw3 As System.Windows.Forms.Label
     Friend WithEvents Antw4 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

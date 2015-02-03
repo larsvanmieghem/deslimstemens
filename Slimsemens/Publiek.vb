@@ -13,7 +13,7 @@
     End Sub
 
     Public Sub synchroniseer()
-       
+
         If Controle.actieveronde = Controle.actieverondeenum.driezesnegen Then
             ronde1()
         End If
@@ -70,10 +70,11 @@
         Label1.Location = New Point((Me.Width * (1 / 10)) + (Naam1label.Width / 3), Me.Height * (8.5 / 10))
         Label2.Location = New Point(Me.Width * (4.5 / 10) + (Naam2label.Width / 3), Me.Height * (8.5 / 10))
         Label3.Location = New Point(Me.Width * (8 / 10) + (Naam3label.Width / 3), Me.Height * (8.5 / 10))
-     
+
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
+        PictureBox1.Visible = True
         Select Case Controle.ronde1actievevraag
             Case 1
                 r1v1.ForeColor = Color.Gold
@@ -129,23 +130,27 @@
         Panel1.Location = New Point(0, Me.Height * (2 / 4))
         r1v1.Location = New Point(Panel1.Width * (1 / 32), r1v1.Location.Y)
         r1v2.Location = New Point(Panel1.Width * (3 / 32), r1v1.Location.Y)
-        r1v3.Location = New Point(Panel1.Width * (5 / 32), r1v1.Location.Y)
+        r1v3.Location = New Point(Panel1.Width * (5 / 32), r1v1.Location.Y - 10)
         r1v4.Location = New Point(Panel1.Width * (7 / 32), r1v1.Location.Y)
         r1v5.Location = New Point(Panel1.Width * (9 / 32), r1v1.Location.Y)
-        r1v6.Location = New Point(Panel1.Width * (11 / 32), r1v1.Location.Y)
+        r1v6.Location = New Point(Panel1.Width * (11 / 32), r1v1.Location.Y - 10)
         r1v7.Location = New Point(Panel1.Width * (13 / 32), r1v1.Location.Y)
         r1v8.Location = New Point(Panel1.Width * (15 / 32), r1v1.Location.Y)
-        r1v9.Location = New Point(Panel1.Width * (17 / 32), r1v1.Location.Y)
+        r1v9.Location = New Point(Panel1.Width * (17 / 32), r1v1.Location.Y - 10)
         r1v10.Location = New Point(Panel1.Width * (19 / 32), r1v1.Location.Y)
         r1v11.Location = New Point(Panel1.Width * (21 / 32), r1v1.Location.Y)
-        r1v12.Location = New Point(Panel1.Width * (23 / 32), r1v1.Location.Y)
+        r1v12.Location = New Point(Panel1.Width * (23 / 32), r1v1.Location.Y - 10)
         r1v13.Location = New Point(Panel1.Width * (25 / 32), r1v1.Location.Y)
         r1v14.Location = New Point(Panel1.Width * (27 / 32), r1v1.Location.Y)
-        r1v15.Location = New Point(Panel1.Width * (29 / 32), r1v1.Location.Y)
+        r1v15.Location = New Point(Panel1.Width * (29 / 32), r1v1.Location.Y - 10)
+        PictureBox1.Width = Me.Width
+        PictureBox1.Height = (Me.Height / 2)
+        PictureBox1.Location = New Point(0, 0)
     End Sub
     Sub ronde2()
         Panel1.Visible = False
         vragen.Visible = False
+        PictureBox1.Visible = False
         If Controle.ronde2antw1chk.Checked Then
             Antw1.Visible = True
             Antw1.Text = Controle.ronde2antw1chk.Text
@@ -172,15 +177,19 @@
         End If
     End Sub
     Sub ronde3()
-
+        Panel1.Visible = False
+        PictureBox1.Visible = False
     End Sub
     Sub ronde4()
-
+        Panel1.Visible = False
+        PictureBox1.Visible = False
     End Sub
     Sub ronde5()
-
+        Panel1.Visible = False
+        PictureBox1.Visible = False
     End Sub
     Sub ronde6()
-
+        Panel1.Visible = False
+        PictureBox1.Visible = False
     End Sub
 End Class
