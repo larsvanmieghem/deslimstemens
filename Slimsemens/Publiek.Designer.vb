@@ -62,6 +62,10 @@ Partial Class Publiek
         Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
         Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
         Me.ronde2grotefoto = New System.Windows.Forms.PictureBox()
+        Me.logo203 = New System.Windows.Forms.PictureBox()
+        Me.logo201 = New System.Windows.Forms.PictureBox()
+        Me.logo202 = New System.Windows.Forms.PictureBox()
+        Me.logo204 = New System.Windows.Forms.PictureBox()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +77,10 @@ Partial Class Publiek
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde2grotefoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo203, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo201, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo202, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo204, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -363,7 +371,7 @@ Partial Class Publiek
         Me.ronde2Antw1.BackColor = System.Drawing.Color.Transparent
         Me.ronde2Antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.ronde2Antw1.ForeColor = System.Drawing.Color.White
-        Me.ronde2Antw1.Location = New System.Drawing.Point(36, 83)
+        Me.ronde2Antw1.Location = New System.Drawing.Point(695, 42)
         Me.ronde2Antw1.Name = "ronde2Antw1"
         Me.ronde2Antw1.Size = New System.Drawing.Size(72, 22)
         Me.ronde2Antw1.TabIndex = 18
@@ -376,7 +384,7 @@ Partial Class Publiek
         Me.ronde2Antw2.BackColor = System.Drawing.Color.Transparent
         Me.ronde2Antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.ronde2Antw2.ForeColor = System.Drawing.Color.White
-        Me.ronde2Antw2.Location = New System.Drawing.Point(32, 144)
+        Me.ronde2Antw2.Location = New System.Drawing.Point(695, 83)
         Me.ronde2Antw2.Name = "ronde2Antw2"
         Me.ronde2Antw2.Size = New System.Drawing.Size(76, 22)
         Me.ronde2Antw2.TabIndex = 19
@@ -389,7 +397,7 @@ Partial Class Publiek
         Me.ronde2Antw3.BackColor = System.Drawing.Color.Transparent
         Me.ronde2Antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.ronde2Antw3.ForeColor = System.Drawing.Color.White
-        Me.ronde2Antw3.Location = New System.Drawing.Point(32, 211)
+        Me.ronde2Antw3.Location = New System.Drawing.Point(695, 130)
         Me.ronde2Antw3.Name = "ronde2Antw3"
         Me.ronde2Antw3.Size = New System.Drawing.Size(76, 22)
         Me.ronde2Antw3.TabIndex = 20
@@ -402,7 +410,7 @@ Partial Class Publiek
         Me.ronde2Antw4.BackColor = System.Drawing.Color.Transparent
         Me.ronde2Antw4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.ronde2Antw4.ForeColor = System.Drawing.Color.White
-        Me.ronde2Antw4.Location = New System.Drawing.Point(32, 277)
+        Me.ronde2Antw4.Location = New System.Drawing.Point(695, 170)
         Me.ronde2Antw4.Name = "ronde2Antw4"
         Me.ronde2Antw4.Size = New System.Drawing.Size(76, 22)
         Me.ronde2Antw4.TabIndex = 21
@@ -506,6 +514,50 @@ Partial Class Publiek
         Me.ronde2grotefoto.TabStop = False
         Me.ronde2grotefoto.Visible = False
         '
+        'logo203
+        '
+        Me.logo203.BackColor = System.Drawing.Color.Transparent
+        Me.logo203.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo20
+        Me.logo203.Location = New System.Drawing.Point(640, 130)
+        Me.logo203.Name = "logo203"
+        Me.logo203.Size = New System.Drawing.Size(51, 41)
+        Me.logo203.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo203.TabIndex = 31
+        Me.logo203.TabStop = False
+        '
+        'logo201
+        '
+        Me.logo201.BackColor = System.Drawing.Color.Transparent
+        Me.logo201.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo20
+        Me.logo201.Location = New System.Drawing.Point(640, 39)
+        Me.logo201.Name = "logo201"
+        Me.logo201.Size = New System.Drawing.Size(51, 41)
+        Me.logo201.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo201.TabIndex = 33
+        Me.logo201.TabStop = False
+        '
+        'logo202
+        '
+        Me.logo202.BackColor = System.Drawing.Color.Transparent
+        Me.logo202.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo20
+        Me.logo202.Location = New System.Drawing.Point(640, 83)
+        Me.logo202.Name = "logo202"
+        Me.logo202.Size = New System.Drawing.Size(51, 41)
+        Me.logo202.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo202.TabIndex = 34
+        Me.logo202.TabStop = False
+        '
+        'logo204
+        '
+        Me.logo204.BackColor = System.Drawing.Color.Transparent
+        Me.logo204.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo20
+        Me.logo204.Location = New System.Drawing.Point(640, 170)
+        Me.logo204.Name = "logo204"
+        Me.logo204.Size = New System.Drawing.Size(51, 41)
+        Me.logo204.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo204.TabIndex = 35
+        Me.logo204.TabStop = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -514,6 +566,10 @@ Partial Class Publiek
         Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.logo204)
+        Me.Controls.Add(Me.logo202)
+        Me.Controls.Add(Me.logo201)
+        Me.Controls.Add(Me.logo203)
         Me.Controls.Add(Me.ronde2foto3)
         Me.Controls.Add(Me.ronde2foto2)
         Me.Controls.Add(Me.ronde2foto1)
@@ -551,6 +607,10 @@ Partial Class Publiek
         CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde2grotefoto, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo203, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo201, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo202, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo204, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -593,4 +653,8 @@ Partial Class Publiek
     Friend WithEvents ronde2foto2 As System.Windows.Forms.PictureBox
     Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
     Friend WithEvents ronde2grotefoto As System.Windows.Forms.PictureBox
+    Friend WithEvents logo203 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo201 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo202 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo204 As System.Windows.Forms.PictureBox
 End Class

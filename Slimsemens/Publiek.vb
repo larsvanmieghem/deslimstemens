@@ -111,6 +111,7 @@
         ronde2foto2.Height = Me.Height * (1 / 5)
         ronde2foto3.Width = Me.Width * (2 / 10)
         ronde2foto3.Height = Me.Height * (1 / 5)
+
         If Controle.ronde2foto1.Visible = True Then
             ronde2foto1.Visible = True
         Else
@@ -132,6 +133,10 @@
         ronde2Antw2.Location = New Point(Me.Width * (1 / 2), Me.Height * (1 / 8) + 20)
         ronde2Antw3.Location = New Point(Me.Width * (1 / 2), Me.Height * (2 / 8) + 20)
         ronde2Antw4.Location = New Point(Me.Width * (1 / 2), Me.Height * (3 / 8) + 20)
+        logo201.Location = New Point(ronde2Antw1.Location.X - 50, ronde2Antw1.Location.Y - 10)
+        logo202.Location = New Point(ronde2Antw2.Location.X - 50, ronde2Antw2.Location.Y - 10)
+        logo203.Location = New Point(ronde2Antw3.Location.X - 50, ronde2Antw3.Location.Y - 10)
+        logo204.Location = New Point(ronde2Antw4.Location.X - 50, ronde2Antw4.Location.Y - 10)
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -216,26 +221,34 @@
         If Controle.ronde2antw1chk.Checked Then
             ronde2Antw1.Visible = True
             ronde2Antw1.Text = Controle.ronde2antw1chk.Text
+            logo201.Visible = True
         Else
             ronde2Antw1.Visible = False
+            logo201.Visible = False
         End If
         If Controle.ronde2antwoord2chk.Checked Then
             ronde2Antw2.Visible = True
             ronde2Antw2.Text = Controle.ronde2antwoord2chk.Text
+            logo202.Visible = True
         Else
             ronde2Antw2.Visible = False
+            logo202.Visible = False
         End If
         If Controle.ronde2antwoord3chk.Checked Then
             ronde2Antw3.Visible = True
             ronde2Antw3.Text = Controle.ronde2antwoord3chk.Text
+            logo203.Visible = True
         Else
             ronde2Antw3.Visible = False
+            logo203.Visible = False
         End If
         If Controle.ronde2antwoord4chk.Checked Then
             ronde2Antw4.Visible = True
             ronde2Antw4.Text = Controle.ronde2antwoord4chk.Text
+            logo204.Visible = True
         Else
             ronde2Antw4.Visible = False
+            logo204.Visible = False
         End If
     End Sub
     Sub ronde3()
