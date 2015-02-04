@@ -22,6 +22,7 @@ Partial Class Publiek
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Publiek))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -56,6 +57,7 @@ Partial Class Publiek
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.AxVLCPlugin21 = New AxAXVLC.AxVLCPlugin2()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +70,7 @@ Partial Class Publiek
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(35, 497)
@@ -79,6 +82,7 @@ Partial Class Publiek
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(414, 497)
@@ -90,6 +94,7 @@ Partial Class Publiek
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(808, 497)
@@ -101,6 +106,7 @@ Partial Class Publiek
         'Naam1label
         '
         Me.Naam1label.AutoSize = True
+        Me.Naam1label.BackColor = System.Drawing.Color.Transparent
         Me.Naam1label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam1label.ForeColor = System.Drawing.Color.White
         Me.Naam1label.Location = New System.Drawing.Point(35, 460)
@@ -112,6 +118,7 @@ Partial Class Publiek
         'Naam2label
         '
         Me.Naam2label.AutoSize = True
+        Me.Naam2label.BackColor = System.Drawing.Color.Transparent
         Me.Naam2label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam2label.ForeColor = System.Drawing.Color.White
         Me.Naam2label.Location = New System.Drawing.Point(384, 460)
@@ -124,6 +131,7 @@ Partial Class Publiek
         'Naam3label
         '
         Me.Naam3label.AutoSize = True
+        Me.Naam3label.BackColor = System.Drawing.Color.Transparent
         Me.Naam3label.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Naam3label.ForeColor = System.Drawing.Color.White
         Me.Naam3label.Location = New System.Drawing.Point(784, 460)
@@ -143,7 +151,7 @@ Partial Class Publiek
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DarkRed
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.r1v15)
         Me.Panel1.Controls.Add(Me.r1v14)
         Me.Panel1.Controls.Add(Me.r1v13)
@@ -332,6 +340,7 @@ Partial Class Publiek
         'vragen
         '
         Me.vragen.AutoSize = True
+        Me.vragen.BackColor = System.Drawing.Color.Transparent
         Me.vragen.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.vragen.ForeColor = System.Drawing.Color.White
         Me.vragen.Location = New System.Drawing.Point(35, 42)
@@ -343,6 +352,7 @@ Partial Class Publiek
         'Antw1
         '
         Me.Antw1.AutoSize = True
+        Me.Antw1.BackColor = System.Drawing.Color.Transparent
         Me.Antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Antw1.ForeColor = System.Drawing.Color.White
         Me.Antw1.Location = New System.Drawing.Point(36, 83)
@@ -355,6 +365,7 @@ Partial Class Publiek
         'Antw2
         '
         Me.Antw2.AutoSize = True
+        Me.Antw2.BackColor = System.Drawing.Color.Transparent
         Me.Antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Antw2.ForeColor = System.Drawing.Color.White
         Me.Antw2.Location = New System.Drawing.Point(32, 144)
@@ -367,6 +378,7 @@ Partial Class Publiek
         'Antw3
         '
         Me.Antw3.AutoSize = True
+        Me.Antw3.BackColor = System.Drawing.Color.Transparent
         Me.Antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Antw3.ForeColor = System.Drawing.Color.White
         Me.Antw3.Location = New System.Drawing.Point(32, 211)
@@ -379,6 +391,7 @@ Partial Class Publiek
         'Antw4
         '
         Me.Antw4.AutoSize = True
+        Me.Antw4.BackColor = System.Drawing.Color.Transparent
         Me.Antw4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Antw4.ForeColor = System.Drawing.Color.White
         Me.Antw4.Location = New System.Drawing.Point(32, 277)
@@ -390,6 +403,7 @@ Partial Class Publiek
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(27, 12)
         Me.PictureBox1.Name = "PictureBox1"
@@ -400,6 +414,7 @@ Partial Class Publiek
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
         Me.PictureBox2.Location = New System.Drawing.Point(-2, 460)
         Me.PictureBox2.Name = "PictureBox2"
@@ -410,6 +425,7 @@ Partial Class Publiek
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
         Me.PictureBox3.Location = New System.Drawing.Point(347, 460)
         Me.PictureBox3.Name = "PictureBox3"
@@ -420,6 +436,7 @@ Partial Class Publiek
         '
         'PictureBox4
         '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo
         Me.PictureBox4.Location = New System.Drawing.Point(753, 460)
         Me.PictureBox4.Name = "PictureBox4"
@@ -438,11 +455,16 @@ Partial Class Publiek
         Me.AxVLCPlugin21.TabIndex = 26
         Me.AxVLCPlugin21.Visible = False
         '
+        'Timer1
+        '
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
+        Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
         Me.Controls.Add(Me.AxVLCPlugin21)
         Me.Controls.Add(Me.PictureBox4)
@@ -510,4 +532,5 @@ Partial Class Publiek
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents AxVLCPlugin21 As AxAXVLC.AxVLCPlugin2
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

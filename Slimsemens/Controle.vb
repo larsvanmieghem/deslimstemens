@@ -579,7 +579,7 @@ Public Class Controle
     '---Ronde1---
 
     Private Sub ronde1j_Click(sender As Object, e As EventArgs) Handles ronde1j.Click 'Speler heeft het antwoord juist (ronde 1)s
-
+        publiekvenster.juistgeluid()
         If (ronde1actievevraag = 3) Or (ronde1actievevraag = 6) Or (ronde1actievevraag = 9) Or (ronde1actievevraag = 12) Or (ronde1actievevraag = 15) Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -757,6 +757,7 @@ Public Class Controle
     Private Sub ronde2antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antw1chk.CheckedChanged
         If ronde2checkboxvpunten = True Then
             If ronde2antw1chk.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -795,6 +796,7 @@ Public Class Controle
     Private Sub ronde2antwoord2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord2chk.CheckedChanged
         If ronde2checkboxvpunten = True Then
             If ronde2antwoord2chk.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -834,6 +836,7 @@ Public Class Controle
     Private Sub ronde2antwoord3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord3chk.CheckedChanged
         If ronde2checkboxvpunten = True Then
             If ronde2antwoord3chk.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -873,6 +876,7 @@ Public Class Controle
     Private Sub ronde2antwoord4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde2antwoord4chk.CheckedChanged
         If ronde2checkboxvpunten = True Then
             If ronde2antwoord4chk.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -1004,6 +1008,7 @@ Public Class Controle
     Private Sub Ronde3chkantw1_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw1.CheckedChanged
         If ronde3checkboxvpunten = True Then
             If Ronde3chkantw1.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -1045,6 +1050,7 @@ Public Class Controle
     Private Sub Ronde3chkantw2_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw2.CheckedChanged
         If ronde3checkboxvpunten = True Then
             If Ronde3chkantw2.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -1086,6 +1092,7 @@ Public Class Controle
     Private Sub Ronde3chkantw3_CheckedChanged(sender As Object, e As EventArgs) Handles Ronde3chkantw3.CheckedChanged
         If ronde3checkboxvpunten = True Then
             If Ronde3chkantw3.Checked = True Then
+                publiekvenster.juistgeluid()
                 Select Case aandebeurt
                     Case aandebeurtenum.Jan
                         jan.Istelleraan = False
@@ -1561,6 +1568,7 @@ Select origineelaandebeurt
         End If
     End Sub
     Private Sub ronde4telpuntenbij()
+        publiekvenster.juistgeluid()
         If ronde4checkboxvpunten = False Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -1753,9 +1761,7 @@ Select origineelaandebeurt
 
 
 
-    Public Sub startronde6()
-        actieveronde = actieverondeenum.Finale
-    End Sub
+   
 
     Private Sub ronde5toonvideo_Click(sender As Object, e As EventArgs) Handles ronde5toonvideo.Click
         origineelaandebeurt = aandebeurt
@@ -1810,6 +1816,7 @@ Select origineelaandebeurt
         End If
     End Sub
     Private Sub ronde5telpuntenbij()
+        publiekvenster.juistgeluid()
         If ronde5checkv = True Then
             Select Case aandebeurt
                 Case aandebeurtenum.Jan
@@ -1909,5 +1916,8 @@ Select origineelaandebeurt
         End Select
         origineelaandebeurt = aandebeurt
 
+    End Sub
+    Public Sub startronde6()
+        actieveronde = actieverondeenum.Finale
     End Sub
 End Class
