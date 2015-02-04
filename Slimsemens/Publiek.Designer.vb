@@ -48,16 +48,20 @@ Partial Class Publiek
         Me.r1v2 = New System.Windows.Forms.Label()
         Me.r1v1 = New System.Windows.Forms.Label()
         Me.vragen = New System.Windows.Forms.Label()
-        Me.Antw1 = New System.Windows.Forms.Label()
-        Me.Antw2 = New System.Windows.Forms.Label()
-        Me.Antw3 = New System.Windows.Forms.Label()
-        Me.Antw4 = New System.Windows.Forms.Label()
+        Me.ronde2Antw1 = New System.Windows.Forms.Label()
+        Me.ronde2Antw2 = New System.Windows.Forms.Label()
+        Me.ronde2Antw3 = New System.Windows.Forms.Label()
+        Me.ronde2Antw4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.AxVLCPlugin21 = New AxAXVLC.AxVLCPlugin2()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ronde2foto1 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto2 = New System.Windows.Forms.PictureBox()
+        Me.ronde2foto3 = New System.Windows.Forms.PictureBox()
+        Me.ronde2grotefoto = New System.Windows.Forms.PictureBox()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +69,10 @@ Partial Class Publiek
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AxVLCPlugin21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ronde2grotefoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -143,10 +151,10 @@ Partial Class Publiek
         'AxWindowsMediaPlayer1
         '
         Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(716, 12)
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(699, 506)
         Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
         Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(126, 100)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(31, 20)
         Me.AxWindowsMediaPlayer1.TabIndex = 15
         '
         'Panel1
@@ -349,57 +357,57 @@ Partial Class Publiek
         Me.vragen.TabIndex = 17
         Me.vragen.Text = "Vragen"
         '
-        'Antw1
+        'ronde2Antw1
         '
-        Me.Antw1.AutoSize = True
-        Me.Antw1.BackColor = System.Drawing.Color.Transparent
-        Me.Antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Antw1.ForeColor = System.Drawing.Color.White
-        Me.Antw1.Location = New System.Drawing.Point(36, 83)
-        Me.Antw1.Name = "Antw1"
-        Me.Antw1.Size = New System.Drawing.Size(72, 22)
-        Me.Antw1.TabIndex = 18
-        Me.Antw1.Text = "Antw1"
-        Me.Antw1.Visible = False
+        Me.ronde2Antw1.AutoSize = True
+        Me.ronde2Antw1.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2Antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde2Antw1.ForeColor = System.Drawing.Color.White
+        Me.ronde2Antw1.Location = New System.Drawing.Point(36, 83)
+        Me.ronde2Antw1.Name = "ronde2Antw1"
+        Me.ronde2Antw1.Size = New System.Drawing.Size(72, 22)
+        Me.ronde2Antw1.TabIndex = 18
+        Me.ronde2Antw1.Text = "Antw1"
+        Me.ronde2Antw1.Visible = False
         '
-        'Antw2
+        'ronde2Antw2
         '
-        Me.Antw2.AutoSize = True
-        Me.Antw2.BackColor = System.Drawing.Color.Transparent
-        Me.Antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Antw2.ForeColor = System.Drawing.Color.White
-        Me.Antw2.Location = New System.Drawing.Point(32, 144)
-        Me.Antw2.Name = "Antw2"
-        Me.Antw2.Size = New System.Drawing.Size(76, 22)
-        Me.Antw2.TabIndex = 19
-        Me.Antw2.Text = "Label4"
-        Me.Antw2.Visible = False
+        Me.ronde2Antw2.AutoSize = True
+        Me.ronde2Antw2.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2Antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde2Antw2.ForeColor = System.Drawing.Color.White
+        Me.ronde2Antw2.Location = New System.Drawing.Point(32, 144)
+        Me.ronde2Antw2.Name = "ronde2Antw2"
+        Me.ronde2Antw2.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw2.TabIndex = 19
+        Me.ronde2Antw2.Text = "Label4"
+        Me.ronde2Antw2.Visible = False
         '
-        'Antw3
+        'ronde2Antw3
         '
-        Me.Antw3.AutoSize = True
-        Me.Antw3.BackColor = System.Drawing.Color.Transparent
-        Me.Antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Antw3.ForeColor = System.Drawing.Color.White
-        Me.Antw3.Location = New System.Drawing.Point(32, 211)
-        Me.Antw3.Name = "Antw3"
-        Me.Antw3.Size = New System.Drawing.Size(76, 22)
-        Me.Antw3.TabIndex = 20
-        Me.Antw3.Text = "Label5"
-        Me.Antw3.Visible = False
+        Me.ronde2Antw3.AutoSize = True
+        Me.ronde2Antw3.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2Antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde2Antw3.ForeColor = System.Drawing.Color.White
+        Me.ronde2Antw3.Location = New System.Drawing.Point(32, 211)
+        Me.ronde2Antw3.Name = "ronde2Antw3"
+        Me.ronde2Antw3.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw3.TabIndex = 20
+        Me.ronde2Antw3.Text = "Label5"
+        Me.ronde2Antw3.Visible = False
         '
-        'Antw4
+        'ronde2Antw4
         '
-        Me.Antw4.AutoSize = True
-        Me.Antw4.BackColor = System.Drawing.Color.Transparent
-        Me.Antw4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Antw4.ForeColor = System.Drawing.Color.White
-        Me.Antw4.Location = New System.Drawing.Point(32, 277)
-        Me.Antw4.Name = "Antw4"
-        Me.Antw4.Size = New System.Drawing.Size(76, 22)
-        Me.Antw4.TabIndex = 21
-        Me.Antw4.Text = "Label6"
-        Me.Antw4.Visible = False
+        Me.ronde2Antw4.AutoSize = True
+        Me.ronde2Antw4.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2Antw4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde2Antw4.ForeColor = System.Drawing.Color.White
+        Me.ronde2Antw4.Location = New System.Drawing.Point(32, 277)
+        Me.ronde2Antw4.Name = "ronde2Antw4"
+        Me.ronde2Antw4.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw4.TabIndex = 21
+        Me.ronde2Antw4.Text = "Label6"
+        Me.ronde2Antw4.Visible = False
         '
         'PictureBox1
         '
@@ -448,15 +456,55 @@ Partial Class Publiek
         'AxVLCPlugin21
         '
         Me.AxVLCPlugin21.Enabled = True
-        Me.AxVLCPlugin21.Location = New System.Drawing.Point(314, 225)
+        Me.AxVLCPlugin21.Location = New System.Drawing.Point(673, 516)
         Me.AxVLCPlugin21.Name = "AxVLCPlugin21"
         Me.AxVLCPlugin21.OcxState = CType(resources.GetObject("AxVLCPlugin21.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxVLCPlugin21.Size = New System.Drawing.Size(74, 42)
+        Me.AxVLCPlugin21.Size = New System.Drawing.Size(20, 10)
         Me.AxVLCPlugin21.TabIndex = 26
         Me.AxVLCPlugin21.Visible = False
         '
         'Timer1
         '
+        '
+        'ronde2foto1
+        '
+        Me.ronde2foto1.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2foto1.Location = New System.Drawing.Point(142, 14)
+        Me.ronde2foto1.Name = "ronde2foto1"
+        Me.ronde2foto1.Size = New System.Drawing.Size(100, 50)
+        Me.ronde2foto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto1.TabIndex = 27
+        Me.ronde2foto1.TabStop = False
+        '
+        'ronde2foto2
+        '
+        Me.ronde2foto2.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2foto2.Location = New System.Drawing.Point(142, 83)
+        Me.ronde2foto2.Name = "ronde2foto2"
+        Me.ronde2foto2.Size = New System.Drawing.Size(100, 50)
+        Me.ronde2foto2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto2.TabIndex = 28
+        Me.ronde2foto2.TabStop = False
+        '
+        'ronde2foto3
+        '
+        Me.ronde2foto3.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2foto3.Location = New System.Drawing.Point(142, 144)
+        Me.ronde2foto3.Name = "ronde2foto3"
+        Me.ronde2foto3.Size = New System.Drawing.Size(100, 50)
+        Me.ronde2foto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde2foto3.TabIndex = 29
+        Me.ronde2foto3.TabStop = False
+        '
+        'ronde2grotefoto
+        '
+        Me.ronde2grotefoto.BackColor = System.Drawing.Color.Transparent
+        Me.ronde2grotefoto.Location = New System.Drawing.Point(27, 12)
+        Me.ronde2grotefoto.Name = "ronde2grotefoto"
+        Me.ronde2grotefoto.Size = New System.Drawing.Size(351, 287)
+        Me.ronde2grotefoto.TabIndex = 30
+        Me.ronde2grotefoto.TabStop = False
+        Me.ronde2grotefoto.Visible = False
         '
         'Publiek
         '
@@ -466,15 +514,18 @@ Partial Class Publiek
         Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.ronde2foto3)
+        Me.Controls.Add(Me.ronde2foto2)
+        Me.Controls.Add(Me.ronde2foto1)
+        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.AxVLCPlugin21)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.AxWindowsMediaPlayer1)
-        Me.Controls.Add(Me.Antw4)
-        Me.Controls.Add(Me.Antw3)
-        Me.Controls.Add(Me.Antw2)
-        Me.Controls.Add(Me.Antw1)
+        Me.Controls.Add(Me.ronde2Antw4)
+        Me.Controls.Add(Me.ronde2Antw3)
+        Me.Controls.Add(Me.ronde2Antw2)
+        Me.Controls.Add(Me.ronde2Antw1)
         Me.Controls.Add(Me.vragen)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Naam3label)
@@ -484,6 +535,7 @@ Partial Class Publiek
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.ronde2grotefoto)
         Me.Enabled = False
         Me.Name = "Publiek"
         Me.Text = "Publiek"
@@ -495,6 +547,10 @@ Partial Class Publiek
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AxVLCPlugin21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2foto3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ronde2grotefoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -523,14 +579,18 @@ Partial Class Publiek
     Friend WithEvents r1v2 As System.Windows.Forms.Label
     Friend WithEvents r1v1 As System.Windows.Forms.Label
     Friend WithEvents vragen As System.Windows.Forms.Label
-    Friend WithEvents Antw1 As System.Windows.Forms.Label
-    Friend WithEvents Antw2 As System.Windows.Forms.Label
-    Friend WithEvents Antw3 As System.Windows.Forms.Label
-    Friend WithEvents Antw4 As System.Windows.Forms.Label
+    Friend WithEvents ronde2Antw1 As System.Windows.Forms.Label
+    Friend WithEvents ronde2Antw2 As System.Windows.Forms.Label
+    Friend WithEvents ronde2Antw3 As System.Windows.Forms.Label
+    Friend WithEvents ronde2Antw4 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents AxVLCPlugin21 As AxAXVLC.AxVLCPlugin2
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents ronde2foto1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde2foto2 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde2foto3 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde2grotefoto As System.Windows.Forms.PictureBox
 End Class

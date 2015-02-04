@@ -862,7 +862,7 @@ Partial Class Controle
         Me.GroupBox9.Controls.Add(Me.ronde4antw10chk)
         Me.GroupBox9.Controls.Add(Me.ronde4antw5chk)
         Me.GroupBox9.Controls.Add(Me.ronde4antw1chk)
-        Me.GroupBox9.Location = New System.Drawing.Point(326, 6)
+        Me.GroupBox9.Location = New System.Drawing.Point(340, 6)
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.Size = New System.Drawing.Size(165, 249)
         Me.GroupBox9.TabIndex = 27

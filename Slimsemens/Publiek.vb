@@ -17,7 +17,9 @@
         AxVLCPlugin21.playlist.add("goed.mp3")
         AxVLCPlugin21.playlist.add("finale.mp3")
         AxVLCPlugin21.playlist.add("klokeind.mp3")
-
+        ronde2foto1.Load("ronde2foto1.jpg")
+        ronde2foto2.Load("ronde2foto2.jpg")
+        ronde2foto3.Load("ronde2foto3.jpg")
     End Sub
 
     Public Sub synchroniseer()
@@ -97,6 +99,39 @@
         PictureBox2.Location = New Point(Naam1label.Location.X - 40, Naam1label.Location.Y)
         PictureBox3.Location = New Point(Naam2label.Location.X - 40, Naam1label.Location.Y)
         PictureBox4.Location = New Point(Naam3label.Location.X - 40, Naam1label.Location.Y)
+        AxWindowsMediaPlayer1.Width = Me.Width
+        AxWindowsMediaPlayer1.Height = Me.Height
+        AxWindowsMediaPlayer1.Location = New Point(0, 0)
+        ronde2foto1.Location = New Point(Me.Width * (1 / 10), 20)
+        ronde2foto2.Location = New Point(Me.Width * (1 / 10), Me.Height * (1 / 4) + 20)
+        ronde2foto3.Location = New Point(Me.Width * (1 / 10), Me.Height * (2 / 4) + 20)
+        ronde2foto1.Width = Me.Width * (2 / 10)
+        ronde2foto1.Height = Me.Height * (1 / 5)
+        ronde2foto2.Width = Me.Width * (2 / 10)
+        ronde2foto2.Height = Me.Height * (1 / 5)
+        ronde2foto3.Width = Me.Width * (2 / 10)
+        ronde2foto3.Height = Me.Height * (1 / 5)
+        If Controle.ronde2foto1.Visible = True Then
+            ronde2foto1.Visible = True
+        Else
+            ronde2foto1.Visible = False
+        End If
+
+        If Controle.ronde2foto2.Visible = True Then
+            ronde2foto2.Visible = True
+        Else
+            ronde2foto2.Visible = False
+        End If
+
+        If Controle.ronde2foto3.Visible = True Then
+            ronde2foto3.Visible = True
+        Else
+            ronde2foto3.Visible = False
+        End If
+        ronde2Antw1.Location = New Point(Me.Width * (1 / 2), 20)
+        ronde2Antw2.Location = New Point(Me.Width * (1 / 2), Me.Height * (1 / 8) + 20)
+        ronde2Antw3.Location = New Point(Me.Width * (1 / 2), Me.Height * (2 / 8) + 20)
+        ronde2Antw4.Location = New Point(Me.Width * (1 / 2), Me.Height * (3 / 8) + 20)
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -179,28 +214,28 @@
         vragen.Visible = False
         PictureBox1.Visible = False
         If Controle.ronde2antw1chk.Checked Then
-            Antw1.Visible = True
-            Antw1.Text = Controle.ronde2antw1chk.Text
+            ronde2Antw1.Visible = True
+            ronde2Antw1.Text = Controle.ronde2antw1chk.Text
         Else
-            Antw1.Visible = False
+            ronde2Antw1.Visible = False
         End If
         If Controle.ronde2antwoord2chk.Checked Then
-            Antw2.Visible = True
-            Antw2.Text = Controle.ronde2antwoord2chk.Text
+            ronde2Antw2.Visible = True
+            ronde2Antw2.Text = Controle.ronde2antwoord2chk.Text
         Else
-            Antw2.Visible = False
+            ronde2Antw2.Visible = False
         End If
         If Controle.ronde2antwoord3chk.Checked Then
-            Antw3.Visible = True
-            Antw3.Text = Controle.ronde2antwoord3chk.Text
+            ronde2Antw3.Visible = True
+            ronde2Antw3.Text = Controle.ronde2antwoord3chk.Text
         Else
-            Antw3.Visible = False
+            ronde2Antw3.Visible = False
         End If
         If Controle.ronde2antwoord4chk.Checked Then
-            Antw4.Visible = True
-            Antw4.Text = Controle.ronde2antwoord4chk.Text
+            ronde2Antw4.Visible = True
+            ronde2Antw4.Text = Controle.ronde2antwoord4chk.Text
         Else
-            Antw4.Visible = False
+            ronde2Antw4.Visible = False
         End If
     End Sub
     Sub ronde3()
