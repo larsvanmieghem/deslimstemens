@@ -141,6 +141,8 @@
         ronde3antw2.Location = New Point(Me.Width * (1 / 2), Me.Height * (1 / 6) + 20)
         ronde3antw3.Location = New Point(Me.Width * (1 / 2), Me.Height * (2 / 6) + 20)
         logo301.Location = logo201.Location
+        logo302.Location = New Point(ronde3antw2.Location.X - 50, ronde3antw2.Location.Y - 10)
+        logo303.Location = New Point(ronde3antw3.Location.X - 50, ronde3antw3.Location.Y - 10)
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -264,14 +266,23 @@
         If Controle.Ronde3chkantw1.Checked Then
             ronde3antw1.Visible = True
             logo301.Visible = True
+        Else
+            ronde3antw1.Visible = False
+            logo301.Visible = False
         End If
         If Controle.Ronde3chkantw2.Checked Then
             ronde3antw2.Visible = True
             logo302.Visible = True
+        Else
+            ronde3antw2.Visible = False
+            logo302.Visible = False
         End If
         If Controle.Ronde3chkantw3.Checked Then
             ronde3antw3.Visible = True
             logo303.Visible = True
+        Else
+            ronde3antw3.Visible = False
+            logo303.Visible = False
         End If
     End Sub
     Sub ronde4()
