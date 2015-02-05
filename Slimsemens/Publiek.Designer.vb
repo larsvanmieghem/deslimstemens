@@ -72,6 +72,16 @@ Partial Class Publiek
         Me.logo301 = New System.Windows.Forms.PictureBox()
         Me.logo303 = New System.Windows.Forms.PictureBox()
         Me.logo302 = New System.Windows.Forms.PictureBox()
+        Me.ronde4tips = New System.Windows.Forms.Panel()
+        Me.ronde4tip1 = New System.Windows.Forms.Label()
+        Me.ronde4tip7 = New System.Windows.Forms.Label()
+        Me.ronde4tip4 = New System.Windows.Forms.Label()
+        Me.ronde4tip5 = New System.Windows.Forms.Label()
+        Me.ronde4tip8 = New System.Windows.Forms.Label()
+        Me.ronde4tip2 = New System.Windows.Forms.Label()
+        Me.ronde4tip6 = New System.Windows.Forms.Label()
+        Me.ronde4tip9 = New System.Windows.Forms.Label()
+        Me.ronde4tip3 = New System.Windows.Forms.Label()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,6 +100,7 @@ Partial Class Publiek
         CType(Me.logo301, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo303, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ronde4tips.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -642,6 +653,132 @@ Partial Class Publiek
         Me.logo302.TabStop = False
         Me.logo302.Visible = False
         '
+        'ronde4tips
+        '
+        Me.ronde4tips.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tips.Controls.Add(Me.ronde4tip6)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip9)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip3)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip5)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip8)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip2)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip4)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip7)
+        Me.ronde4tips.Controls.Add(Me.ronde4tip1)
+        Me.ronde4tips.Location = New System.Drawing.Point(27, 14)
+        Me.ronde4tips.Name = "ronde4tips"
+        Me.ronde4tips.Size = New System.Drawing.Size(453, 285)
+        Me.ronde4tips.TabIndex = 43
+        Me.ronde4tips.Visible = False
+        '
+        'ronde4tip1
+        '
+        Me.ronde4tip1.AutoSize = True
+        Me.ronde4tip1.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip1.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip1.Location = New System.Drawing.Point(8, 28)
+        Me.ronde4tip1.Name = "ronde4tip1"
+        Me.ronde4tip1.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip1.TabIndex = 44
+        Me.ronde4tip1.Text = "Tip 1"
+        '
+        'ronde4tip7
+        '
+        Me.ronde4tip7.AutoSize = True
+        Me.ronde4tip7.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip7.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip7.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip7.Location = New System.Drawing.Point(8, 175)
+        Me.ronde4tip7.Name = "ronde4tip7"
+        Me.ronde4tip7.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip7.TabIndex = 45
+        Me.ronde4tip7.Text = "Tip 7"
+        '
+        'ronde4tip4
+        '
+        Me.ronde4tip4.AutoSize = True
+        Me.ronde4tip4.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip4.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip4.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip4.Location = New System.Drawing.Point(8, 105)
+        Me.ronde4tip4.Name = "ronde4tip4"
+        Me.ronde4tip4.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip4.TabIndex = 46
+        Me.ronde4tip4.Text = "Tip 4"
+        '
+        'ronde4tip5
+        '
+        Me.ronde4tip5.AutoSize = True
+        Me.ronde4tip5.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip5.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip5.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip5.Location = New System.Drawing.Point(153, 105)
+        Me.ronde4tip5.Name = "ronde4tip5"
+        Me.ronde4tip5.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip5.TabIndex = 49
+        Me.ronde4tip5.Text = "Tip 5"
+        '
+        'ronde4tip8
+        '
+        Me.ronde4tip8.AutoSize = True
+        Me.ronde4tip8.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip8.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip8.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip8.Location = New System.Drawing.Point(153, 175)
+        Me.ronde4tip8.Name = "ronde4tip8"
+        Me.ronde4tip8.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip8.TabIndex = 48
+        Me.ronde4tip8.Text = "Tip 8"
+        '
+        'ronde4tip2
+        '
+        Me.ronde4tip2.AutoSize = True
+        Me.ronde4tip2.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip2.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip2.Location = New System.Drawing.Point(153, 31)
+        Me.ronde4tip2.Name = "ronde4tip2"
+        Me.ronde4tip2.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip2.TabIndex = 47
+        Me.ronde4tip2.Text = "Tip 2"
+        '
+        'ronde4tip6
+        '
+        Me.ronde4tip6.AutoSize = True
+        Me.ronde4tip6.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip6.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip6.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip6.Location = New System.Drawing.Point(303, 105)
+        Me.ronde4tip6.Name = "ronde4tip6"
+        Me.ronde4tip6.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip6.TabIndex = 52
+        Me.ronde4tip6.Text = "Tip 6"
+        '
+        'ronde4tip9
+        '
+        Me.ronde4tip9.AutoSize = True
+        Me.ronde4tip9.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip9.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip9.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip9.Location = New System.Drawing.Point(306, 175)
+        Me.ronde4tip9.Name = "ronde4tip9"
+        Me.ronde4tip9.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip9.TabIndex = 51
+        Me.ronde4tip9.Text = "Tip 9"
+        '
+        'ronde4tip3
+        '
+        Me.ronde4tip3.AutoSize = True
+        Me.ronde4tip3.BackColor = System.Drawing.Color.Transparent
+        Me.ronde4tip3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde4tip3.ForeColor = System.Drawing.Color.White
+        Me.ronde4tip3.Location = New System.Drawing.Point(303, 31)
+        Me.ronde4tip3.Name = "ronde4tip3"
+        Me.ronde4tip3.Size = New System.Drawing.Size(61, 22)
+        Me.ronde4tip3.TabIndex = 50
+        Me.ronde4tip3.Text = "Tip 3"
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -650,6 +787,7 @@ Partial Class Publiek
         Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.ronde4tips)
         Me.Controls.Add(Me.logo302)
         Me.Controls.Add(Me.logo303)
         Me.Controls.Add(Me.logo301)
@@ -704,6 +842,8 @@ Partial Class Publiek
         CType(Me.logo301, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo303, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ronde4tips.ResumeLayout(False)
+        Me.ronde4tips.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -756,4 +896,14 @@ Partial Class Publiek
     Friend WithEvents logo301 As System.Windows.Forms.PictureBox
     Friend WithEvents logo303 As System.Windows.Forms.PictureBox
     Friend WithEvents logo302 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde4tips As System.Windows.Forms.Panel
+    Friend WithEvents ronde4tip4 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip7 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip1 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip6 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip9 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip3 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip5 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip8 As System.Windows.Forms.Label
+    Friend WithEvents ronde4tip2 As System.Windows.Forms.Label
 End Class

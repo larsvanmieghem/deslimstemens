@@ -311,6 +311,15 @@ Public Class Controle
                         ronde3label3.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label4.ForeColor = Ronde3chkantw1.ForeColor
+                        If Ronde3chkantw1.Checked = True Then
+                            publiekvenster.ronde4tip3.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip1.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip4.ForeColor = Ronde3chkantw1.ForeColor
+                        Else
+                            publiekvenster.ronde4tip3.ForeColor = Color.White
+                            publiekvenster.ronde4tip1.ForeColor = Color.White
+                            publiekvenster.ronde4tip4.ForeColor = Color.White
+                        End If
                         'Antwoord2
                         ronde3label2.Text = tipsronde3puzzel1(4, 1) '256
                         ronde3label5.Text = tipsronde3puzzel1(5, 1)
@@ -318,6 +327,15 @@ Public Class Controle
                         ronde3label2.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label5.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label6.ForeColor = Ronde3chkantw2.ForeColor
+                        If Ronde3chkantw2.Checked = True Then
+                            publiekvenster.ronde4tip2.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip5.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip6.ForeColor = Ronde3chkantw2.ForeColor
+                        Else
+                            publiekvenster.ronde4tip2.ForeColor = Color.White
+                            publiekvenster.ronde4tip5.ForeColor = Color.White
+                            publiekvenster.ronde4tip6.ForeColor = Color.White
+                        End If
                         'Antwoord3
                         ronde3label9.Text = tipsronde3puzzel1(7, 1) '978
                         ronde3label8.Text = tipsronde3puzzel1(8, 1)
@@ -325,7 +343,15 @@ Public Class Controle
                         ronde3label9.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label8.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label7.ForeColor = Ronde3chkantw3.ForeColor
-
+                        If Ronde3chkantw3.Checked = True Then
+                            publiekvenster.ronde4tip9.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip7.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip8.ForeColor = Ronde3chkantw3.ForeColor
+                        Else
+                            publiekvenster.ronde4tip9.ForeColor = Color.White
+                            publiekvenster.ronde4tip7.ForeColor = Color.White
+                            publiekvenster.ronde4tip8.ForeColor = Color.White
+                        End If
 
                     Case ronde3actievevraagem.puzzelvoorplatypus
                         Ronde3chkantw1.Text = antwoordenronde3puzzel2(1, 1)
@@ -338,6 +364,15 @@ Public Class Controle
                         ronde3label2.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label7.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
+                        If Ronde3chkantw1.Checked = True Then
+                            publiekvenster.ronde4tip2.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip7.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip1.ForeColor = Ronde3chkantw1.ForeColor
+                        Else
+                            publiekvenster.ronde4tip2.ForeColor = Color.White
+                            publiekvenster.ronde4tip7.ForeColor = Color.White
+                            publiekvenster.ronde4tip1.ForeColor = Color.White
+                        End If
                         'Antwoord 2
                         ronde3label8.Text = tipsronde3puzzel2(4, 1) '843
                         ronde3label4.Text = tipsronde3puzzel2(5, 1)
@@ -345,6 +380,15 @@ Public Class Controle
                         ronde3label8.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label4.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label3.ForeColor = Ronde3chkantw2.ForeColor
+                        If Ronde3chkantw2.Checked = True Then
+                            publiekvenster.ronde4tip8.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip4.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip3.ForeColor = Ronde3chkantw2.ForeColor
+                        Else
+                            publiekvenster.ronde4tip8.ForeColor = Color.White
+                            publiekvenster.ronde4tip4.ForeColor = Color.White
+                            publiekvenster.ronde4tip3.ForeColor = Color.White
+                        End If
                         'Antwoord3
                         ronde3label5.Text = tipsronde3puzzel2(7, 1) '596
                         ronde3label9.Text = tipsronde3puzzel2(8, 1)
@@ -352,7 +396,15 @@ Public Class Controle
                         ronde3label5.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label9.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label6.ForeColor = Ronde3chkantw3.ForeColor
-
+                        If Ronde3chkantw3.Checked = True Then
+                            publiekvenster.ronde4tip5.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip9.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip6.ForeColor = Ronde3chkantw3.ForeColor
+                        Else
+                            publiekvenster.ronde4tip5.ForeColor = Color.White
+                            publiekvenster.ronde4tip9.ForeColor = Color.White
+                            publiekvenster.ronde4tip6.ForeColor = Color.White
+                        End If
 
 
                     Case ronde3actievevraagem.puzzelvoormiauw
@@ -366,6 +418,15 @@ Public Class Controle
                         ronde3label1.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label7.ForeColor = Ronde3chkantw1.ForeColor
                         ronde3label3.ForeColor = Ronde3chkantw1.ForeColor
+                        If Ronde3chkantw1.Checked = True Then
+                            publiekvenster.ronde4tip1.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip7.ForeColor = Ronde3chkantw1.ForeColor
+                            publiekvenster.ronde4tip3.ForeColor = Ronde3chkantw1.ForeColor
+                        Else
+                            publiekvenster.ronde4tip1.ForeColor = Color.White
+                            publiekvenster.ronde4tip7.ForeColor = Color.White
+                            publiekvenster.ronde4tip3.ForeColor = Color.White
+                        End If
                         'Antwoord 2
                         ronde3label4.Text = tipsronde3puzzel3(4, 1) '498
                         ronde3label9.Text = tipsronde3puzzel3(5, 1)
@@ -373,6 +434,15 @@ Public Class Controle
                         ronde3label4.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label9.ForeColor = Ronde3chkantw2.ForeColor
                         ronde3label8.ForeColor = Ronde3chkantw2.ForeColor
+                        If Ronde3chkantw2.Checked = True Then
+                            publiekvenster.ronde4tip4.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip9.ForeColor = Ronde3chkantw2.ForeColor
+                            publiekvenster.ronde4tip8.ForeColor = Ronde3chkantw2.ForeColor
+                        Else
+                            publiekvenster.ronde4tip4.ForeColor = Color.White
+                            publiekvenster.ronde4tip9.ForeColor = Color.White
+                            publiekvenster.ronde4tip8.ForeColor = Color.White
+                        End If
                         'Antwoord3
                         ronde3label2.Text = tipsronde3puzzel3(7, 1) '265
                         ronde3label6.Text = tipsronde3puzzel3(8, 1)
@@ -380,7 +450,15 @@ Public Class Controle
                         ronde3label2.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label6.ForeColor = Ronde3chkantw3.ForeColor
                         ronde3label5.ForeColor = Ronde3chkantw3.ForeColor
-
+                        If Ronde3chkantw3.Checked = True Then
+                            publiekvenster.ronde4tip2.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip6.ForeColor = Ronde3chkantw3.ForeColor
+                            publiekvenster.ronde4tip5.ForeColor = Ronde3chkantw3.ForeColor
+                        Else
+                            publiekvenster.ronde4tip2.ForeColor = Color.White
+                            publiekvenster.ronde4tip6.ForeColor = Color.White
+                            publiekvenster.ronde4tip5.ForeColor = Color.White
+                        End If
 
 
 

@@ -557,6 +557,7 @@ Partial Class Controle
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.ronde4startronde)
+        Me.GroupBox5.Controls.Add(Me.GroupBox8)
         Me.GroupBox5.Controls.Add(Me.ronde3stop)
         Me.GroupBox5.Controls.Add(Me.ronde3start)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw3)
@@ -572,7 +573,7 @@ Partial Class Controle
         '
         'ronde4startronde
         '
-        Me.ronde4startronde.Location = New System.Drawing.Point(6, 14)
+        Me.ronde4startronde.Location = New System.Drawing.Point(11, 19)
         Me.ronde4startronde.Name = "ronde4startronde"
         Me.ronde4startronde.Size = New System.Drawing.Size(205, 80)
         Me.ronde4startronde.TabIndex = 5
@@ -623,6 +624,7 @@ Partial Class Controle
         'Ronde3chkantw1
         '
         Me.Ronde3chkantw1.AutoSize = True
+        Me.Ronde3chkantw1.ForeColor = System.Drawing.Color.Gold
         Me.Ronde3chkantw1.Location = New System.Drawing.Point(21, 31)
         Me.Ronde3chkantw1.Name = "Ronde3chkantw1"
         Me.Ronde3chkantw1.Size = New System.Drawing.Size(80, 17)
@@ -748,7 +750,7 @@ Partial Class Controle
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Slimsemens.My.Resources.Resources.platypus
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 6)
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(322, 249)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -783,7 +785,7 @@ Partial Class Controle
         Me.GroupBox8.Controls.Add(Me.ronde4pas)
         Me.GroupBox8.Controls.Add(Me.ronde4juist)
         Me.GroupBox8.Controls.Add(Me.ronde4startreeks)
-        Me.GroupBox8.Location = New System.Drawing.Point(504, 6)
+        Me.GroupBox8.Location = New System.Drawing.Point(11, 0)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(219, 249)
         Me.GroupBox8.TabIndex = 26
@@ -980,7 +982,7 @@ Partial Class Controle
         Me.GroupBox10.Controls.Add(Me.ronde5antw3chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw2chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw1chk)
-        Me.GroupBox10.Location = New System.Drawing.Point(504, 6)
+        Me.GroupBox10.Location = New System.Drawing.Point(509, 6)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(220, 249)
         Me.GroupBox10.TabIndex = 28
@@ -1068,7 +1070,7 @@ Partial Class Controle
         'GroupBox11
         '
         Me.GroupBox11.Controls.Add(Me.PictureBox1)
-        Me.GroupBox11.Location = New System.Drawing.Point(6, 0)
+        Me.GroupBox11.Location = New System.Drawing.Point(12, 6)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(328, 264)
         Me.GroupBox11.TabIndex = 9
@@ -1082,7 +1084,6 @@ Partial Class Controle
         Me.Controls.Add(Me.GroupBox11)
         Me.Controls.Add(Me.GroupBox10)
         Me.Controls.Add(Me.GroupBox9)
-        Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.Groupbox7)
         Me.Controls.Add(Me.StatusStrip1)

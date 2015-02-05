@@ -143,6 +143,19 @@
         logo301.Location = logo201.Location
         logo302.Location = New Point(ronde3antw2.Location.X - 50, ronde3antw2.Location.Y - 10)
         logo303.Location = New Point(ronde3antw3.Location.X - 50, ronde3antw3.Location.Y - 10)
+        ronde3antw1.Text = Controle.Ronde3chkantw1.Text
+        ronde3antw2.Text = Controle.Ronde3chkantw2.Text
+        ronde3antw3.Text = Controle.Ronde3chkantw3.Text
+        ronde4tip1.Text = Controle.ronde3label1.Text
+        ronde4tip2.Text = Controle.ronde3label2.Text
+        ronde4tip3.Text = Controle.ronde3label3.Text
+        ronde4tip4.Text = Controle.ronde3label4.Text
+        ronde4tip5.Text = Controle.ronde3label5.Text
+        ronde4tip6.Text = Controle.ronde3label6.Text
+        ronde4tip7.Text = Controle.ronde3label7.Text
+        ronde4tip8.Text = Controle.ronde3label8.Text
+        ronde4tip9.Text = Controle.ronde3label9.Text
+      
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -262,6 +275,7 @@
     Sub ronde3()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        ronde4tips.Visible = True
         ronde2onzichtbaar()
         If Controle.Ronde3chkantw1.Checked Then
             ronde3antw1.Visible = True
@@ -284,6 +298,7 @@
             ronde3antw3.Visible = False
             logo303.Visible = False
         End If
+       
     End Sub
     Sub ronde4()
         Panel1.Visible = False
@@ -335,6 +350,7 @@
         ronde2Antw4.Visible = False
     End Sub
     Sub ronde3onzichtbaar()
+        ronde4tips.Visible = False  'Dat had eigelijk ronde3 moeten heten :)
         logo301.Visible = False
         logo302.Visible = False
         logo303.Visible = False
