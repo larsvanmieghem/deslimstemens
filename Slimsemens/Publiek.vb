@@ -137,6 +137,10 @@
         logo202.Location = New Point(ronde2Antw2.Location.X - 50, ronde2Antw2.Location.Y - 10)
         logo203.Location = New Point(ronde2Antw3.Location.X - 50, ronde2Antw3.Location.Y - 10)
         logo204.Location = New Point(ronde2Antw4.Location.X - 50, ronde2Antw4.Location.Y - 10)
+        ronde3antw1.Location = ronde2Antw1.Location
+        ronde3antw2.Location = New Point(Me.Width * (1 / 2), Me.Height * (1 / 6) + 20)
+        ronde3antw3.Location = New Point(Me.Width * (1 / 2), Me.Height * (2 / 6) + 20)
+        logo301.Location = logo201.Location
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -212,7 +216,8 @@
         PictureBox1.Width = Me.Width
         PictureBox1.Height = (Me.Height / 2)
         PictureBox1.Location = New Point(0, 0)
-
+        ronde2onzichtbaar()
+        ronde3onzichtbaar()
     End Sub
     Sub ronde2()
         Panel1.Visible = False
@@ -250,22 +255,42 @@
             ronde2Antw4.Visible = False
             logo204.Visible = False
         End If
+        ronde3onzichtbaar()
     End Sub
     Sub ronde3()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        ronde2onzichtbaar()
+        If Controle.Ronde3chkantw1.Checked Then
+            ronde3antw1.Visible = True
+            logo301.Visible = True
+        End If
+        If Controle.Ronde3chkantw2.Checked Then
+            ronde3antw2.Visible = True
+            logo302.Visible = True
+        End If
+        If Controle.Ronde3chkantw3.Checked Then
+            ronde3antw3.Visible = True
+            logo303.Visible = True
+        End If
     End Sub
     Sub ronde4()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        ronde2onzichtbaar()
+        ronde3onzichtbaar()
     End Sub
     Sub ronde5()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        ronde2onzichtbaar()
+        ronde3onzichtbaar()
     End Sub
     Sub ronde6()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        ronde2onzichtbaar()
+        ronde3onzichtbaar()
     End Sub
     Public Sub juistgeluid()
         vlcbezet = True
@@ -287,5 +312,23 @@
             End If
         End If
 
+    End Sub
+    Sub ronde2onzichtbaar()
+        logo201.Visible = False
+        logo202.Visible = False
+        logo203.Visible = False
+        logo204.Visible = False
+        ronde2Antw1.Visible = False
+        ronde2Antw2.Visible = False
+        ronde2Antw3.Visible = False
+        ronde2Antw4.Visible = False
+    End Sub
+    Sub ronde3onzichtbaar()
+        logo301.Visible = False
+        logo302.Visible = False
+        logo303.Visible = False
+        ronde3antw1.Visible = False
+        ronde3antw2.Visible = False
+        ronde3antw3.Visible = False
     End Sub
 End Class

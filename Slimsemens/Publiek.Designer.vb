@@ -66,6 +66,12 @@ Partial Class Publiek
         Me.logo201 = New System.Windows.Forms.PictureBox()
         Me.logo202 = New System.Windows.Forms.PictureBox()
         Me.logo204 = New System.Windows.Forms.PictureBox()
+        Me.ronde3antw1 = New System.Windows.Forms.Label()
+        Me.ronde3antw3 = New System.Windows.Forms.Label()
+        Me.ronde3antw2 = New System.Windows.Forms.Label()
+        Me.logo301 = New System.Windows.Forms.PictureBox()
+        Me.logo303 = New System.Windows.Forms.PictureBox()
+        Me.logo302 = New System.Windows.Forms.PictureBox()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +87,9 @@ Partial Class Publiek
         CType(Me.logo201, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo202, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo204, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo301, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo303, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo302, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -373,9 +382,9 @@ Partial Class Publiek
         Me.ronde2Antw1.ForeColor = System.Drawing.Color.White
         Me.ronde2Antw1.Location = New System.Drawing.Point(695, 42)
         Me.ronde2Antw1.Name = "ronde2Antw1"
-        Me.ronde2Antw1.Size = New System.Drawing.Size(72, 22)
+        Me.ronde2Antw1.Size = New System.Drawing.Size(147, 22)
         Me.ronde2Antw1.TabIndex = 18
-        Me.ronde2Antw1.Text = "Antw1"
+        Me.ronde2Antw1.Text = "Ronde2Antw1"
         Me.ronde2Antw1.Visible = False
         '
         'ronde2Antw2
@@ -386,9 +395,9 @@ Partial Class Publiek
         Me.ronde2Antw2.ForeColor = System.Drawing.Color.White
         Me.ronde2Antw2.Location = New System.Drawing.Point(695, 83)
         Me.ronde2Antw2.Name = "ronde2Antw2"
-        Me.ronde2Antw2.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw2.Size = New System.Drawing.Size(147, 22)
         Me.ronde2Antw2.TabIndex = 19
-        Me.ronde2Antw2.Text = "Label4"
+        Me.ronde2Antw2.Text = "Ronde2Antw2"
         Me.ronde2Antw2.Visible = False
         '
         'ronde2Antw3
@@ -399,9 +408,9 @@ Partial Class Publiek
         Me.ronde2Antw3.ForeColor = System.Drawing.Color.White
         Me.ronde2Antw3.Location = New System.Drawing.Point(695, 130)
         Me.ronde2Antw3.Name = "ronde2Antw3"
-        Me.ronde2Antw3.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw3.Size = New System.Drawing.Size(147, 22)
         Me.ronde2Antw3.TabIndex = 20
-        Me.ronde2Antw3.Text = "Label5"
+        Me.ronde2Antw3.Text = "Ronde2Antw3"
         Me.ronde2Antw3.Visible = False
         '
         'ronde2Antw4
@@ -412,9 +421,9 @@ Partial Class Publiek
         Me.ronde2Antw4.ForeColor = System.Drawing.Color.White
         Me.ronde2Antw4.Location = New System.Drawing.Point(695, 170)
         Me.ronde2Antw4.Name = "ronde2Antw4"
-        Me.ronde2Antw4.Size = New System.Drawing.Size(76, 22)
+        Me.ronde2Antw4.Size = New System.Drawing.Size(147, 22)
         Me.ronde2Antw4.TabIndex = 21
-        Me.ronde2Antw4.Text = "Label6"
+        Me.ronde2Antw4.Text = "Ronde2Antw4"
         Me.ronde2Antw4.Visible = False
         '
         'PictureBox1
@@ -558,6 +567,81 @@ Partial Class Publiek
         Me.logo204.TabIndex = 35
         Me.logo204.TabStop = False
         '
+        'ronde3antw1
+        '
+        Me.ronde3antw1.AutoSize = True
+        Me.ronde3antw1.BackColor = System.Drawing.Color.Transparent
+        Me.ronde3antw1.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde3antw1.ForeColor = System.Drawing.Color.White
+        Me.ronde3antw1.Location = New System.Drawing.Point(697, 42)
+        Me.ronde3antw1.Name = "ronde3antw1"
+        Me.ronde3antw1.Size = New System.Drawing.Size(147, 22)
+        Me.ronde3antw1.TabIndex = 36
+        Me.ronde3antw1.Text = "Ronde3Antw1"
+        Me.ronde3antw1.Visible = False
+        '
+        'ronde3antw3
+        '
+        Me.ronde3antw3.AutoSize = True
+        Me.ronde3antw3.BackColor = System.Drawing.Color.Transparent
+        Me.ronde3antw3.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde3antw3.ForeColor = System.Drawing.Color.White
+        Me.ronde3antw3.Location = New System.Drawing.Point(695, 130)
+        Me.ronde3antw3.Name = "ronde3antw3"
+        Me.ronde3antw3.Size = New System.Drawing.Size(147, 22)
+        Me.ronde3antw3.TabIndex = 38
+        Me.ronde3antw3.Text = "Ronde3Antw3"
+        Me.ronde3antw3.Visible = False
+        '
+        'ronde3antw2
+        '
+        Me.ronde3antw2.AutoSize = True
+        Me.ronde3antw2.BackColor = System.Drawing.Color.Transparent
+        Me.ronde3antw2.Font = New System.Drawing.Font("Lucida Sans", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.ronde3antw2.ForeColor = System.Drawing.Color.White
+        Me.ronde3antw2.Location = New System.Drawing.Point(697, 83)
+        Me.ronde3antw2.Name = "ronde3antw2"
+        Me.ronde3antw2.Size = New System.Drawing.Size(147, 22)
+        Me.ronde3antw2.TabIndex = 39
+        Me.ronde3antw2.Text = "Ronde3Antw2"
+        Me.ronde3antw2.Visible = False
+        '
+        'logo301
+        '
+        Me.logo301.BackColor = System.Drawing.Color.Transparent
+        Me.logo301.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo30
+        Me.logo301.Location = New System.Drawing.Point(642, 36)
+        Me.logo301.Name = "logo301"
+        Me.logo301.Size = New System.Drawing.Size(51, 41)
+        Me.logo301.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo301.TabIndex = 40
+        Me.logo301.TabStop = False
+        Me.logo301.Visible = False
+        '
+        'logo303
+        '
+        Me.logo303.BackColor = System.Drawing.Color.Transparent
+        Me.logo303.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo30
+        Me.logo303.Location = New System.Drawing.Point(642, 130)
+        Me.logo303.Name = "logo303"
+        Me.logo303.Size = New System.Drawing.Size(51, 41)
+        Me.logo303.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo303.TabIndex = 41
+        Me.logo303.TabStop = False
+        Me.logo303.Visible = False
+        '
+        'logo302
+        '
+        Me.logo302.BackColor = System.Drawing.Color.Transparent
+        Me.logo302.Image = Global.Slimsemens.My.Resources.Resources.dsmlogo30
+        Me.logo302.Location = New System.Drawing.Point(642, 83)
+        Me.logo302.Name = "logo302"
+        Me.logo302.Size = New System.Drawing.Size(51, 41)
+        Me.logo302.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo302.TabIndex = 42
+        Me.logo302.TabStop = False
+        Me.logo302.Visible = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -566,6 +650,12 @@ Partial Class Publiek
         Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.logo302)
+        Me.Controls.Add(Me.logo303)
+        Me.Controls.Add(Me.logo301)
+        Me.Controls.Add(Me.ronde3antw2)
+        Me.Controls.Add(Me.ronde3antw3)
+        Me.Controls.Add(Me.ronde3antw1)
         Me.Controls.Add(Me.logo204)
         Me.Controls.Add(Me.logo202)
         Me.Controls.Add(Me.logo201)
@@ -611,6 +701,9 @@ Partial Class Publiek
         CType(Me.logo201, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo202, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo204, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo301, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo303, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo302, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -657,4 +750,10 @@ Partial Class Publiek
     Friend WithEvents logo201 As System.Windows.Forms.PictureBox
     Friend WithEvents logo202 As System.Windows.Forms.PictureBox
     Friend WithEvents logo204 As System.Windows.Forms.PictureBox
+    Friend WithEvents ronde3antw1 As System.Windows.Forms.Label
+    Friend WithEvents ronde3antw3 As System.Windows.Forms.Label
+    Friend WithEvents ronde3antw2 As System.Windows.Forms.Label
+    Friend WithEvents logo301 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo303 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo302 As System.Windows.Forms.PictureBox
 End Class
