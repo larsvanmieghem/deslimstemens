@@ -22,6 +22,7 @@ Partial Class Edit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Edit))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mintienspelereen = New System.Windows.Forms.Button()
@@ -335,6 +336,7 @@ Partial Class Edit
         Me.ClientSize = New System.Drawing.Size(618, 184)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Edit"
         Me.Text = "Edit"
         Me.GroupBox1.ResumeLayout(False)

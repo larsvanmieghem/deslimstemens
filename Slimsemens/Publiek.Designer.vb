@@ -82,6 +82,7 @@ Partial Class Publiek
         Me.ronde4tip6 = New System.Windows.Forms.Label()
         Me.ronde4tip9 = New System.Windows.Forms.Label()
         Me.ronde4tip3 = New System.Windows.Forms.Label()
+        Me.ronde4foto = New System.Windows.Forms.PictureBox()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +102,7 @@ Partial Class Publiek
         CType(Me.logo303, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ronde4tips.SuspendLayout()
+        CType(Me.ronde4foto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -779,6 +781,17 @@ Partial Class Publiek
         Me.ronde4tip3.TabIndex = 50
         Me.ronde4tip3.Text = "Tip 3"
         '
+        'ronde4foto
+        '
+        Me.ronde4foto.Image = Global.Slimsemens.My.Resources.Resources.platypus
+        Me.ronde4foto.Location = New System.Drawing.Point(604, 443)
+        Me.ronde4foto.Name = "ronde4foto"
+        Me.ronde4foto.Size = New System.Drawing.Size(51, 39)
+        Me.ronde4foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ronde4foto.TabIndex = 53
+        Me.ronde4foto.TabStop = False
+        Me.ronde4foto.Visible = False
+        '
         'Publiek
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -787,6 +800,7 @@ Partial Class Publiek
         Me.BackgroundImage = Global.Slimsemens.My.Resources.Resources.achtergrond
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(891, 538)
+        Me.Controls.Add(Me.ronde4foto)
         Me.Controls.Add(Me.ronde4tips)
         Me.Controls.Add(Me.logo302)
         Me.Controls.Add(Me.logo303)
@@ -821,6 +835,7 @@ Partial Class Publiek
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ronde2grotefoto)
         Me.Enabled = False
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Publiek"
         Me.Text = "Publiek"
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -844,6 +859,7 @@ Partial Class Publiek
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ronde4tips.ResumeLayout(False)
         Me.ronde4tips.PerformLayout()
+        CType(Me.ronde4foto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -906,4 +922,5 @@ Partial Class Publiek
     Friend WithEvents ronde4tip5 As System.Windows.Forms.Label
     Friend WithEvents ronde4tip8 As System.Windows.Forms.Label
     Friend WithEvents ronde4tip2 As System.Windows.Forms.Label
+    Friend WithEvents ronde4foto As System.Windows.Forms.PictureBox
 End Class

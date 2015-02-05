@@ -167,6 +167,13 @@
         ronde4tip7.Location = New Point(ronde4tips.Width * (1 / 10), ronde4tips.Height * (7 / 10))
         ronde4tip8.Location = New Point(ronde4tips.Width * (4 / 10), ronde4tips.Height * (7 / 10))
         ronde4tip9.Location = New Point(ronde4tips.Width * (7 / 10), ronde4tips.Height * (7 / 10))
+        ronde4foto.Size = Me.Size
+        ronde4foto.Location = New Point(0, 0)
+        If Controle.PictureBox1.Visible = True Then
+            ronde4foto.Visible = True
+        Else
+            ronde4foto.Visible = False
+        End If
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
@@ -286,6 +293,7 @@
     Sub ronde3()
         Panel1.Visible = False
         PictureBox1.Visible = False
+        vragen.Visible = False
         If (Controle.jan.Istelleraan = True) Or (Controle.platypus.Istelleraan = True) Or (Controle.miauw.Istelleraan = True) Then
             ronde4tips.Visible = True
         Else
@@ -318,21 +326,25 @@
     End Sub
     Sub ronde4()
         Panel1.Visible = False
-        PictureBox1.Visible = False
+        PictureBox1.Visible = True
+        vragen.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
     End Sub
     Sub ronde5()
+        vragen.Visible = False
         Panel1.Visible = False
         PictureBox1.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
     End Sub
     Sub ronde6()
+        vragen.Visible = False
         Panel1.Visible = False
         PictureBox1.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
+
     End Sub
     Public Sub juistgeluid()
         vlcbezet = True

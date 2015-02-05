@@ -1276,6 +1276,7 @@ Select origineelaandebeurt
         aandebeurt = aandebeurtenum.Jan
         actieveronde = actieverondeenum.Galerij
         PictureBox1.Load("reeks1foto1.jpg")
+        publiekvenster.ronde4foto.Load("reeks1foto1.jpg")
         ronde4actievereeks = ronde4actievereeksenum.reeks1
         PictureBox1.Visible = False
         GroupBox9.Enabled = False
@@ -1322,31 +1323,40 @@ Select origineelaandebeurt
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load("reeks1foto2.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto2.jpg")
                     ronde4antw1chk.Checked = True
                 Case 2
                     PictureBox1.Load("reeks1foto3.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto3.jpg")
                     ronde4antw2chk.Checked = True
                 Case 3
                     PictureBox1.Load("reeks1foto4.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto4.jpg")
                     ronde4antw3chk.Checked = True
                 Case 4
                     PictureBox1.Load("reeks1foto5.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto5.jpg")
                     ronde4antw4chk.Checked = True
                 Case 5
                     PictureBox1.Load("reeks1foto6.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto6.jpg")
                     ronde4antw5chk.Checked = True
                 Case 6
                     PictureBox1.Load("reeks1foto7.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto7.jpg")
                     ronde4antw6chk.Checked = True
                 Case 7
                     PictureBox1.Load("reeks1foto8.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto8.jpg")
                     ronde4antw7chk.Checked = True
                 Case 8
                     PictureBox1.Load("reeks1foto9.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto9.jpg")
                     ronde4antw8chk.Checked = True
                 Case 9
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks1foto10.jpg")
+                    publiekvenster.ronde4foto.Load("reeks1foto10.jpg")
                 Case 10
                     ronde4anderespelers()   'Zeer belangrijk dat dit voor chk10 = true komt => dit activeert de mogelijkheid voor de andere spelers 
                     'om deze reeks te beantwoorden; als alles al juist is, dan zorgt chk10 = true voor het beïndigen van de reeks. Omgekeerd  niet zou de volgende reeks worden beïndigd en zouden de andere spelers vervolgens de kans krijgen om die reeks als eerste te beantwoorden, wat totaal 
@@ -1371,31 +1381,40 @@ Select origineelaandebeurt
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load("reeks2foto2.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto2.jpg")
                     ronde4antw1chk.Checked = True
                 Case 2
                     PictureBox1.Load("reeks2foto3.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto3.jpg")
                     ronde4antw2chk.Checked = True
                 Case 3
                     PictureBox1.Load("reeks2foto4.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto4.jpg")
                     ronde4antw3chk.Checked = True
                 Case 4
                     PictureBox1.Load("reeks2foto5.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto5.jpg")
                     ronde4antw4chk.Checked = True
                 Case 5
                     PictureBox1.Load("reeks2foto6.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto6.jpg")
                     ronde4antw5chk.Checked = True
                 Case 6
                     PictureBox1.Load("reeks2foto7.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto7.jpg")
                     ronde4antw6chk.Checked = True
                 Case 7
                     PictureBox1.Load("reeks2foto8.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto8.jpg")
                     ronde4antw7chk.Checked = True
                 Case 8
                     PictureBox1.Load("reeks2foto9.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto9.jpg")
                     ronde4antw8chk.Checked = True
                 Case 9
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks2foto10.jpg")
+                    publiekvenster.ronde4foto.Load("reeks2foto10.jpg")
                 Case 10
                     ronde4anderespelers()
                     Select Case origineelaandebeurt
@@ -1418,31 +1437,40 @@ Select origineelaandebeurt
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load("reeks3foto2.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto2.jpg")
                     ronde4antw1chk.Checked = True
                 Case 2
                     PictureBox1.Load("reeks3foto3.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto3.jpg")
                     ronde4antw2chk.Checked = True
                 Case 3
                     PictureBox1.Load("reeks3foto4.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto4.jpg")
                     ronde4antw3chk.Checked = True
                 Case 4
+                    publiekvenster.ronde4foto.Load("reeks3foto5.jpg")
                     PictureBox1.Load("reeks3foto5.jpg")
                     ronde4antw4chk.Checked = True
                 Case 5
                     PictureBox1.Load("reeks3foto6.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto6.jpg")
                     ronde4antw5chk.Checked = True
                 Case 6
                     PictureBox1.Load("reeks3foto7.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto7.jpg")
                     ronde4antw6chk.Checked = True
                 Case 7
                     PictureBox1.Load("reeks3foto8.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto8.jpg")
                     ronde4antw7chk.Checked = True
                 Case 8
                     PictureBox1.Load("reeks3foto9.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto9.jpg")
                     ronde4antw8chk.Checked = True
                 Case 9
                     ronde4antw9chk.Checked = True
                     PictureBox1.Load("reeks3foto10.jpg")
+                    publiekvenster.ronde4foto.Load("reeks3foto10.jpg")
                 Case 10
                     ronde4anderespelers()
                     Select Case origineelaandebeurt
@@ -1778,9 +1806,11 @@ Select origineelaandebeurt
             Case ronde4actievereeksenum.reeks1
                 ronde4actievereeks = ronde4actievereeksenum.reeks2
                 PictureBox1.Load("reeks2foto1.jpg")
+                publiekvenster.ronde4foto.Load("reeks2foto1.jpg")
             Case ronde4actievereeksenum.reeks2
                 ronde4actievereeks = ronde4actievereeksenum.reeks3
                 PictureBox1.Load("reeks3foto1.jpg")
+                publiekvenster.ronde4foto.Load("reeks3foto1.jpg")
         End Select
         origineelaandebeurt = aandebeurt
     End Sub
