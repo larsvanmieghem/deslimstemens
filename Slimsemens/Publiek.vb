@@ -169,6 +169,16 @@
         ronde4tip9.Location = New Point(ronde4tips.Width * (7 / 10), ronde4tips.Height * (7 / 10))
         ronde4foto.Size = Me.Size
         ronde4foto.Location = New Point(0, 0)
+        ronde5antw1.Location = New Point(Me.Width * (2 / 3), 20)
+        ronde5antw2.Location = New Point(Me.Width * (2 / 3), Me.Height * (2 / 3) * (1 / 5) + 20)
+        ronde5antw3.Location = New Point(Me.Width * (2 / 3), Me.Height * (2 / 3) * (2 / 5) + 20)
+        ronde5antw4.Location = New Point(Me.Width * (2 / 3), Me.Height * (2 / 3) * (3 / 5) + 20)
+        ronde5antw5.Location = New Point(Me.Width * (2 / 3), Me.Height * (2 / 3) * (4 / 5) + 20)
+        logo1.Location = logo201.Location
+        logo2.Location = New Point(ronde5antw2.Location.X - 50, ronde5antw2.Location.Y - 10)
+        logo3.Location = New Point(ronde5antw3.Location.X - 50, ronde5antw3.Location.Y - 10)
+        logo4.Location = New Point(ronde5antw4.Location.X - 50, ronde5antw4.Location.Y - 10)
+        logo5.Location = New Point(ronde5antw5.Location.X - 50, ronde5antw5.Location.Y - 10)
         If Controle.PictureBox1.Visible = True Then
             ronde4foto.Visible = True
         Else
@@ -177,6 +187,7 @@
     End Sub
     Sub ronde1()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
+        ronde5onzichtbaar()
         PictureBox1.Visible = True
         Select Case Controle.ronde1actievevraag
             Case 1
@@ -255,6 +266,7 @@
     Sub ronde2()
         Panel1.Visible = False
         vragen.Visible = False
+        ronde5onzichtbaar()
         PictureBox1.Visible = False
         If Controle.ronde2antw1chk.Checked Then
             ronde2Antw1.Visible = True
@@ -322,7 +334,7 @@
             ronde3antw3.Visible = False
             logo303.Visible = False
         End If
-
+        ronde5onzichtbaar()
     End Sub
     Sub ronde4()
         Panel1.Visible = False
@@ -330,11 +342,47 @@
         vragen.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
+        ronde5onzichtbaar()
     End Sub
     Sub ronde5()
         vragen.Visible = False
         Panel1.Visible = False
         PictureBox1.Visible = False
+        If Controle.ronde5antw1chk.Checked = True Then
+            ronde5antw1.Visible = True
+            logo1.Visible = True
+        Else
+            ronde5antw1.Visible = False
+            logo1.Visible = False
+        End If
+        If Controle.ronde5antw2chk.Checked = True Then
+            logo2.Visible = True
+            ronde5antw2.Visible = True
+        Else
+            ronde5antw2.Visible = False
+            logo2.Visible = False
+        End If
+        If Controle.ronde5antw3chk.Checked = True Then
+            logo3.Visible = True
+            ronde5antw3.Visible = True
+        Else
+            logo3.Visible = False
+            ronde5antw3.Visible = False
+        End If
+        If Controle.ronde5antw4chk.Checked = True Then
+            logo4.Visible = True
+            ronde5antw4.Visible = True
+        Else
+            ronde5antw4.Visible = False
+            logo4.Visible = False
+        End If
+        If Controle.ronde5antw5chk.Checked = True Then
+            ronde5antw5.Visible = True
+            logo5.Visible = True
+        Else
+            ronde5antw5.Visible = False
+            logo5.Visible = False
+        End If
         ronde2onzichtbaar()
         ronde3onzichtbaar()
     End Sub
@@ -344,7 +392,7 @@
         PictureBox1.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
-
+        ronde5onzichtbaar()
     End Sub
     Public Sub juistgeluid()
         vlcbezet = True
@@ -385,5 +433,17 @@
         ronde3antw1.Visible = False
         ronde3antw2.Visible = False
         ronde3antw3.Visible = False
+    End Sub
+    Sub ronde5onzichtbaar()
+        ronde5antw1.Visible = False
+        ronde5antw2.Visible = False
+        ronde5antw3.Visible = False
+        ronde5antw4.Visible = False
+        ronde5antw5.Visible = False
+        logo1.Visible = False
+        logo2.Visible = False
+        logo3.Visible = False
+        logo4.Visible = False
+        logo5.Visible = False
     End Sub
 End Class

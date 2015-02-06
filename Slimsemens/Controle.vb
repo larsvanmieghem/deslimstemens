@@ -29,6 +29,7 @@ Public Class Controle
     Public ronde2rondgaan As Short = 1
     Public ronde4actievefoto As Short = 1
     Public ronde4rondgaan As Short = 1
+    Dim ronde1inroaan As Boolean = False
     Public Enum actieverondeenum As Short
         driezesnegen = 1
         Opendeur = 2
@@ -736,6 +737,7 @@ Public Class Controle
         r1v13.BackColor = Color.Transparent
         r1v14.BackColor = Color.Transparent
         r1v15.BackColor = Color.Transparent
+        ronde1inroaan = False
     End Sub
     '---Ronde2---
 
@@ -1886,7 +1888,7 @@ Select origineelaandebeurt
 
     Private Sub ronde5antw1chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw1chk.CheckedChanged
         If ronde5antw1chk.Checked = True Then
-            ronde5telpuntenbij()
+            ronde5telpuntenbij(1)
         Else
             ronde5trekpuntenaf()
         End If
@@ -1894,7 +1896,7 @@ Select origineelaandebeurt
 
     Private Sub ronde5antw2chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw2chk.CheckedChanged
         If ronde5antw2chk.Checked = True Then
-            ronde5telpuntenbij()
+            ronde5telpuntenbij(2)
         Else
             ronde5trekpuntenaf()
         End If
@@ -1902,7 +1904,7 @@ Select origineelaandebeurt
 
     Private Sub ronde5antw3chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw3chk.CheckedChanged
         If ronde5antw3chk.Checked = True Then
-            ronde5telpuntenbij()
+            ronde5telpuntenbij(3)
         Else
             ronde5trekpuntenaf()
         End If
@@ -1910,7 +1912,7 @@ Select origineelaandebeurt
 
     Private Sub ronde5antw4chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw4chk.CheckedChanged
         If ronde5antw4chk.Checked = True Then
-            ronde5telpuntenbij()
+            ronde5telpuntenbij(4)
         Else
             ronde5trekpuntenaf()
         End If
@@ -1918,12 +1920,13 @@ Select origineelaandebeurt
 
     Private Sub ronde5antw5chk_CheckedChanged(sender As Object, e As EventArgs) Handles ronde5antw5chk.CheckedChanged
         If ronde5antw5chk.Checked = True Then
-            ronde5telpuntenbij()
+            ronde5telpuntenbij(5)
         Else
             ronde5trekpuntenaf()
         End If
     End Sub
-    Private Sub ronde5telpuntenbij()
+    Private Sub ronde5telpuntenbij(zender As Short)
+        Dim fotolocatie As String
         publiekvenster.juistgeluid()
         If ronde5checkv = True Then
             Select Case aandebeurt
@@ -1940,6 +1943,34 @@ Select origineelaandebeurt
                     miauw.Seconden += (ronde5antwtel * 10)
                     miauw.Istelleraan = True
             End Select
+            Select Case ronde5antwtel
+                Case 1
+                    fotolocatie = "dsmlogo10.png"
+                Case 2
+                    fotolocatie = "dsmlogo20.png"
+                Case 3
+                    fotolocatie = "dsmlogo30.png"
+                Case 4
+                    fotolocatie = "dsmlogo40.png"
+                Case 5
+                    fotolocatie = "dsmlogo50.png"
+            End Select
+            Select Case zender
+                Case 1
+                    publiekvenster.logo1.Load(fotolocatie)
+                Case 2
+                    publiekvenster.logo2.Load(fotolocatie)
+                Case 3
+                    publiekvenster.logo3.Load(fotolocatie)
+                Case 4
+                    publiekvenster.logo4.Load(fotolocatie)
+                Case 5
+                    publiekvenster.logo5.Load(fotolocatie)
+            End Select
+
+
+
+
             ronde5antwtel += 1
             If ronde5antwtel = 6 Then
                 ronde5volgendevraag()
@@ -2027,5 +2058,15 @@ Select origineelaandebeurt
     End Sub
     Public Sub startronde6()
         actieveronde = actieverondeenum.Finale
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If ronde1inroaan = False Then
+            ronde1inroaan = True
+            publiekvenster.AxVLCPlugin21.playlist.playItem(0)
+        ElseIf ronde1inroaan = True Then
+            ronde1inroaan = False
+            publiekvenster.AxVLCPlugin21.playlist.stop()
+        End If
     End Sub
 End Class

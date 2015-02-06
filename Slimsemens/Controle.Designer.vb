@@ -116,6 +116,7 @@ Partial Class Controle
         Me.ronde5antw2chk = New System.Windows.Forms.CheckBox()
         Me.ronde5antw1chk = New System.Windows.Forms.CheckBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -386,12 +387,13 @@ Partial Class Controle
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.ronde2startronde)
         Me.GroupBox3.Controls.Add(Me.ronde1f)
         Me.GroupBox3.Controls.Add(Me.ronde1j)
         Me.GroupBox3.Location = New System.Drawing.Point(500, 19)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(217, 87)
+        Me.GroupBox3.Size = New System.Drawing.Size(217, 150)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Bedieningpaneel ronde 1"
@@ -434,7 +436,7 @@ Partial Class Controle
         Me.GroupBox4.Controls.Add(Me.ronde2antw1chk)
         Me.GroupBox4.Controls.Add(Me.ronde2stop)
         Me.GroupBox4.Controls.Add(Me.ronde2start)
-        Me.GroupBox4.Location = New System.Drawing.Point(500, 19)
+        Me.GroupBox4.Location = New System.Drawing.Point(508, 0)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(217, 236)
         Me.GroupBox4.TabIndex = 15
@@ -562,9 +564,9 @@ Partial Class Controle
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw3)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw2)
         Me.GroupBox5.Controls.Add(Me.Ronde3chkantw1)
-        Me.GroupBox5.Location = New System.Drawing.Point(500, 12)
+        Me.GroupBox5.Location = New System.Drawing.Point(506, 0)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(218, 243)
+        Me.GroupBox5.Size = New System.Drawing.Size(239, 243)
         Me.GroupBox5.TabIndex = 21
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Bedieningspaneel ronde 3"
@@ -784,9 +786,9 @@ Partial Class Controle
         Me.GroupBox8.Controls.Add(Me.ronde4pas)
         Me.GroupBox8.Controls.Add(Me.ronde4juist)
         Me.GroupBox8.Controls.Add(Me.ronde4startreeks)
-        Me.GroupBox8.Location = New System.Drawing.Point(509, 6)
+        Me.GroupBox8.Location = New System.Drawing.Point(494, 6)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(219, 249)
+        Me.GroupBox8.Size = New System.Drawing.Size(245, 255)
         Me.GroupBox8.TabIndex = 26
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Bedieningspaneel ronde 4"
@@ -981,9 +983,9 @@ Partial Class Controle
         Me.GroupBox10.Controls.Add(Me.ronde5antw3chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw2chk)
         Me.GroupBox10.Controls.Add(Me.ronde5antw1chk)
-        Me.GroupBox10.Location = New System.Drawing.Point(511, 0)
+        Me.GroupBox10.Location = New System.Drawing.Point(495, 1)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(220, 249)
+        Me.GroupBox10.Size = New System.Drawing.Size(227, 254)
         Me.GroupBox10.TabIndex = 28
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "Bedieningspaneel ronde 5 "
@@ -1075,24 +1077,33 @@ Partial Class Controle
         Me.GroupBox11.TabIndex = 9
         Me.GroupBox11.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(11, 82)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(188, 56)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "Introliedje"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(751, 425)
-        Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox10)
+        Me.Controls.Add(Me.GroupBox8)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox11)
         Me.Controls.Add(Me.GroupBox9)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.Groupbox7)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Edit)
         Me.Controls.Add(Me.ronde2foto3)
         Me.Controls.Add(Me.ronde2foto2)
         Me.Controls.Add(Me.ronde2foto1)
-        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.ronde1antwoordtekstlbl)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox2)
@@ -1222,5 +1233,6 @@ Partial Class Controle
     Friend WithEvents ronde5startronde As System.Windows.Forms.Button
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
     Friend WithEvents ronde5toonvideo As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
