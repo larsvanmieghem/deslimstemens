@@ -259,6 +259,9 @@
         r1v15.Location = New Point(Panel1.Width * (29 / 32), r1v1.Location.Y - 10)
         PictureBox1.Width = Me.Width
         PictureBox1.Height = (Me.Height / 2)
+        PictureBox5.Width = PictureBox1.Width * (2 / 3)
+        PictureBox5.Height = PictureBox1.Height
+        PictureBox5.Location = PictureBox1.Location
         PictureBox1.Location = New Point(0, 0)
         ronde2onzichtbaar()
         ronde3onzichtbaar()
@@ -348,6 +351,7 @@
         vragen.Visible = False
         Panel1.Visible = False
         PictureBox1.Visible = False
+        PictureBox5.Visible = True
         If Controle.ronde5antw1chk.Checked = True Then
             ronde5antw1.Visible = True
             logo1.Visible = True
@@ -445,5 +449,6 @@
         logo3.Visible = False
         logo4.Visible = False
         logo5.Visible = False
+        PictureBox5.Visible = False
     End Sub
 End Class

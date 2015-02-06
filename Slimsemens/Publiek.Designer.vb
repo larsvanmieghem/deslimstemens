@@ -73,6 +73,7 @@ Partial Class Publiek
         Me.logo303 = New System.Windows.Forms.PictureBox()
         Me.logo302 = New System.Windows.Forms.PictureBox()
         Me.ronde4tips = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.ronde4tip6 = New System.Windows.Forms.Label()
         Me.ronde4tip9 = New System.Windows.Forms.Label()
         Me.ronde4tip3 = New System.Windows.Forms.Label()
@@ -112,6 +113,7 @@ Partial Class Publiek
         CType(Me.logo303, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ronde4tips.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ronde4foto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.logo4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -504,7 +506,7 @@ Partial Class Publiek
         Me.AxVLCPlugin21.Location = New System.Drawing.Point(673, 516)
         Me.AxVLCPlugin21.Name = "AxVLCPlugin21"
         Me.AxVLCPlugin21.OcxState = CType(resources.GetObject("AxVLCPlugin21.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxVLCPlugin21.Size = New System.Drawing.Size(19, 10)
+        Me.AxVLCPlugin21.Size = New System.Drawing.Size(20, 10)
         Me.AxVLCPlugin21.TabIndex = 26
         Me.AxVLCPlugin21.Visible = False
         '
@@ -687,6 +689,17 @@ Partial Class Publiek
         Me.ronde4tips.Size = New System.Drawing.Size(453, 285)
         Me.ronde4tips.TabIndex = 43
         Me.ronde4tips.Visible = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Image = Global.Slimsemens.My.Resources.Resources.dsm
+        Me.PictureBox5.Location = New System.Drawing.Point(486, 217)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(72, 41)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 53
+        Me.PictureBox5.TabStop = False
         '
         'ronde4tip6
         '
@@ -979,6 +992,7 @@ Partial Class Publiek
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ronde2grotefoto)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Enabled = False
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Publiek"
@@ -1004,6 +1018,7 @@ Partial Class Publiek
         CType(Me.logo302, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ronde4tips.ResumeLayout(False)
         Me.ronde4tips.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ronde4foto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.logo4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1083,4 +1098,5 @@ Partial Class Publiek
     Friend WithEvents ronde5antw3 As System.Windows.Forms.Label
     Friend WithEvents ronde5antw2 As System.Windows.Forms.Label
     Friend WithEvents ronde5antw1 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
 End Class

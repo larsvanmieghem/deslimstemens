@@ -244,6 +244,7 @@
     <None Include="bin\Debug\dsmlogo30.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\dsm.png" />
     <Content Include="dsmlogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
