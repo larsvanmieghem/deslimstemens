@@ -73,7 +73,6 @@ Partial Class Publiek
         Me.logo303 = New System.Windows.Forms.PictureBox()
         Me.logo302 = New System.Windows.Forms.PictureBox()
         Me.ronde4tips = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.ronde4tip6 = New System.Windows.Forms.Label()
         Me.ronde4tip9 = New System.Windows.Forms.Label()
         Me.ronde4tip3 = New System.Windows.Forms.Label()
@@ -83,6 +82,7 @@ Partial Class Publiek
         Me.ronde4tip4 = New System.Windows.Forms.Label()
         Me.ronde4tip7 = New System.Windows.Forms.Label()
         Me.ronde4tip1 = New System.Windows.Forms.Label()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.ronde4foto = New System.Windows.Forms.PictureBox()
         Me.logo5 = New System.Windows.Forms.PictureBox()
         Me.logo4 = New System.Windows.Forms.PictureBox()
@@ -690,17 +690,6 @@ Partial Class Publiek
         Me.ronde4tips.TabIndex = 43
         Me.ronde4tips.Visible = False
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.Image = Global.Slimsemens.My.Resources.Resources.dsm
-        Me.PictureBox5.Location = New System.Drawing.Point(486, 217)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(72, 41)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 53
-        Me.PictureBox5.TabStop = False
-        '
         'ronde4tip6
         '
         Me.ronde4tip6.AutoSize = True
@@ -808,6 +797,17 @@ Partial Class Publiek
         Me.ronde4tip1.Size = New System.Drawing.Size(61, 22)
         Me.ronde4tip1.TabIndex = 44
         Me.ronde4tip1.Text = "Tip 1"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox5.Image = Global.Slimsemens.My.Resources.Resources.dsm
+        Me.PictureBox5.Location = New System.Drawing.Point(486, 217)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(72, 41)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 53
+        Me.PictureBox5.TabStop = False
         '
         'ronde4foto
         '

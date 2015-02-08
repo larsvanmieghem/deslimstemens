@@ -13,6 +13,7 @@
         mistelleraan = False
         timer.Enabled = False
         timer.Interval = 1000 'milliseconden
+        mleeftijd = 42
     End Sub
     'Houdt spelersnaam bij
     Public Property Naam() As String

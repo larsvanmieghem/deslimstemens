@@ -12,14 +12,14 @@
         Label1.Text = Controle.jan.Seconden.ToString
         Label2.Text = Controle.platypus.Seconden.ToString
         Label3.Text = Controle.miauw.Seconden.ToString
-        AxVLCPlugin21.playlist.add("generiek.mp3")
-        AxVLCPlugin21.playlist.add("klok.mp3")
-        AxVLCPlugin21.playlist.add("goed.mp3")
-        AxVLCPlugin21.playlist.add("finale.mp3")
-        AxVLCPlugin21.playlist.add("klokeind.mp3")
-        ronde2foto1.Load("ronde2foto1.jpg")
-        ronde2foto2.Load("ronde2foto2.jpg")
-        ronde2foto3.Load("ronde2foto3.jpg")
+        AxVLCPlugin21.playlist.add(Controle.map & "\generiek.mp3")
+        AxVLCPlugin21.playlist.add(Controle.map & "\klok.mp3")
+        AxVLCPlugin21.playlist.add(Controle.map & "\goed.mp3")
+        AxVLCPlugin21.playlist.add(Controle.map & "\finale.mp3")
+        AxVLCPlugin21.playlist.add(Controle.map & "\klokeind.mp3")
+        ronde2foto1.Load(Controle.map & "\ronde2foto1.jpg")
+        ronde2foto2.Load(Controle.map & "\ronde2foto2.jpg")
+        ronde2foto3.Load(Controle.map & "\ronde2foto3.jpg")
     End Sub
 
     Public Sub synchroniseer()
@@ -72,7 +72,27 @@
                 End If
             End If
         End If
-
+        If Controle.GroupBox1.Visible = True Then
+            Naam1label.Visible = True
+            Naam2label.Visible = True
+            Naam3label.Visible = True
+            Label1.Visible = True
+            Label2.Visible = True
+            Label3.Visible = True
+            PictureBox2.Visible = True
+            PictureBox3.Visible = True
+            PictureBox4.Visible = True
+        ElseIf Controle.GroupBox12.Visible = True Then
+            Naam1label.Visible = False
+            Naam2label.Visible = False
+            Naam3label.Visible = False
+            Label1.Visible = False
+            Label2.Visible = False
+            Label3.Visible = False
+            PictureBox2.Visible = False
+            PictureBox3.Visible = False
+            PictureBox4.Visible = False
+        End If
 
         'Toont wie er aan de beurt is
         Select Case Controle.aandebeurt
@@ -179,6 +199,11 @@
         logo3.Location = New Point(ronde5antw3.Location.X - 50, ronde5antw3.Location.Y - 10)
         logo4.Location = New Point(ronde5antw4.Location.X - 50, ronde5antw4.Location.Y - 10)
         logo5.Location = New Point(ronde5antw5.Location.X - 50, ronde5antw5.Location.Y - 10)
+        ronde5antw1.Text = Controle.ronde5antw1chk.Text
+        ronde5antw2.Text = Controle.ronde5antw2chk.Text
+        ronde5antw3.Text = Controle.ronde5antw3chk.Text
+        ronde5antw4.Text = Controle.ronde5antw4chk.Text
+        ronde5antw5.Text = Controle.ronde5antw5chk.Text
         If Controle.PictureBox1.Visible = True Then
             ronde4foto.Visible = True
         Else
@@ -451,4 +476,6 @@
         logo5.Visible = False
         PictureBox5.Visible = False
     End Sub
+
+   
 End Class
