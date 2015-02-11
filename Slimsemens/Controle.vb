@@ -686,6 +686,11 @@ Public Class Controle
 
                 If (heusnoorn.Seconden <= 0) Or (abricoos.Seconden <= 0) Then
                     actieveronde = actieverondeenum.Winnaar
+                    If heusnoorn.Seconden <= 0 Then
+                        heusnoorn.Seconden = 0
+                    Else
+                        abricoos.Seconden = 0
+                    End If
                 End If
             Case actieverondeenum.Winnaar
                 GroupBox1.Visible = False

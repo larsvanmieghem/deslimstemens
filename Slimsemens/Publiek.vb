@@ -7,7 +7,7 @@
         Naam1label.Text = Controle.jan.Naam
         Naam2label.Text = Controle.platypus.Naam
         Naam3label.Text = Controle.miauw.Naam
-
+       
         'Past de weergegeven seconden aan aan die van de objecten bij begin programma
         Label1.Text = Controle.jan.Seconden.ToString
         Label2.Text = Controle.platypus.Seconden.ToString
@@ -23,6 +23,8 @@
     End Sub
 
     Public Sub synchroniseer()
+        finalenaamlabel1.Text = Controle.heusnoorn.Naam
+        Finalenaamlabel2.Text = Controle.abricoos.Naam
 
         If Controle.actieveronde = Controle.actieverondeenum.driezesnegen Then
             ronde1()
@@ -54,7 +56,6 @@
         Label1.Text = Controle.jan.Seconden.ToString
         Label2.Text = Controle.platypus.Seconden.ToString
         Label3.Text = Controle.miauw.Seconden.ToString
-
         'Zorgt voor het afspelen van het klokgeluidje
         If vlcbezet = False Then
             If ((Controle.jan.Istelleraan = True) Or (Controle.platypus.Istelleraan = True Or Controle.miauw.Istelleraan = True)) Then
@@ -146,7 +147,16 @@
         ronde2foto2.Height = Me.Height * (1 / 5)
         ronde2foto3.Width = Me.Width * (2 / 10)
         ronde2foto3.Height = Me.Height * (1 / 5)
-
+        ronde6antw1.Location = New Point(Me.Width * (1 / 10), Me.Height * (1 / 2))
+        ronde6antw2.Location = New Point(Me.Width * (2.8 / 10), Me.Height * (5 / 9))
+        ronde6antw3.Location = New Point(Me.Width * (4.6 / 10), Me.Height * (1 / 2))
+        ronde6antw4.Location = New Point(Me.Width * (6.4 / 10), Me.Height * (5 / 9))
+        ronde6antw5.Location = New Point(Me.Width * (8.2 / 10), Me.Height * (1 / 2))
+        logo6.Location = New Point(ronde6antw1.Location.X - 50, ronde6antw1.Location.Y)
+        logo7.Location = New Point(ronde6antw2.Location.X - 50, ronde6antw2.Location.Y)
+        logo8.Location = New Point(ronde6antw3.Location.X - 50, ronde6antw3.Location.Y)
+        logo9.Location = New Point(ronde6antw4.Location.X - 50, ronde6antw4.Location.Y)
+        logo10.Location = New Point(ronde6antw5.Location.X - 50, ronde6antw5.Location.Y)
         If Controle.ronde2foto1.Visible = True Then
             ronde2foto1.Visible = True
         Else
@@ -226,6 +236,7 @@
         End If
     End Sub
     Sub ronde1()
+        ronde6onzichtbaar()
         vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
         ronde5onzichtbaar()
         PictureBox1.Visible = True
@@ -307,6 +318,7 @@
         ronde3onzichtbaar()
     End Sub
     Sub ronde2()
+        ronde6onzichtbaar()
         Panel1.Visible = False
         vragen.Visible = False
         ronde5onzichtbaar()
@@ -346,6 +358,7 @@
         ronde3onzichtbaar()
     End Sub
     Sub ronde3()
+        ronde6onzichtbaar()
         Panel1.Visible = False
         PictureBox1.Visible = False
         vragen.Visible = False
@@ -386,6 +399,7 @@
         ronde2onzichtbaar()
         ronde3onzichtbaar()
         ronde5onzichtbaar()
+        ronde6onzichtbaar()
     End Sub
     Sub ronde5()
         vragen.Visible = False
@@ -433,13 +447,68 @@
     Sub ronde6()
         vragen.Visible = False
         Panel1.Visible = False
+        PictureBox1.Visible = True
+        ronde2onzichtbaar()
+        ronde3onzichtbaar()
+        ronde5onzichtbaar()
+        finaleteller1.Text = Controle.heusnoorn.Seconden.ToString
+        finaleteller2.Text = Controle.abricoos.Seconden.ToString
+        ronde6antw1.Text = Controle.antwoordenfinale(Controle.ronde6actievevraag, 1)
+        ronde6antw2.Text = Controle.antwoordenfinale(Controle.ronde6actievevraag, 2)
+        ronde6antw3.Text = Controle.antwoordenfinale(Controle.ronde6actievevraag, 3)
+        ronde6antw4.Text = Controle.antwoordenfinale(Controle.ronde6actievevraag, 4)
+        ronde6antw5.Text = Controle.antwoordenfinale(Controle.ronde6actievevraag, 5)
+        If Controle.finaleaandebeurt = Controle.finaleaandebeurtem.heusnoorn Then
+        Else
+            finalenaamlabel1.ForeColor = Color.Gold
+            Finalenaamlabel2.ForeColor = Color.White
+        End If
+        finalenaamlabel1.ForeColor = Color.White
+        Finalenaamlabel2.ForeColor = Color.Gold
+        If Controle.ronde6antw1.Checked Then
+            ronde6antw1.Visible = True
+            logo6.Visible = True
+        Else
+            ronde6antw1.Visible = False
+            logo6.Visible = False
+        End If
+        If Controle.ronde6antw2.Checked Then
+            ronde6antw2.Visible = True
+            logo7.Visible = True
+        Else
+            ronde6antw2.Visible = False
+            logo7.Visible = False
+        End If
+        If Controle.ronde6antw3.Checked Then
+            ronde6antw3.Visible = True
+            logo8.Visible = True
+        Else
+            ronde6antw3.Visible = False
+            logo8.Visible = False
+        End If
+        If Controle.ronde6antw4.Checked Then
+            ronde6antw4.Visible = True
+            logo9.Visible = True
+        Else
+            ronde6antw4.Visible = False
+            logo9.Visible = False
+        End If
+        If Controle.ronde6antw5.Checked Then
+            ronde6antw5.Visible = True
+            logo10.Visible = True
+        Else
+            ronde6antw5.Visible = False
+            logo10.Visible = False
+        End If
+    End Sub
+    Sub ronde7()
+        vragen.Visible = False
+        Panel1.Visible = False
         PictureBox1.Visible = False
         ronde2onzichtbaar()
         ronde3onzichtbaar()
         ronde5onzichtbaar()
-    End Sub
-    Sub ronde7()
-
+        ronde6onzichtbaar()
     End Sub
     Public Sub juistgeluid()
         vlcbezet = True
@@ -493,6 +562,18 @@
         logo4.Visible = False
         logo5.Visible = False
         PictureBox5.Visible = False
+    End Sub
+    Sub ronde6onzichtbaar()
+        ronde6antw1.Visible = False
+        ronde6antw2.Visible = False
+        ronde6antw3.Visible = False
+        ronde6antw4.Visible = False
+        ronde6antw5.Visible = False
+        logo6.Visible = False
+        logo7.Visible = False
+        logo8.Visible = False
+        logo9.Visible = False
+        logo10.Visible = False
     End Sub
 
   
