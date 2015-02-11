@@ -2288,6 +2288,7 @@ Public Class Controle
     End Sub
     Sub ronde6puntenbij()
         If ronde6checkboxv = False Then
+            Publiek.juistgeluid()
             Select Case finaleaandebeurt
                 Case finaleaandebeurtem.heusnoorn
                     abricoos.Seconden -= 20
