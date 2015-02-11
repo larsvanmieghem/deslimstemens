@@ -43,6 +43,7 @@ Public Class Controle
         Galerij = 4
         Collectiefgeheugen = 5
         Finale = 6
+        Winnaar = 7
     End Enum
     Public actieveronde As actieverondeenum
     Public Enum aandebeurtenum As Short
@@ -682,6 +683,29 @@ Public Class Controle
                 ronde6antw3.Text = antwoordenfinale(ronde6actievevraag, 3)
                 ronde6antw4.Text = antwoordenfinale(ronde6actievevraag, 4)
                 ronde6antw5.Text = antwoordenfinale(ronde6actievevraag, 5)
+
+                If (heusnoorn.Seconden <= 0) Or (abricoos.Seconden <= 0) Then
+                    actieveronde = actieverondeenum.Winnaar
+                End If
+            Case actieverondeenum.Winnaar
+                GroupBox1.Visible = False
+                ronde1antwoordtekstlbl.Visible = False
+                GroupBox2.Visible = False
+                GroupBox3.Visible = False
+                GroupBox4.Visible = False
+                Groupbox7.Visible = False
+                ronde2foto1.Visible = False
+                ronde2foto2.Visible = False
+                ronde2foto3.Visible = False
+                GroupBox5.Visible = False
+                GroupBox6.Visible = False
+                PictureBox1.Visible = False
+                GroupBox8.Visible = False
+                GroupBox9.Visible = False
+                GroupBox11.Visible = False
+                GroupBox12.Visible = False
+                ToolStripStatusLabel1.Text = "Winnaar"
+                GroupBox13.Visible = False
         End Select
 
         'Toont wie er aan de beurt is
@@ -2265,6 +2289,10 @@ Public Class Controle
                 Case finaleaandebeurtem.abricoos
                     heusnoorn.Seconden -= 20
             End Select
+            If ronde6antw1.Checked And ronde6antw2.Checked And ronde6antw3.Checked And ronde6antw4.Checked And ronde6antw5.Checked Then
+                ronde6rondgaan += 1
+                ronde6stopknop()
+            End If
         End If
     End Sub
     Sub ronde6puntenaf()
@@ -2295,6 +2323,9 @@ Public Class Controle
     End Sub
 
     Private Sub ronde6stop_Click(sender As Object, e As EventArgs) Handles ronde6stop.Click
+        ronde6stopknop()
+    End Sub
+    Sub ronde6stopknop()
         ronde6stop.Enabled = False
         ronde6antw1.Enabled = False
         ronde6antw2.Enabled = False
@@ -2322,7 +2353,6 @@ Public Class Controle
             ronde6antw5.Checked = True
         End If
     End Sub
-
     Private Sub ronde6volgendevraag_Click(sender As Object, e As EventArgs) Handles ronde6volgendevraag.Click
         ronde6antw1.Checked = False
         ronde6antw2.Checked = False
