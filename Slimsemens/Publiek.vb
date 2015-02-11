@@ -26,21 +26,18 @@
 
         If Controle.actieveronde = Controle.actieverondeenum.driezesnegen Then
             ronde1()
-        End If
-        If Controle.actieveronde = Controle.actieverondeenum.Opendeur Then
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Opendeur Then
             ronde2()
-        End If
-        If Controle.actieveronde = Controle.actieverondeenum.Puzzel Then
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Puzzel Then
             ronde3()
-        End If
-        If Controle.actieveronde = Controle.actieverondeenum.Galerij Then
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Galerij Then
             ronde4()
-        End If
-        If Controle.actieveronde = Controle.actieverondeenum.Collectiefgeheugen Then
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Collectiefgeheugen Then
             ronde5()
-        End If
-        If Controle.actieveronde = Controle.actieverondeenum.Finale Then
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Finale Then
             ronde6()
+        ElseIf Controle.actieveronde = Controle.actieverondeenum.Winnaar Then
+            ronde7()
         End If
         'Toont de juiste elementen afhankelijk van de ronde
         algemeen()
@@ -82,6 +79,12 @@
             PictureBox2.Visible = True
             PictureBox3.Visible = True
             PictureBox4.Visible = True
+            finalenaamlabel1.Visible = False
+            Finalenaamlabel2.Visible = False
+            finaleteller1.Visible = False
+            finaleteller2.Visible = False
+            PictureBox6.Visible = False
+            PictureBox7.Visible = False
         ElseIf Controle.GroupBox12.Visible = True Then
             Naam1label.Visible = False
             Naam2label.Visible = False
@@ -92,6 +95,12 @@
             PictureBox2.Visible = False
             PictureBox3.Visible = False
             PictureBox4.Visible = False
+            finalenaamlabel1.Visible = True
+            Finalenaamlabel2.Visible = True
+            finaleteller1.Visible = True
+            finaleteller2.Visible = True
+            PictureBox6.Visible = True
+            PictureBox7.Visible = True
         End If
 
         'Toont wie er aan de beurt is
@@ -113,12 +122,18 @@
         Naam1label.Location = New Point(Me.Width * (1 / 10), Me.Height * (3 / 4))
         Naam2label.Location = New Point(Me.Width * (4.5 / 10), Me.Height * (3 / 4))
         Naam3label.Location = New Point(Me.Width * (8 / 10), Me.Height * (3 / 4))
+        finalenaamlabel1.Location = New Point(Me.Width * (2.75 / 10), Me.Height * (3 / 4))
+        Finalenaamlabel2.Location = New Point(Me.Width * (6.25 / 10), Me.Height * (3 / 4))
         Label1.Location = New Point((Me.Width * (1 / 10)) + (Naam1label.Width / 3), Me.Height * (8.5 / 10))
         Label2.Location = New Point(Me.Width * (4.5 / 10) + (Naam2label.Width / 3), Me.Height * (8.5 / 10))
         Label3.Location = New Point(Me.Width * (8 / 10) + (Naam3label.Width / 3), Me.Height * (8.5 / 10))
+        finaleteller1.Location = New Point(finalenaamlabel1.Location.X, Label1.Location.Y)
+        finaleteller2.Location = New Point(Finalenaamlabel2.Location.X, Label1.Location.Y)
         PictureBox2.Location = New Point(Naam1label.Location.X - 40, Naam1label.Location.Y)
         PictureBox3.Location = New Point(Naam2label.Location.X - 40, Naam1label.Location.Y)
         PictureBox4.Location = New Point(Naam3label.Location.X - 40, Naam1label.Location.Y)
+        PictureBox6.Location = New Point(finalenaamlabel1.Location.X - 40, finalenaamlabel1.Location.Y)
+        PictureBox7.Location = New Point(Finalenaamlabel2.Location.X - 40, finalenaamlabel1.Location.Y)
         AxWindowsMediaPlayer1.Width = Me.Width
         AxWindowsMediaPlayer1.Height = Me.Height
         AxWindowsMediaPlayer1.Location = New Point(0, 0)
@@ -423,6 +438,9 @@
         ronde3onzichtbaar()
         ronde5onzichtbaar()
     End Sub
+    Sub ronde7()
+
+    End Sub
     Public Sub juistgeluid()
         vlcbezet = True
         AxVLCPlugin21.playlist.playItem(2)
@@ -455,7 +473,7 @@
         ronde2Antw4.Visible = False
     End Sub
     Sub ronde3onzichtbaar()
-        ronde4tips.Visible = False  'Dat had eigelijk ronde3 moeten heten :)
+        ronde4tips.Visible = False  'Dat had eigelijk ronde4 moeten heten :)
         logo301.Visible = False
         logo302.Visible = False
         logo303.Visible = False
@@ -477,5 +495,5 @@
         PictureBox5.Visible = False
     End Sub
 
-   
+  
 End Class
