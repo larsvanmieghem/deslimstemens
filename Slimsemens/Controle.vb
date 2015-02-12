@@ -1606,30 +1606,32 @@ Public Class Controle
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load(map & "\reeks1foto2.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto2.jpg")
 
                 Case 2
                     PictureBox1.Load(map & "\reeks1foto3.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto3.jpg")
                 Case 3
                     PictureBox1.Load(map & "\reeks1foto4.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto4.jpg")
                 Case 4
                     PictureBox1.Load(map & "\reeks1foto5.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto5.jpg")
                 Case 5
                     PictureBox1.Load(map & "\reeks1foto6.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto6.jpg")
                 Case 6
                     PictureBox1.Load(map & "\reeks1foto7.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto7.jpg")
 
                 Case 7
                     PictureBox1.Load(map & "\reeks1foto8.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto8.jpg")
                 Case 8
                     PictureBox1.Load(map & "\reeks1foto9.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto9.jpg")
                 Case 9
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks1foto10.jpg")
                     PictureBox1.Load(map & "\reeks1foto10.jpg")
                 Case 10
                     ronde4anderespelers()
@@ -1638,30 +1640,31 @@ Public Class Controle
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load(map & "\reeks2foto2.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto2.jpg")
 
                 Case 2
                     PictureBox1.Load(map & "\reeks2foto3.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto3.jpg")
                 Case 3
                     PictureBox1.Load(map & "\reeks2foto4.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto4.jpg")
                 Case 4
                     PictureBox1.Load(map & "\reeks2foto5.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto5.jpg")
                 Case 5
                     PictureBox1.Load(map & "\reeks2foto6.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto6.jpg")
                 Case 6
                     PictureBox1.Load(map & "\reeks2foto7.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto7.jpg")
                 Case 7
                     PictureBox1.Load(map & "\reeks2foto8.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto8.jpg")
                 Case 8
                     PictureBox1.Load(map & "\reeks2foto9.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto9.jpg")
                 Case 9
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks2foto10.jpg")
                     PictureBox1.Load(map & "\reeks2foto10.jpg")
                 Case 10
                     ronde4anderespelers()
@@ -1670,29 +1673,37 @@ Public Class Controle
             Select Case ronde4actievefoto
                 Case 1
                     PictureBox1.Load(map & "\reeks3foto2.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto2.jpg")
                 Case 2
                     PictureBox1.Load(map & "\reeks3foto3.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto3.jpg")
 
                 Case 3
                     PictureBox1.Load(map & "\reeks3foto4.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto4.jpg")
 
                 Case 4
                     PictureBox1.Load(map & "\reeks3foto5.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto5.jpg")
 
                 Case 5
                     PictureBox1.Load(map & "\reeks3foto6.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto6.jpg")
 
                 Case 6
                     PictureBox1.Load(map & "\reeks3foto7.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto7.jpg")
 
                 Case 7
                     PictureBox1.Load(map & "\reeks3foto8.jpg")
-
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto8.jpg")
                 Case 8
                     PictureBox1.Load(map & "\reeks3foto9.jpg")
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto9.jpg")
 
                 Case 9
+                    publiekvenster.ronde4foto.Load(map & "\reeks3foto10.jpg")
+
                     PictureBox1.Load(map & "\reeks3foto10.jpg")
                 Case 10
                     ronde4anderespelers()
