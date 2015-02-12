@@ -182,10 +182,10 @@
         logo202.Location = New Point(ronde2Antw2.Location.X - 50, ronde2Antw2.Location.Y - 10)
         logo203.Location = New Point(ronde2Antw3.Location.X - 50, ronde2Antw3.Location.Y - 10)
         logo204.Location = New Point(ronde2Antw4.Location.X - 50, ronde2Antw4.Location.Y - 10)
-        ronde3antw1.Location = ronde2Antw1.Location
-        ronde3antw2.Location = New Point(Me.Width * (2 / 3), Me.Height * (1 / 6) + 20)
-        ronde3antw3.Location = New Point(Me.Width * (2 / 3), Me.Height * (2 / 6) + 20)
-        logo301.Location = logo201.Location
+        ronde3antw1.Location = New Point(Me.Width * (5 / 6), 20)
+        ronde3antw2.Location = New Point(Me.Width * (5 / 6), Me.Height * (1 / 6) + 20)
+        ronde3antw3.Location = New Point(Me.Width * (5 / 6), Me.Height * (2 / 6) + 20)
+        logo301.Location = New Point(ronde3antw1.Location.X - 50, ronde3antw1.Location.Y - 10)
         logo302.Location = New Point(ronde3antw2.Location.X - 50, ronde3antw2.Location.Y - 10)
         logo303.Location = New Point(ronde3antw3.Location.X - 50, ronde3antw3.Location.Y - 10)
         ronde3antw1.Text = Controle.Ronde3chkantw1.Text
@@ -200,7 +200,7 @@
         ronde4tip7.Text = Controle.ronde3label7.Text
         ronde4tip8.Text = Controle.ronde3label8.Text
         ronde4tip9.Text = Controle.ronde3label9.Text
-        ronde4tips.Width = (Me.Width / 2)
+        ronde4tips.Width = (Me.Width * (5 / 6) - 50)
         ronde4tips.Height = (Me.Height * (2 / 3))
         ronde4tips.Location = New Point(0, 0)
         ronde4tip1.Location = New Point(ronde4tips.Width * (1 / 10), ronde4tips.Height * (1 / 10))

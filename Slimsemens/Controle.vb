@@ -1169,6 +1169,7 @@ Public Class Controle
         Ronde3chkantw2.Enabled = False
         Ronde3chkantw3.Enabled = False
         origineelaandebeurt = aandebeurtenum.Jan
+        ronde3rondgaan = 1
     End Sub
 
     Private Sub ronde3start_Click(sender As Object, e As EventArgs) Handles ronde3start.Click 'Start het beantwoorden van de vraag
