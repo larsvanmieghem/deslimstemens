@@ -93,6 +93,7 @@ Public Class Controle
     Public finaleaandebeurt As finaleaandebeurtem = finaleaandebeurtem.heusnoorn
     Dim ronde6checkboxv As Boolean = False
     Public map As String
+    Public ronde6finalenetgedaan As Boolean = False
     Dim lezer As StreamReader
 
     Private Sub openmap()
@@ -2202,6 +2203,7 @@ Public Class Controle
         actieveronde = actieverondeenum.Finale
         ronde6actievevraag = 1
         ronde6rondgaan = 1
+        ronde6finalenetgedaan = False
         If (jan.Seconden > platypus.Seconden) And (jan.Seconden > miauw.Seconden) Then
             heusnoorn = finalespeler(0)
             abricoos = finalespeler(1)
@@ -2306,7 +2308,7 @@ Public Class Controle
     End Sub
     Sub ronde6puntenbij()
         If ronde6checkboxv = False Then
-            Publiek.juistgeluid()
+            publiekvenster.juistgeluid()
             Select Case finaleaandebeurt
                 Case finaleaandebeurtem.heusnoorn
                     abricoos.Seconden -= 20
@@ -2421,7 +2423,13 @@ Public Class Controle
     End Sub
 
     Sub ronde7startronde()
-        publiekvenster.AxVLCPlugin21.playlist.playItem(3)
-        Volgendevraag.Visible = True
+        If ronde6finalenetgedaan = False Then
+            heusnoorn.Istelleraan = False
+            abricoos.Istelleraan = False
+            publiekvenster.AxVLCPlugin21.playlist.playItem(3)
+            Volgendevraag.Visible = True
+            ronde6finalenetgedaan = True
+        End If
+        
     End Sub
 End Class
