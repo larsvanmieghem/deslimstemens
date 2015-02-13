@@ -125,14 +125,15 @@ Partial Class Controle
         Me.ronde6speler1 = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
-        Me.ronde6antw1 = New System.Windows.Forms.CheckBox()
-        Me.ronde6antw2 = New System.Windows.Forms.CheckBox()
-        Me.ronde6antw3 = New System.Windows.Forms.CheckBox()
-        Me.ronde6antw4 = New System.Windows.Forms.CheckBox()
-        Me.ronde6antw5 = New System.Windows.Forms.CheckBox()
-        Me.ronde6start = New System.Windows.Forms.Button()
-        Me.ronde6stop = New System.Windows.Forms.Button()
         Me.ronde6volgendevraag = New System.Windows.Forms.Button()
+        Me.ronde6stop = New System.Windows.Forms.Button()
+        Me.ronde6start = New System.Windows.Forms.Button()
+        Me.ronde6antw5 = New System.Windows.Forms.CheckBox()
+        Me.ronde6antw4 = New System.Windows.Forms.CheckBox()
+        Me.ronde6antw3 = New System.Windows.Forms.CheckBox()
+        Me.ronde6antw2 = New System.Windows.Forms.CheckBox()
+        Me.ronde6antw1 = New System.Windows.Forms.CheckBox()
+        Me.Volgendevraag = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1187,64 +1188,15 @@ Partial Class Controle
         Me.GroupBox13.TabStop = False
         Me.GroupBox13.Text = "Finale"
         '
-        'ronde6antw1
+        'ronde6volgendevraag
         '
-        Me.ronde6antw1.AutoSize = True
-        Me.ronde6antw1.Location = New System.Drawing.Point(19, 27)
-        Me.ronde6antw1.Name = "ronde6antw1"
-        Me.ronde6antw1.Size = New System.Drawing.Size(56, 17)
-        Me.ronde6antw1.TabIndex = 0
-        Me.ronde6antw1.Text = "Antw1"
-        Me.ronde6antw1.UseVisualStyleBackColor = True
-        '
-        'ronde6antw2
-        '
-        Me.ronde6antw2.AutoSize = True
-        Me.ronde6antw2.Location = New System.Drawing.Point(19, 55)
-        Me.ronde6antw2.Name = "ronde6antw2"
-        Me.ronde6antw2.Size = New System.Drawing.Size(56, 17)
-        Me.ronde6antw2.TabIndex = 1
-        Me.ronde6antw2.Text = "Antw2"
-        Me.ronde6antw2.UseVisualStyleBackColor = True
-        '
-        'ronde6antw3
-        '
-        Me.ronde6antw3.AutoSize = True
-        Me.ronde6antw3.Location = New System.Drawing.Point(19, 83)
-        Me.ronde6antw3.Name = "ronde6antw3"
-        Me.ronde6antw3.Size = New System.Drawing.Size(56, 17)
-        Me.ronde6antw3.TabIndex = 2
-        Me.ronde6antw3.Text = "Antw3"
-        Me.ronde6antw3.UseVisualStyleBackColor = True
-        '
-        'ronde6antw4
-        '
-        Me.ronde6antw4.AutoSize = True
-        Me.ronde6antw4.Location = New System.Drawing.Point(19, 113)
-        Me.ronde6antw4.Name = "ronde6antw4"
-        Me.ronde6antw4.Size = New System.Drawing.Size(56, 17)
-        Me.ronde6antw4.TabIndex = 3
-        Me.ronde6antw4.Text = "Antw4"
-        Me.ronde6antw4.UseVisualStyleBackColor = True
-        '
-        'ronde6antw5
-        '
-        Me.ronde6antw5.AutoSize = True
-        Me.ronde6antw5.Location = New System.Drawing.Point(19, 144)
-        Me.ronde6antw5.Name = "ronde6antw5"
-        Me.ronde6antw5.Size = New System.Drawing.Size(56, 17)
-        Me.ronde6antw5.TabIndex = 4
-        Me.ronde6antw5.Text = "Antw5"
-        Me.ronde6antw5.UseVisualStyleBackColor = True
-        '
-        'ronde6start
-        '
-        Me.ronde6start.Location = New System.Drawing.Point(14, 202)
-        Me.ronde6start.Name = "ronde6start"
-        Me.ronde6start.Size = New System.Drawing.Size(72, 30)
-        Me.ronde6start.TabIndex = 5
-        Me.ronde6start.Text = "Start"
-        Me.ronde6start.UseVisualStyleBackColor = True
+        Me.ronde6volgendevraag.Enabled = False
+        Me.ronde6volgendevraag.Location = New System.Drawing.Point(251, 201)
+        Me.ronde6volgendevraag.Name = "ronde6volgendevraag"
+        Me.ronde6volgendevraag.Size = New System.Drawing.Size(133, 29)
+        Me.ronde6volgendevraag.TabIndex = 7
+        Me.ronde6volgendevraag.Text = "Naar volgende vraag "
+        Me.ronde6volgendevraag.UseVisualStyleBackColor = True
         '
         'ronde6stop
         '
@@ -1256,21 +1208,81 @@ Partial Class Controle
         Me.ronde6stop.Text = "Stop"
         Me.ronde6stop.UseVisualStyleBackColor = True
         '
-        'ronde6volgendevraag
+        'ronde6start
         '
-        Me.ronde6volgendevraag.Enabled = False
-        Me.ronde6volgendevraag.Location = New System.Drawing.Point(251, 201)
-        Me.ronde6volgendevraag.Name = "ronde6volgendevraag"
-        Me.ronde6volgendevraag.Size = New System.Drawing.Size(133, 29)
-        Me.ronde6volgendevraag.TabIndex = 7
-        Me.ronde6volgendevraag.Text = "Naar volgende vraag "
-        Me.ronde6volgendevraag.UseVisualStyleBackColor = True
+        Me.ronde6start.Location = New System.Drawing.Point(14, 202)
+        Me.ronde6start.Name = "ronde6start"
+        Me.ronde6start.Size = New System.Drawing.Size(72, 30)
+        Me.ronde6start.TabIndex = 5
+        Me.ronde6start.Text = "Start"
+        Me.ronde6start.UseVisualStyleBackColor = True
+        '
+        'ronde6antw5
+        '
+        Me.ronde6antw5.AutoSize = True
+        Me.ronde6antw5.Location = New System.Drawing.Point(19, 144)
+        Me.ronde6antw5.Name = "ronde6antw5"
+        Me.ronde6antw5.Size = New System.Drawing.Size(56, 17)
+        Me.ronde6antw5.TabIndex = 4
+        Me.ronde6antw5.Text = "Antw5"
+        Me.ronde6antw5.UseVisualStyleBackColor = True
+        '
+        'ronde6antw4
+        '
+        Me.ronde6antw4.AutoSize = True
+        Me.ronde6antw4.Location = New System.Drawing.Point(19, 113)
+        Me.ronde6antw4.Name = "ronde6antw4"
+        Me.ronde6antw4.Size = New System.Drawing.Size(56, 17)
+        Me.ronde6antw4.TabIndex = 3
+        Me.ronde6antw4.Text = "Antw4"
+        Me.ronde6antw4.UseVisualStyleBackColor = True
+        '
+        'ronde6antw3
+        '
+        Me.ronde6antw3.AutoSize = True
+        Me.ronde6antw3.Location = New System.Drawing.Point(19, 83)
+        Me.ronde6antw3.Name = "ronde6antw3"
+        Me.ronde6antw3.Size = New System.Drawing.Size(56, 17)
+        Me.ronde6antw3.TabIndex = 2
+        Me.ronde6antw3.Text = "Antw3"
+        Me.ronde6antw3.UseVisualStyleBackColor = True
+        '
+        'ronde6antw2
+        '
+        Me.ronde6antw2.AutoSize = True
+        Me.ronde6antw2.Location = New System.Drawing.Point(19, 55)
+        Me.ronde6antw2.Name = "ronde6antw2"
+        Me.ronde6antw2.Size = New System.Drawing.Size(56, 17)
+        Me.ronde6antw2.TabIndex = 1
+        Me.ronde6antw2.Text = "Antw2"
+        Me.ronde6antw2.UseVisualStyleBackColor = True
+        '
+        'ronde6antw1
+        '
+        Me.ronde6antw1.AutoSize = True
+        Me.ronde6antw1.Location = New System.Drawing.Point(19, 27)
+        Me.ronde6antw1.Name = "ronde6antw1"
+        Me.ronde6antw1.Size = New System.Drawing.Size(56, 17)
+        Me.ronde6antw1.TabIndex = 0
+        Me.ronde6antw1.Text = "Antw1"
+        Me.ronde6antw1.UseVisualStyleBackColor = True
+        '
+        'Volgendevraag
+        '
+        Me.Volgendevraag.Location = New System.Drawing.Point(616, 322)
+        Me.Volgendevraag.Name = "Volgendevraag"
+        Me.Volgendevraag.Size = New System.Drawing.Size(123, 23)
+        Me.Volgendevraag.TabIndex = 31
+        Me.Volgendevraag.Text = "Volgende vraag"
+        Me.Volgendevraag.UseVisualStyleBackColor = True
+        Me.Volgendevraag.Visible = False
         '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(751, 428)
+        Me.Controls.Add(Me.Volgendevraag)
         Me.Controls.Add(Me.GroupBox13)
         Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.GroupBox10)
@@ -1436,5 +1448,6 @@ Partial Class Controle
     Friend WithEvents ronde6volgendevraag As System.Windows.Forms.Button
     Friend WithEvents ronde6stop As System.Windows.Forms.Button
     Friend WithEvents ronde6start As System.Windows.Forms.Button
+    Friend WithEvents Volgendevraag As System.Windows.Forms.Button
 
 End Class

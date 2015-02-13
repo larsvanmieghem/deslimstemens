@@ -526,11 +526,12 @@ Partial Class Publiek
         'AxVLCPlugin21
         '
         Me.AxVLCPlugin21.Enabled = True
-        Me.AxVLCPlugin21.Location = New System.Drawing.Point(673, 516)
+        Me.AxVLCPlugin21.Location = New System.Drawing.Point(672, 516)
         Me.AxVLCPlugin21.Name = "AxVLCPlugin21"
         Me.AxVLCPlugin21.OcxState = CType(resources.GetObject("AxVLCPlugin21.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxVLCPlugin21.Size = New System.Drawing.Size(20, 10)
+        Me.AxVLCPlugin21.Size = New System.Drawing.Size(19, 10)
         Me.AxVLCPlugin21.TabIndex = 26
+        Me.AxVLCPlugin21.TabStop = False
         Me.AxVLCPlugin21.Visible = False
         '
         'Timer1

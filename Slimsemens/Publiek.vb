@@ -58,7 +58,7 @@
         Label3.Text = Controle.miauw.Seconden.ToString
         'Zorgt voor het afspelen van het klokgeluidje
         If vlcbezet = False Then
-            If ((Controle.jan.Istelleraan = True) Or (Controle.platypus.Istelleraan = True Or Controle.miauw.Istelleraan = True)) Then
+            If (Controle.jan.Istelleraan = True) Or (Controle.platypus.Istelleraan = True) Or (Controle.miauw.Istelleraan = True) Or (Controle.heusnoorn.Istelleraan = True) Or (Controle.abricoos.Istelleraan = True) Then
                 If vlcaangeschakeld = False Then
                     vlcaangeschakeld = True
                     AxVLCPlugin21.playlist.playItem(1)

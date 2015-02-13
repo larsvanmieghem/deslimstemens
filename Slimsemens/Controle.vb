@@ -21,7 +21,7 @@ Public Class Controle
     Public antwoordenronde5video1(5, 2) As String
     Public antwoordenronde5video2(5, 2) As String
     Public antwoordenronde5video3(5, 2) As String
-    Public antwoordenfinale(14, 5) As String
+    Public antwoordenfinale(20, 5) As String
     Public ticknaspelen As Short
     Public ronde2foto1toonbaar As Boolean = True
     Public ronde2foto2toonbaar As Boolean = True
@@ -196,7 +196,7 @@ Public Class Controle
             finalespeler(i).Naam = lezer.ReadLine()
             finalespeler(i).leeftijd = CInt(lezer.ReadLine())
         Next
-        For i = 1 To 14
+        For i = 1 To 20
             lezer.ReadLine() '---Finalevraag1---
             For j = 1 To 5
                 antwoordenfinale(i, j) = lezer.ReadLine()
@@ -685,7 +685,7 @@ Public Class Controle
                 ronde6antw5.Text = antwoordenfinale(ronde6actievevraag, 5)
 
                 If (heusnoorn.Seconden <= 0) Or (abricoos.Seconden <= 0) Then
-                    actieveronde = actieverondeenum.Winnaar
+                    ronde7startronde()
                     If heusnoorn.Seconden <= 0 Then
                         heusnoorn.Seconden = 0
                     Else
@@ -2238,24 +2238,30 @@ Public Class Controle
         abricoos.Istelleraan = False
     End Sub
     Sub gelijkstand()
-        Select Case CInt(InputBox("Welk team moet er naar de finale ? Antwoord met 1, 2 of 3 (van links naar rechts)", "Kies spelers"))
-            Case 1
-                heusnoorn = finalespeler(0)
-                abricoos = finalespeler(1)
-            Case 2
-                heusnoorn = finalespeler(2)
-                abricoos = finalespeler(3)
-                heusnoorn.Seconden = platypus.Seconden
-                abricoos.Seconden = platypus.Seconden
-            Case 3
-                heusnoorn = finalespeler(4)
-                abricoos = finalespeler(5)
-                heusnoorn.Seconden = miauw.Seconden
-                abricoos.Seconden = miauw.Seconden
-            Case Else
-                MsgBox("ERROR")
-                gelijkstand()
-        End Select
+        Try
+            Select Case CInt(InputBox("Welk team moet er naar de finale ? Antwoord met 1, 2 of 3 (van links naar rechts)", "Kies spelers"))
+                Case 1
+                    heusnoorn = finalespeler(0)
+                    abricoos = finalespeler(1)
+                Case 2
+                    heusnoorn = finalespeler(2)
+                    abricoos = finalespeler(3)
+                    heusnoorn.Seconden = platypus.Seconden
+                    abricoos.Seconden = platypus.Seconden
+                Case 3
+                    heusnoorn = finalespeler(4)
+                    abricoos = finalespeler(5)
+                    heusnoorn.Seconden = miauw.Seconden
+                    abricoos.Seconden = miauw.Seconden
+                Case Else
+                    MsgBox("ERROR")
+                    gelijkstand()
+            End Select
+        Catch ex As Exception
+            MsgBox("ERROR")
+            gelijkstand()
+        End Try
+
     End Sub
 
     Private Sub ronde6antw1_CheckedChanged(sender As Object, e As EventArgs) Handles ronde6antw1.CheckedChanged
@@ -2393,5 +2399,29 @@ Public Class Controle
                 finaleaandebeurt = finaleaandebeurtem.heusnoorn
             End If
         End If
+    End Sub
+
+    Private Sub Volgendevraag_Click(sender As Object, e As EventArgs) Handles Volgendevraag.Click
+        Volgendevraag.Visible = False
+        Select Case actieveronde
+            Case actieverondeenum.Opendeur
+            Case actieverondeenum.Puzzel
+            Case actieverondeenum.Galerij
+            Case actieverondeenum.Collectiefgeheugen
+            Case actieverondeenum.Finale
+                Volgendevraag.Text = "Toon Antwoorden"
+                ronde6checkboxv = True
+                ronde6antw1.Checked = True
+                ronde6antw2.Checked = True
+                ronde6antw3.Checked = True
+                ronde6antw4.Checked = True
+                ronde6antw5.Checked = True
+                ronde6checkboxv = False
+        End Select
+    End Sub
+
+    Sub ronde7startronde()
+        publiekvenster.AxVLCPlugin21.playlist.playItem(3)
+        Volgendevraag.Visible = True
     End Sub
 End Class
