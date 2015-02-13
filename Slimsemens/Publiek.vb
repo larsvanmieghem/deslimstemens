@@ -524,7 +524,7 @@
         If teller >= 10 Then
             Timer1.Enabled = False
             vlcbezet = False
-            If Controle.ronde6finalenetgedaan = True Then
+            If Controle.ronde6finalenetgedaan = False Then
                 AxVLCPlugin21.playlist.stop()
             End If
             If vlcaangeschakeld = True Then

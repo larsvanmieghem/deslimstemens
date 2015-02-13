@@ -2424,12 +2424,18 @@ Public Class Controle
 
     Sub ronde7startronde()
         If ronde6finalenetgedaan = False Then
+            ronde6finalenetgedaan = True
             heusnoorn.Istelleraan = False
             abricoos.Istelleraan = False
             publiekvenster.AxVLCPlugin21.playlist.playItem(3)
             Volgendevraag.Visible = True
-            ronde6finalenetgedaan = True
         End If
-        
+        ronde6start.Enabled = False
+        ronde6stop.Enabled = False
+        ronde6antw1.Enabled = False
+        ronde6antw2.Enabled = False
+        ronde6antw3.Enabled = False
+        ronde6antw4.Enabled = False
+        ronde6antw5.Enabled = False
     End Sub
 End Class
