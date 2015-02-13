@@ -817,6 +817,9 @@ Public Class Controle
         ronde2foto1.Visible = True
         ronde2foto2.Visible = True
         ronde2foto3.Visible = True
+        ronde2foto1.Load("ronde2foto1.jpg")
+        ronde2foto2.Load("ronde2foto2.jpg")
+        ronde2foto3.Load("ronde2foto3.jpg")
     End Sub
     Public Sub startronde1()
         actieveronde = actieverondeenum.driezesnegen

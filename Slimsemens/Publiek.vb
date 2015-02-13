@@ -286,6 +286,11 @@
                 r1v14.ForeColor = Color.White
                 r1v15.ForeColor = Color.Gold
         End Select
+        If Controle.ronde1actievevraag = 4 Then
+            PictureBox1.Load("Vergaelen.png")
+        Else
+            PictureBox1.Image = My.Resources.dsm
+        End If
         If Controle.GroupBox2.Visible = True Then
             Panel1.Visible = True
         Else

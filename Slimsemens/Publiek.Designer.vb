@@ -486,7 +486,7 @@ Partial Class Publiek
         Me.PictureBox1.Location = New System.Drawing.Point(27, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(621, 180)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
