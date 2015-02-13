@@ -237,7 +237,10 @@
     End Sub
     Sub ronde1()
         ronde6onzichtbaar()
-        vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
+        Try
+            vragen.Text = Controle.vragenronde1(Controle.ronde1actievevraag)
+        Catch ex As Exception
+        End Try
         ronde5onzichtbaar()
         PictureBox1.Visible = True
         Select Case Controle.ronde1actievevraag

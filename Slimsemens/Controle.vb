@@ -251,7 +251,11 @@ Public Class Controle
                 GroupBox2.Visible = True
                 GroupBox3.Visible = True
                 GroupBox4.Visible = False
-                ronde1antwoordtekstlbl.Text = antwoordenronde1(ronde1actievevraag) 'Toont het actieve antwoord   
+                Try
+                    ronde1antwoordtekstlbl.Text = antwoordenronde1(ronde1actievevraag) 'Toont het actieve antwoord 
+                Catch ex As Exception
+                End Try
+
                 ronde1antwoordtekstlbl.Visible = True
                 Groupbox7.Visible = False
                 'Geeft aan wat de actieve vraag is
@@ -802,6 +806,11 @@ Public Class Controle
         If ronde1rondgaan >= 4 Then
             ronde1actievevraag += 1
             ronde1rondgaan = 1
+            If ronde1actievevraag > 15 Then
+                ronde1j.Visible = False
+                ronde1f.Visible = False
+                ronde2startronde.Visible = True
+            End If
         End If
     End Sub
 
