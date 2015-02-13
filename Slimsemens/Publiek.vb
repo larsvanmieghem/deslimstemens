@@ -17,6 +17,7 @@
         AxVLCPlugin21.playlist.add(Controle.map & "\goed.mp3")
         AxVLCPlugin21.playlist.add(Controle.map & "\finale.mp3")
         AxVLCPlugin21.playlist.add(Controle.map & "\klokeind.mp3")
+        AxVLCPlugin21.playlist.add(Controle.map & "\twerkmuziek.mp3")
         ronde2foto1.Load(Controle.map & "\ronde2foto1.jpg")
         ronde2foto2.Load(Controle.map & "\ronde2foto2.jpg")
         ronde2foto3.Load(Controle.map & "\ronde2foto3.jpg")
@@ -291,8 +292,15 @@
         End Select
         If Controle.ronde1actievevraag = 4 Then
             PictureBox1.Load(Controle.map & "\Vergaelen.png")
+        ElseIf Controle.ronde1actievevraag = 13 Then
+            PictureBox1.Load(Controle.map & "\poetsvrouw.jpg")
         Else
             PictureBox1.Image = My.Resources.dsm
+        End If
+        If Controle.ronde1actievevraag = 15 Then
+            Controle.ronde1startmuziek.Visible = True
+        Else
+            Controle.ronde1startmuziek.Visible = False
         End If
         If Controle.GroupBox2.Visible = True Then
             Panel1.Visible = True

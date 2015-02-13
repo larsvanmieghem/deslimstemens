@@ -94,6 +94,7 @@ Public Class Controle
     Dim ronde6checkboxv As Boolean = False
     Public map As String
     Public ronde6finalenetgedaan As Boolean = False
+    Dim ronde1muziekaanhetspelen As Boolean = False
     Dim lezer As StreamReader
 
     Private Sub openmap()
@@ -783,9 +784,13 @@ Public Class Controle
             ronde1j.Visible = False
             ronde1f.Visible = False
             ronde2startronde.Visible = True
+            publiekvenster.AxVLCPlugin21.playlist.stop()
         ElseIf ronde1actievevraag < 15 Then
             ronde1actievevraag += 1
             ronde1rondgaan = 1
+            If ronde1actievevraag = 12 Then
+                publiekvenster.AxWindowsMediaPlayer1.URL = map & "\leterme.wmv"
+            End If
         End If
 
     End Sub
@@ -806,10 +811,12 @@ Public Class Controle
         If ronde1rondgaan >= 4 Then
             ronde1actievevraag += 1
             ronde1rondgaan = 1
+            publiekvenster.AxWindowsMediaPlayer1.URL = map & "\leterme.wmv"
             If ronde1actievevraag > 15 Then
                 ronde1j.Visible = False
                 ronde1f.Visible = False
                 ronde2startronde.Visible = True
+                publiekvenster.AxVLCPlugin21.playlist.stop()
             End If
         End If
     End Sub
@@ -831,6 +838,7 @@ Public Class Controle
         ronde2foto3.Load("ronde2foto3.jpg")
     End Sub
     Public Sub startronde1()
+        publiekvenster.AxWindowsMediaPlayer1.Visible = False
         actieveronde = actieverondeenum.driezesnegen
         GroupBox4.Enabled = True
         ronde2startronde.Visible = False
@@ -2449,5 +2457,16 @@ Public Class Controle
         ronde6antw3.Enabled = False
         ronde6antw4.Enabled = False
         ronde6antw5.Enabled = False
+    End Sub
+
+   
+    Private Sub ronde1startmuziek_Click(sender As Object, e As EventArgs) Handles ronde1startmuziek.Click
+        If ronde1muziekaanhetspelen = False Then
+            ronde1muziekaanhetspelen = True
+            publiekvenster.AxVLCPlugin21.playlist.playItem(5)
+        Else
+            ronde1muziekaanhetspelen = False
+            publiekvenster.AxVLCPlugin21.playlist.stop()
+        End If
     End Sub
 End Class

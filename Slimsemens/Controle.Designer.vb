@@ -134,6 +134,7 @@ Partial Class Controle
         Me.ronde6antw2 = New System.Windows.Forms.CheckBox()
         Me.ronde6antw1 = New System.Windows.Forms.CheckBox()
         Me.Volgendevraag = New System.Windows.Forms.Button()
+        Me.ronde1startmuziek = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1277,11 +1278,22 @@ Partial Class Controle
         Me.Volgendevraag.UseVisualStyleBackColor = True
         Me.Volgendevraag.Visible = False
         '
+        'ronde1startmuziek
+        '
+        Me.ronde1startmuziek.Location = New System.Drawing.Point(616, 324)
+        Me.ronde1startmuziek.Name = "ronde1startmuziek"
+        Me.ronde1startmuziek.Size = New System.Drawing.Size(129, 21)
+        Me.ronde1startmuziek.TabIndex = 32
+        Me.ronde1startmuziek.Text = "Start muziek"
+        Me.ronde1startmuziek.UseVisualStyleBackColor = True
+        Me.ronde1startmuziek.Visible = False
+        '
         'Controle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(751, 428)
+        Me.Controls.Add(Me.ronde1startmuziek)
         Me.Controls.Add(Me.Volgendevraag)
         Me.Controls.Add(Me.GroupBox13)
         Me.Controls.Add(Me.GroupBox12)
@@ -1449,5 +1461,6 @@ Partial Class Controle
     Friend WithEvents ronde6stop As System.Windows.Forms.Button
     Friend WithEvents ronde6start As System.Windows.Forms.Button
     Friend WithEvents Volgendevraag As System.Windows.Forms.Button
+    Friend WithEvents ronde1startmuziek As System.Windows.Forms.Button
 
 End Class
