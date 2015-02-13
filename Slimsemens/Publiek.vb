@@ -287,7 +287,7 @@
                 r1v15.ForeColor = Color.Gold
         End Select
         If Controle.ronde1actievevraag = 4 Then
-            PictureBox1.Load("Vergaelen.png")
+            PictureBox1.Load(Controle.map & "\Vergaelen.png")
         Else
             PictureBox1.Image = My.Resources.dsm
         End If
